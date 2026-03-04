@@ -1,9 +1,260 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-03-04T22:06:34.792Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-03-04T22:37:48.303Z",
+  "components": [
+    {
+      "name": "Button",
+      "path": "src/components/Button/Button.tsx",
+      "description": "Button component",
+      "props": {
+        "variant": {
+          "type": "'primary' | 'secondary' | 'ghost'",
+          "required": false,
+          "default": "'primary'",
+          "description": "The variant of the button."
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "default": "'md'",
+          "description": "The size of the button."
+        },
+        "loading": {
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "description": "If true, the button will show a loading spinner."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "description": "If true, the button will be disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    },
+    {
+      "name": "Text",
+      "path": "src/components/Text/Text.tsx",
+      "description": "Text component for displaying typographic elements.",
+      "props": {
+        "variant": {
+          "type": "keyof typeof typographyVariants",
+          "required": false,
+          "description": "The variant of the text."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    },
+    {
+      "name": "ColorSwatch",
+      "path": "src/components/ColorSwatch/ColorSwatch.tsx",
+      "description": "ColorSwatch component",
+      "props": {
+        "colorName": {
+          "type": "string",
+          "required": true,
+          "description": "The name of the color token to display"
+        },
+        "colorValue": {
+          "type": "string",
+          "required": true,
+          "description": "The hex value of the color token"
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the swatch\n- 'small': 40px\n- 'medium': 60px\n- 'large': 80px"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the swatch"
+        }
+      }
+    },
+    {
+      "name": "Input",
+      "path": "src/components/Input/Input.tsx",
+      "description": "Input component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": true,
+          "description": "The label for the input field"
+        },
+        "placeholder": {
+          "type": "string",
+          "required": false,
+          "description": "The placeholder text for the input field"
+        },
+        "helperText": {
+          "type": "string",
+          "required": false,
+          "description": "Helper text displayed below the input field"
+        },
+        "error": {
+          "type": "string",
+          "required": false,
+          "description": "Error message displayed below the input field"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Whether the input is disabled"
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the input field"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the input field"
+        }
+      }
+    },
+    {
+      "name": "Card",
+      "path": "src/components/Card/Card.tsx",
+      "description": "Card component",
+      "props": {
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Optional class name for custom styling"
+        },
+        "padding": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Padding size of the card\n- 'small': 8px\n- 'medium': 16px\n- 'large': 24px"
+        },
+        "shadow": {
+          "type": "'none' | 'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Shadow variant of the card\n- 'none': No shadow\n- 'small': Small shadow\n- 'medium': Medium shadow\n- 'large': Large shadow"
+        },
+        "borderRadius": {
+          "type": "'none' | 'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Border radius of the card\n- 'none': No border radius\n- 'small': Small border radius\n- 'medium': Medium border radius\n- 'large': Large border radius"
+        },
+        "header": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional header content"
+        },
+        "footer": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional footer content"
+        },
+        "children": {
+          "type": "ReactNode",
+          "required": true,
+          "description": "Main content of the card"
+        }
+      }
+    },
+    {
+      "name": "Badge",
+      "path": "src/components/Badge/Badge.tsx",
+      "description": "Badge component",
+      "props": {
+        "children": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content to display inside the badge."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the badge.\n- 'small': Small size badge\n- 'medium': Medium size badge\n- 'large': Large size badge"
+        },
+        "variant": {
+          "type": "'default' | 'primary' | 'success' | 'warning' | 'error'",
+          "required": false,
+          "description": "The variant of the badge.\n- 'default': Default styling\n- 'primary': Primary styling\n- 'success': Success styling\n- 'warning': Warning styling\n- 'error': Error styling"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the badge will appear disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the badge."
+        }
+      }
+    },
+    {
+      "name": "Alert",
+      "path": "src/components/Alert/Alert.tsx",
+      "description": "Alert component",
+      "props": {
+        "variant": {
+          "type": "'info' | 'success' | 'warning' | 'error'",
+          "required": true,
+          "description": "The variant of the alert, determining its color scheme."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the alert, determining its padding and font size."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Optional className for additional styling."
+        }
+      }
+    },
+    {
+      "name": "Avatar",
+      "path": "src/components/Avatar/Avatar.tsx",
+      "description": "Avatar component",
+      "props": {
+        "src": {
+          "type": "string",
+          "required": false,
+          "description": "The URL of the image to display as the avatar."
+        },
+        "initials": {
+          "type": "string",
+          "required": false,
+          "description": "The initials to display if the image is not available."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the avatar."
+        },
+        "shape": {
+          "type": "'circle' | 'rounded' | 'square'",
+          "required": false,
+          "description": "The shape of the avatar."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the avatar."
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "typography": 0
+    "colors": 28,
+    "typography": 1383
   }
 }
