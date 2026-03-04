@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Alert from './Alert';
+import Alert, { AlertProps } from './Alert';
 
 export default {
   title: 'Components/Alert',
@@ -26,7 +26,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story = (args) => <Alert {...args}>This is an alert message.</Alert>;
+const Template: Story<AlertProps> = (args) => <Alert {...args}>This is an alert</Alert>;
 
 export const Info = Template.bind({});
 Info.args = {

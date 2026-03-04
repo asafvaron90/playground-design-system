@@ -25,6 +25,9 @@ export default {
     disabled: {
       control: 'boolean',
     },
+    className: {
+      control: 'text',
+    },
   },
 } as Meta;
 
@@ -52,20 +55,4 @@ Ghost.args = {
   size: 'md',
   loading: false,
   disabled: false,
-};
-
-export const Loading = Template.bind({});
-Loading.args = {
-  variant: 'primary',
-  size: 'md',
-  loading: true,
-  disabled: false,
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  variant: 'primary',
-  size: 'md',
-  loading: false,
-  disabled: true,
 };

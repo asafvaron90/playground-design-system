@@ -4,16 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-    "d7e3ec": "var(--color-d7e3ec)",
+    "0e92cb": "var(--color-0e92cb)",
     "button": "var(--color-button)",
     "button": "var(--color-button)",
-    "buttons": "var(--color-buttons)",
-    "buttons": "var(--color-buttons)",
-    "buttons": "var(--color-buttons)",
     "error": "var(--color-error)",
     "helper-text": "var(--color-helper-text)",
     "input-dropdown": "var(--color-input-dropdown)",
     "input-dropdown-txt": "var(--color-input-dropdown-txt)",
+    "new-buttons": "var(--color-new-buttons)",
       },
       fontFamily: {
     "inter": ["Inter", "sans-serif"],

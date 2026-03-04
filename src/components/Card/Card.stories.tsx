@@ -1,12 +1,13 @@
 // Card.stories.tsx
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Card from './Card';
+import Card, { CardProps } from './Card';
 
 export default {
   title: 'Components/Card',
   component: Card,
   argTypes: {
+    className: { control: 'text' },
     padding: {
       control: {
         type: 'select',
@@ -25,19 +26,13 @@ export default {
         options: ['none', 'small', 'medium', 'large'],
       },
     },
-    header: {
-      control: 'text',
-    },
-    footer: {
-      control: 'text',
-    },
-    children: {
-      control: 'text',
-    },
+    header: { control: 'text' },
+    footer: { control: 'text' },
+    children: { control: 'text' },
   },
 } as Meta;
 
-const Template: Story = (args) => <Card {...args} />;
+const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -46,5 +41,5 @@ Default.args = {
   borderRadius: 'medium',
   header: 'Card Header',
   footer: 'Card Footer',
-  children: 'This is the card content.',
+  children: 'This is the main content of the card.',
 };

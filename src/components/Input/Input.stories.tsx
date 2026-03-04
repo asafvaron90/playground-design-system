@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Input from './Input';
+import { Input } from './Input';
 
 export default {
   title: 'Components/Input',
@@ -19,6 +19,7 @@ export default {
         options: ['small', 'medium', 'large'],
       },
     },
+    className: { control: 'text' },
   },
 } as Meta;
 
@@ -26,24 +27,11 @@ const Template: Story = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Email',
-  placeholder: 'Enter your email',
-  helperText: 'We will not share your email.',
+  label: 'Label',
+  placeholder: 'Placeholder',
+  helperText: 'Helper text',
+  error: '',
+  disabled: false,
   size: 'medium',
-};
-
-export const WithError = Template.bind({});
-WithError.args = {
-  label: 'Email',
-  placeholder: 'Enter your email',
-  error: 'Invalid email address',
-  size: 'medium',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Email',
-  placeholder: 'Enter your email',
-  disabled: true,
-  size: 'medium',
+  className: '',
 };

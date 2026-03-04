@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 // Define the button variants
 const VARIANTS = {
-  primary: 'bg-var(--color-buttons) text-var(--color-ffffff)',
+  primary: 'bg-var(--color-new-buttons) text-var(--color-new-ffffff)',
   secondary: 'bg-var(--color-button) text-var(--color-1b293a)',
   ghost: 'bg-transparent text-var(--color-1b293a) border border-var(--color-1b293a)',
 };

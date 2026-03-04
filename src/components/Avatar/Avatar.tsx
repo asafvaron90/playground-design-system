@@ -48,16 +48,17 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({
     <div
       ref={ref}
       className={clsx(
-        'flex items-center justify-center overflow-hidden bg-gray-200',
+        'flex items-center justify-center overflow-hidden',
         sizeClasses[size],
         shapeClasses[shape],
         className
       )}
+      style={{ backgroundColor: 'var(--color-primary)' }}
     >
       {src ? (
         <img src={src} alt="Avatar" className="w-full h-full object-cover" />
       ) : (
-        <span className="text-gray-700" style={{ fontSize: 'var(--font-value-*)' }}>
+        <span className="text-gray-700" style={{ fontSize: 'var(--font-primary)' }}>
           {initials}
         </span>
       )}

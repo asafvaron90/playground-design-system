@@ -21,10 +21,10 @@ interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 const Alert = forwardRef<HTMLDivElement, AlertProps>(
   ({ variant, size = 'medium', className, children, ...props }, ref) => {
     const variantClasses = {
-      info: 'bg-info text-info',
-      success: 'bg-success text-success',
-      warning: 'bg-warning text-warning',
-      error: 'bg-error text-error',
+      info: 'bg-[var(--color-light-blue---info)] text-[var(--font-light-blue---info)]',
+      success: 'bg-[var(--color-green---success)] text-[var(--font-green---success)]',
+      warning: 'bg-[var(--color-orange---warning)] text-[var(--font-orange---warning)]',
+      error: 'bg-[var(--color-red---error)] text-[var(--font-red---error)]',
     };
 
     const sizeClasses = {

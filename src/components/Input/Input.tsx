@@ -46,7 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
 }, ref) => {
   return (
     <div className={clsx('input-wrapper', className)}>
-      <label className="input-label" style={{ font: 'var(--font-label-*)' }}>
+      <label className="input-label" style={{ font: 'var(--font-primary-*)' }}>
         {label}
       </label>
       <input
@@ -63,7 +63,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
         style={{
           color: 'var(--color-input-dropdown-txt)',
           backgroundColor: 'var(--color-input-dropdown)',
-          borderColor: error ? 'var(--color-error)' : 'var(--color-d7e3ec)',
+          borderColor: error ? 'var(--color-error)' : 'var(--color-primary)',
           font: 'var(--font-value-*)',
         }}
         {...props}
