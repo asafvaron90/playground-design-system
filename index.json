@@ -1,0 +1,1 @@
+{"v":5,"entries":{"system-welcome--default":{"type":"story","id":"system-welcome--default","name":"Default","title":"System/Welcome","importPath":"./src/components/Welcome.stories.tsx","componentPath":"./src/components/Welcome.tsx","tags":["dev","test"]}}}
