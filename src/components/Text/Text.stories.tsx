@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Text from './Text';
+import { Text } from './Text';
 
 export default {
   title: 'Components/Text',
@@ -25,32 +25,32 @@ export default {
 
 const Template: Story = (args) => <Text {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  variant: 'body',
+  children: 'This is a text component',
+};
+
 export const Heading1 = Template.bind({});
 Heading1.args = {
   variant: 'heading1',
-  children: 'Heading 1 Text',
+  children: 'This is a Heading 1',
 };
 
 export const Heading2 = Template.bind({});
 Heading2.args = {
   variant: 'heading2',
-  children: 'Heading 2 Text',
+  children: 'This is a Heading 2',
 };
 
 export const Heading3 = Template.bind({});
 Heading3.args = {
   variant: 'heading3',
-  children: 'Heading 3 Text',
-};
-
-export const Body = Template.bind({});
-Body.args = {
-  variant: 'body',
-  children: 'Body Text',
+  children: 'This is a Heading 3',
 };
 
 export const Caption = Template.bind({});
 Caption.args = {
   variant: 'caption',
-  children: 'Caption Text',
+  children: 'This is a caption text',
 };

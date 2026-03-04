@@ -2,18 +2,12 @@
 
 export const designTokens = {
   colors: {
-    /** #000000 */
-    D7E3EC: "#000000",
+    /** #FFFFFF */
+    0E92CB: "#FFFFFF",
     /** #F6F6F9 */
     button: "#F6F6F9",
     /** #1B293A */
     button: "#1B293A",
-    /** #2196F3 */
-    buttons: "#2196F3",
-    /** #0C98B0 */
-    buttons: "#0C98B0",
-    /** #F5F5F5 */
-    buttons: "#F5F5F5",
     /** #C84747 */
     eRROR: "#C84747",
     /** #ACBFCB */
@@ -22,6 +16,8 @@ export const designTokens = {
     inputDropdown: "#2F3649",
     /** #223B4E */
     inputDropdownTxt: "#223B4E",
+    /** #232D42 */
+    newButtons: "#232D42",
   },
   typography: {
     eRROR: {
@@ -42,32 +38,14 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
+    value: {
       fontFamily: "Inter",
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 400,
       lineHeight: 1.25,
       textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
     },
     value: {
       fontFamily: "Inter",
@@ -78,15 +56,6 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
     value: {
       fontFamily: "Inter",
       fontSize: 14,
@@ -96,15 +65,6 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
     value: {
       fontFamily: "Inter",
       fontSize: 14,
@@ -113,33 +73,6 @@ export const designTokens = {
       textAlignHorizontal: "LEFT",
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
-    value: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "TOP",
-      textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
     },
     helperText: {
       fontFamily: "Inter",
@@ -159,15 +92,6 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
     value: {
       fontFamily: "Inter",
       fontSize: 14,
@@ -176,15 +100,6 @@ export const designTokens = {
       textAlignHorizontal: "LEFT",
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
     },
     helperText: {
       fontFamily: "Inter",
@@ -203,15 +118,6 @@ export const designTokens = {
       textAlignHorizontal: "LEFT",
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
     },
     helperText: {
       fontFamily: "Inter",
@@ -632,6 +538,15 @@ export const designTokens = {
       textAlignVertical: "CENTER",
       textAutoResize: "WIDTH_AND_HEIGHT",
     },
+    primary: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
     header: {
       fontFamily: "Inter",
       fontSize: 17,
@@ -641,7 +556,34 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    bodyText: {
+    redError: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    lightBlueInfo: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    greenSuccess: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    orangeWarning: {
       fontFamily: "Inter",
       fontSize: 17,
       fontWeight: 400,
@@ -659,6 +601,15 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
+    primary: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
     header: {
       fontFamily: "Inter",
       fontSize: 17,
@@ -668,7 +619,34 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    bodyText: {
+    redError: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    lightBlueInfo: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    greenSuccess: {
+      fontFamily: "Inter",
+      fontSize: 17,
+      fontWeight: 400,
+      lineHeight: 1.25,
+      textAlignHorizontal: "CENTER",
+      textAlignVertical: "TOP",
+      textAutoResize: "HEIGHT",
+    },
+    orangeWarning: {
       fontFamily: "Inter",
       fontSize: 17,
       fontWeight: 400,
@@ -705,15 +683,6 @@ export const designTokens = {
       textAutoResize: "HEIGHT",
     },
     header: {
-      fontFamily: "Inter",
-      fontSize: 18,
-      fontWeight: 500,
-      lineHeight: "normal",
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "TOP",
-      textAutoResize: "HEIGHT",
-    },
-    body: {
       fontFamily: "Inter",
       fontSize: 18,
       fontWeight: 500,
@@ -920,15 +889,6 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
     value: {
       fontFamily: "Inter",
       fontSize: 14,
@@ -937,15 +897,6 @@ export const designTokens = {
       textAlignHorizontal: "LEFT",
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
     },
     text: {
       fontFamily: "Inter",
@@ -1031,15 +982,6 @@ export const designTokens = {
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
     },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
-    },
     value: {
       fontFamily: "Inter",
       fontSize: 14,
@@ -1048,15 +990,6 @@ export const designTokens = {
       textAlignHorizontal: "LEFT",
       textAlignVertical: "TOP",
       textAutoResize: "HEIGHT",
-    },
-    label: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-      textAlignHorizontal: "LEFT",
-      textAlignVertical: "CENTER",
-      textAutoResize: "WIDTH_AND_HEIGHT",
     },
     text: {
       fontFamily: "Inter",
