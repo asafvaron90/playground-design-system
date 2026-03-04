@@ -25,12 +25,12 @@ interface AvatarProps {
   className?: string;
 }
 
-const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({
-  src,
-  initials,
-  size = 'medium',
-  shape = 'circle',
-  className,
+const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({ 
+  src, 
+  initials, 
+  size = 'medium', 
+  shape = 'circle', 
+  className, 
 }, ref) => {
   const sizeClasses = {
     small: 'w-8 h-8',
@@ -53,12 +53,12 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({
         shapeClasses[shape],
         className
       )}
-      style={{ backgroundColor: 'var(--color-primary)' }}
+      style={{ backgroundColor: 'var(--color-0e92cb)' }}
     >
       {src ? (
         <img src={src} alt="Avatar" className="w-full h-full object-cover" />
       ) : (
-        <span className="text-gray-700" style={{ fontSize: 'var(--font-primary)' }}>
+        <span className="text-gray-700" style={{ fontSize: 'var(--font-assistive-text-enabled-*)' }}>
           {initials}
         </span>
       )}

@@ -10,7 +10,7 @@ const typographyVariants = {
   heading1: 'var(--font-large-header)',
   heading2: 'var(--font-subheader)',
   heading3: 'var(--font-header)',
-  body: 'var(--font-primary)', // Updated to use the latest design token
+  body: 'var(--font-assistive-text-enabled)', // Updated to use the latest design token
   caption: 'var(--font-helper-text)'
 };
 

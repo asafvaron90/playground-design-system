@@ -19,7 +19,7 @@ const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  initials: 'JD',
+  initials: 'AB',
   size: 'medium',
   shape: 'circle',
 };
