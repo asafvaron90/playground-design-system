@@ -1,9 +1,256 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-03-04T22:06:34.792Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-03-04T22:10:40.257Z",
+  "components": [
+    {
+      "name": "Button",
+      "path": "src/components/Button/Button.tsx",
+      "description": "A versatile button component with primary, secondary, and ghost variants,\nmultiple sizes, loading state, and disabled state.",
+      "props": {
+        "variant": {
+          "type": "'primary' | 'secondary' | 'ghost'",
+          "required": false,
+          "description": "The variant of the button"
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the button"
+        },
+        "loading": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will show a loading spinner"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the button"
+        }
+      }
+    },
+    {
+      "name": "Text",
+      "path": "src/components/Text/Text.tsx",
+      "description": "Text component",
+      "props": {
+        "children": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content of the text component."
+        },
+        "variant": {
+          "type": "'heading-1' | 'heading-2' | 'heading-3' | 'body' | 'caption'",
+          "required": false,
+          "description": "The variant of the text, which determines the font size and weight."
+        },
+        "state": {
+          "type": "'default' | 'active' | 'disabled' | 'error'",
+          "required": false,
+          "description": "The state of the text, which can be used to apply different styles."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the text component."
+        }
+      }
+    },
+    {
+      "name": "ColorSwatch",
+      "path": "src/components/ColorSwatch/ColorSwatch.tsx",
+      "description": "ColorSwatch component",
+      "props": {
+        "colorName": {
+          "type": "keyof typeof colorTokens",
+          "required": true,
+          "description": "The name of the color token to display."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the swatch.\nCan be 'small', 'medium', or 'large'."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the swatch."
+        }
+      }
+    },
+    {
+      "name": "Input",
+      "path": "src/components/Input/Input.tsx",
+      "description": "Input component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": true,
+          "description": "The label for the input field"
+        },
+        "placeholder": {
+          "type": "string",
+          "required": false,
+          "description": "The placeholder text for the input field"
+        },
+        "helperText": {
+          "type": "string",
+          "required": false,
+          "description": "Helper text displayed below the input field"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the input field will be disabled"
+        },
+        "error": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the input field will display an error state"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names for styling"
+        }
+      }
+    },
+    {
+      "name": "Card",
+      "path": "src/components/Card/Card.tsx",
+      "description": "Card component",
+      "props": {
+        "children": {
+          "type": "ReactNode",
+          "required": true,
+          "description": "Content to be displayed in the card."
+        },
+        "header": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional header content."
+        },
+        "footer": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional footer content."
+        },
+        "padding": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Padding inside the card."
+        },
+        "shadow": {
+          "type": "'none' | 'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Shadow variant for the card."
+        },
+        "borderRadius": {
+          "type": "'none' | 'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Border radius for the card."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names for custom styling."
+        }
+      }
+    },
+    {
+      "name": "Badge",
+      "path": "src/components/Badge/Badge.tsx",
+      "description": "Badge component",
+      "props": {
+        "children": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content of the badge, typically a string or number."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the badge.\n'small' | 'medium' | 'large'"
+        },
+        "variant": {
+          "type": "'default' | 'primary' | 'success' | 'warning' | 'error'",
+          "required": false,
+          "description": "The variant of the badge.\n'default' | 'primary' | 'success' | 'warning' | 'error'"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the badge will have a disabled appearance."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the badge."
+        }
+      }
+    },
+    {
+      "name": "Alert",
+      "path": "src/components/Alert/Alert.tsx",
+      "description": "Alert component",
+      "props": {
+        "variant": {
+          "type": "'info' | 'success' | 'warning' | 'error'",
+          "required": true,
+          "description": "The variant of the alert, determining its color scheme."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the alert."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the alert."
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content of the alert."
+        }
+      }
+    },
+    {
+      "name": "Avatar",
+      "path": "src/components/Avatar/Avatar.tsx",
+      "description": "Avatar component",
+      "props": {
+        "src": {
+          "type": "string",
+          "required": false,
+          "description": "The URL of the image to display in the avatar."
+        },
+        "initials": {
+          "type": "string",
+          "required": false,
+          "description": "The initials to display when the image is not available."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the avatar."
+        },
+        "shape": {
+          "type": "'circle' | 'square'",
+          "required": false,
+          "description": "The shape of the avatar."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the avatar."
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "typography": 0
+    "colors": 28,
+    "typography": 1383
   }
 }
