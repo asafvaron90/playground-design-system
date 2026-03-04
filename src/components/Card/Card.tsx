@@ -44,7 +44,7 @@ interface CardProps {
   children: ReactNode;
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(({
+const Card = forwardRef<HTMLDivElement, CardProps>(({ 
   className,
   padding = 'medium',
   shadow = 'none',
@@ -67,7 +67,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({
         padding: `var(--spacing-${padding})`,
         boxShadow: `var(--shadow-${shadow})`,
         borderRadius: `var(--border-radius-${borderRadius})`,
-        backgroundColor: 'var(--color-new)', // Updated color token
+        backgroundColor: 'var(--color-0e92cb)', // Updated color token
       }}
     >
       {header && <div className="card-header">{header}</div>}

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Input } from './Input';
+import { Input, InputProps } from './Input';
 
 export default {
   title: 'Components/Input',
@@ -13,17 +13,12 @@ export default {
     helperText: { control: 'text' },
     error: { control: 'text' },
     disabled: { control: 'boolean' },
-    size: {
-      control: {
-        type: 'select',
-        options: ['small', 'medium', 'large'],
-      },
-    },
+    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
     className: { control: 'text' },
   },
 } as Meta;
 
-const Template: Story = (args) => <Input {...args} />;
+const Template: Story<InputProps> = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -33,5 +28,4 @@ Default.args = {
   error: '',
   disabled: false,
   size: 'medium',
-  className: '',
 };

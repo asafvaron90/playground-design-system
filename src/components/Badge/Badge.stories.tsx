@@ -1,7 +1,7 @@
 // Badge.stories.tsx
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Badge, BadgeProps } from './Badge';
+import { Badge } from './Badge';
 
 export default {
   title: 'Components/Badge',
@@ -25,7 +25,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
+const Template: Story = (args) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

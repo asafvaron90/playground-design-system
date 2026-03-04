@@ -39,7 +39,7 @@ Default.args = {
   padding: 'medium',
   shadow: 'none',
   borderRadius: 'medium',
-  header: 'Card Header',
-  footer: 'Card Footer',
-  children: 'This is the main content of the card.',
+  header: 'Header Content',
+  footer: 'Footer Content',
+  children: 'Main Content',
 };
