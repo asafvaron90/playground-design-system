@@ -9,8 +9,18 @@ export default {
   argTypes: {
     src: { control: 'text' },
     initials: { control: 'text' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-    shape: { control: { type: 'select', options: ['circle', 'rounded', 'square'] } },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+    shape: {
+      control: {
+        type: 'select',
+        options: ['circle', 'rounded', 'square'],
+      },
+    },
     className: { control: 'text' },
   },
 } as Meta;
@@ -19,14 +29,8 @@ const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  src: '',
   initials: 'AB',
-  size: 'medium',
-  shape: 'circle',
-};
-
-export const WithImage = Template.bind({});
-WithImage.args = {
-  src: 'https://via.placeholder.com/150',
   size: 'medium',
   shape: 'circle',
 };

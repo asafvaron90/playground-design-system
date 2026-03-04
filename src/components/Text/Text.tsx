@@ -7,11 +7,11 @@ import clsx from 'clsx';
  * Typography variants mapped to design tokens.
  */
 const typographyVariants = {
-  heading1: 'var(--font-large-header)',
-  heading2: 'var(--font-subheader)',
-  heading3: 'var(--font-header)',
-  body: 'var(--font-assistive-text-enabled)', // Updated to use the latest design token
-  caption: 'var(--font-helper-text)'
+  heading1: 'var(--font-heading-lg-family)', // Updated to use the latest design token
+  heading2: 'var(--font-heading-md-family)', // Updated to use the latest design token
+  heading3: 'var(--font-heading-md-family)', // Updated to use the latest design token
+  body: 'var(--font-body-md-family)', // Updated to use the latest design token
+  caption: 'var(--font-label-sm-family)' // Updated to use the latest design token
 };
 
 /**

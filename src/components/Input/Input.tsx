@@ -46,7 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
 }, ref) => {
   return (
     <div className={clsx('input-wrapper', className)}>
-      <label className="input-label" style={{ font: 'var(--font-assistive-text-enabled-*)' }}>
+      <label className="input-label" style={{ fontFamily: 'var(--font-label-sm-family)', fontSize: 'var(--font-label-sm-size)', fontWeight: 'var(--font-label-sm-weight)', lineHeight: 'var(--font-label-sm-line-height)' }}>
         {label}
       </label>
       <input
@@ -61,20 +61,23 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
         placeholder={placeholder}
         disabled={disabled}
         style={{
-          color: 'var(--color-input-dropdown-txt)',
-          backgroundColor: 'var(--color-input-dropdown)',
-          borderColor: error ? 'var(--color-error)' : 'var(--color-0e92cb)',
-          font: 'var(--font-value-*)',
+          color: 'var(--color-input-text)',
+          backgroundColor: 'var(--color-input-bg)',
+          borderColor: error ? 'var(--color-error)' : 'var(--color-bg-surface)',
+          fontFamily: 'var(--font-body-md-family)',
+          fontSize: 'var(--font-body-md-size)',
+          fontWeight: 'var(--font-body-md-weight)',
+          lineHeight: 'var(--font-body-md-line-height)',
         }}
         {...props}
       />
       {helperText && !error && (
-        <span className="input-helper-text" style={{ font: 'var(--font-helper-text-*)', color: 'var(--color-helper-text)' }}>
+        <span className="input-helper-text" style={{ fontFamily: 'var(--font-body-sm-family)', fontSize: 'var(--font-body-sm-size)', fontWeight: 'var(--font-body-sm-weight)', lineHeight: 'var(--font-body-sm-line-height)', color: 'var(--color-text-helper)' }}>
           {helperText}
         </span>
       )}
       {error && (
-        <span className="input-error-text" style={{ font: 'var(--font-error-*)', color: 'var(--color-error)' }}>
+        <span className="input-error-text" style={{ fontFamily: 'var(--font-error-family)', fontSize: 'var(--font-error-size)', fontWeight: 'var(--font-error-weight)', lineHeight: 'var(--font-error-line-height)', color: 'var(--color-error)' }}>
           {error}
         </span>
       )}

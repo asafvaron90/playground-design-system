@@ -23,7 +23,7 @@ const Template: Story<ColorSwatchProps> = (args) => <ColorSwatch {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  colorName: 'primary',
-  colorValue: '#new',
+  colorName: 'bg-surface',
+  colorValue: '#FFFFFF',
   size: 'medium',
 };

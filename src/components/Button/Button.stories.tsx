@@ -1,6 +1,6 @@
 // Button.stories.tsx
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 import { Button, ButtonProps } from './Button';
 
 export default {

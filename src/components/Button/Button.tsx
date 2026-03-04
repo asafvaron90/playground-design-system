@@ -4,16 +4,16 @@ import clsx from 'clsx';
 
 // Define the button variants
 const VARIANTS = {
-  primary: 'bg-var(--color-buttons) text-var(--color-ffffff)',
-  secondary: 'bg-var(--color-button) text-var(--color-1b293a)',
-  ghost: 'bg-transparent text-var(--color-1b293a) border border-var(--color-1b293a)',
+  primary: 'bg-var(--color-button-primary) text-var(--color-text-primary)',
+  secondary: 'bg-var(--color-button-secondary) text-var(--color-text-primary)',
+  ghost: 'bg-transparent text-var(--color-text-primary) border border-var(--color-text-primary)',
 };
 
 // Define the button sizes
 const SIZES = {
-  sm: 'py-1 px-3 text-var(--font-text-*)',
-  md: 'py-2 px-4 text-var(--font-default-*)',
-  lg: 'py-3 px-5 text-var(--font-assistive-text-enabled-*)',
+  sm: 'py-1 px-3 text-var(--font-body-sm-size)',
+  md: 'py-2 px-4 text-var(--font-body-md-size)',
+  lg: 'py-3 px-5 text-var(--font-body-lg-size)',
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

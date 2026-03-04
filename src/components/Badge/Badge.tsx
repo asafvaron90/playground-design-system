@@ -49,7 +49,7 @@ const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(({
 
   const variantClasses = {
     default: 'bg-gray-200 text-gray-800',
-    primary: 'bg-[var(--color-0e92cb)] text-[var(--font-0e92cb-*)]',
+    primary: 'bg-[var(--color-button-primary)] text-[var(--font-heading-md-family)]',
     success: 'bg-green-500 text-white',
     warning: 'bg-yellow-500 text-black',
     error: 'bg-red-500 text-white',

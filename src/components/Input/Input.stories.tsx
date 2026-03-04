@@ -13,7 +13,12 @@ export default {
     helperText: { control: 'text' },
     error: { control: 'text' },
     disabled: { control: 'boolean' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
     className: { control: 'text' },
   },
 } as Meta;
@@ -28,4 +33,16 @@ Default.args = {
   error: '',
   disabled: false,
   size: 'medium',
+};
+
+export const WithError = Template.bind({});
+WithError.args = {
+  ...Default.args,
+  error: 'This field is required',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Default.args,
+  disabled: true,
 };
