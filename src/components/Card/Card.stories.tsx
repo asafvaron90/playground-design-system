@@ -1,30 +1,48 @@
 // Card.stories.tsx
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Card from './Card';
+import Card, { CardProps } from './Card';
 
 export default {
   title: 'Components/Card',
   component: Card,
   argTypes: {
-    className: { control: 'text' },
-    padding: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-    shadow: { control: { type: 'select', options: ['none', 'small', 'medium', 'large'] } },
-    borderRadius: { control: { type: 'select', options: ['none', 'small', 'medium', 'large'] } },
+    padding: { control: 'text' },
+    shadow: { control: 'text' },
+    borderRadius: { control: 'text' },
     header: { control: 'text' },
     footer: { control: 'text' },
-    children: { control: 'text' },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['default', 'outlined', 'elevated'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
   },
 } as Meta;
 
-const Template: Story = (args) => <Card {...args} />;
+const Template: Story<CardProps> = (args) => <Card {...args}>Card Content</Card>;
 
 export const Default = Template.bind({});
 Default.args = {
-  padding: 'medium',
-  shadow: 'none',
-  borderRadius: 'medium',
-  header: 'Card Header',
-  footer: 'Card Footer',
-  children: 'This is the main content of the card.',
+  variant: 'default',
+  size: 'medium',
+};
+
+export const Outlined = Template.bind({});
+Outlined.args = {
+  variant: 'outlined',
+  size: 'medium',
+};
+
+export const Elevated = Template.bind({});
+Elevated.args = {
+  variant: 'elevated',
+  size: 'medium',
 };

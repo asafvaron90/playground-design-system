@@ -1,6 +1,5 @@
 // Badge.tsx
 import React from 'react';
-import clsx from 'clsx';
 
 interface BadgeProps {
   /**
@@ -40,27 +39,35 @@ const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(({
   disabled = false,
   className,
 }, ref) => {
-  const baseClasses = 'inline-flex items-center justify-center rounded-full';
-  const sizeClasses = {
-    small: 'px-2 py-1 text-xs',
-    medium: 'px-3 py-1.5 text-sm',
-    large: 'px-4 py-2 text-base',
+  const sizeStyles = {
+    small: { padding: '4px 8px', fontSize: 'var(--font-label-sm-size)', fontFamily: 'var(--font-label-sm-family)', fontWeight: 'var(--font-label-sm-weight)', lineHeight: 'var(--font-label-sm-line-height)' },
+    medium: { padding: '6px 12px', fontSize: 'var(--font-body-sm-size)', fontFamily: 'var(--font-body-sm-family)', fontWeight: 'var(--font-body-sm-weight)', lineHeight: 'var(--font-body-sm-line-height)' },
+    large: { padding: '8px 16px', fontSize: 'var(--font-value-md-size)', fontFamily: 'var(--font-value-md-family)', fontWeight: 'var(--font-value-md-weight)', lineHeight: 'var(--font-value-md-line-height)' },
   }[size];
 
-  const variantClasses = {
-    default: 'bg-gray-200 text-gray-800',
-    primary: 'bg-[var(--color-button-primary)] text-[var(--font-default-family)]',
-    success: 'bg-green-500 text-white',
-    warning: 'bg-yellow-500 text-black',
-    error: 'bg-red-500 text-white',
+  const variantStyles = {
+    default: { backgroundColor: 'var(--color-bg-default)', color: 'var(--color-input-dropdown-text)' },
+    primary: { backgroundColor: 'var(--color-button-primary)', color: 'var(--font-default-xl-family)' },
+    success: { backgroundColor: 'var(--color-active)', color: 'var(--color-bg-default)' },
+    warning: { backgroundColor: 'var(--color-hover-click)', color: 'var(--color-bg-default)' },
+    error: { backgroundColor: 'var(--color-error)', color: 'var(--color-bg-default)' },
   }[variant];
 
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+  const disabledStyles = disabled ? { opacity: 0.5, cursor: 'not-allowed' } : {};
 
   return (
     <span
       ref={ref}
-      className={clsx(baseClasses, sizeClasses, variantClasses, disabledClasses, className)}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '9999px',
+        ...sizeStyles,
+        ...variantStyles,
+        ...disabledStyles,
+      }}
+      className={className}
     >
       {children}
     </span>

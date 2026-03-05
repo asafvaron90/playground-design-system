@@ -1,6 +1,5 @@
 // Avatar.tsx
 import React, { forwardRef } from 'react';
-import clsx from 'clsx';
 
 interface AvatarProps {
   /**
@@ -47,18 +46,28 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({
   return (
     <div
       ref={ref}
-      className={clsx(
-        'flex items-center justify-center overflow-hidden',
-        sizeClasses[size],
-        shapeClasses[shape],
-        className
-      )}
-      style={{ backgroundColor: 'var(--color-bg-surface)' }}
+      className={className}
+      style={{ 
+        backgroundColor: 'var(--color-bg-surface)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        width: size === 'small' ? '32px' : size === 'medium' ? '48px' : '64px',
+        height: size === 'small' ? '32px' : size === 'medium' ? '48px' : '64px',
+        borderRadius: shape === 'circle' ? '50%' : shape === 'rounded' ? '8px' : '0',
+      }}
     >
       {src ? (
-        <img src={src} alt="Avatar" className="w-full h-full object-cover" />
+        <img src={src} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       ) : (
-        <span className="text-gray-700" style={{ fontSize: 'var(--font-text-size)' }}>
+        <span style={{ 
+          color: 'var(--color-input-dropdown-text)',
+          fontFamily: 'var(--font-text-md-family)',
+          fontSize: 'var(--font-text-md-size)',
+          fontWeight: 'var(--font-text-md-weight)',
+          lineHeight: 'var(--font-text-md-line-height)'
+        }}>
           {initials}
         </span>
       )}

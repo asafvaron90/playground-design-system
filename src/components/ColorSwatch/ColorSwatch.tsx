@@ -1,6 +1,4 @@
-// ColorSwatch.tsx
-import React, { forwardRef } from 'react';
-import clsx from 'clsx';
+import React from 'react';
 
 interface ColorSwatchProps {
   /**
@@ -8,46 +6,61 @@ interface ColorSwatchProps {
    */
   colorName: string;
   /**
-   * The hex value of the color token
+   * The hex value of the color
    */
   colorValue: string;
   /**
    * The size of the swatch
-   * - 'small': 40px
-   * - 'medium': 60px
-   * - 'large': 80px
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Additional class names to apply to the swatch
+   * Optional className for consumer overrides
    */
   className?: string;
 }
 
-const sizeClasses = {
-  small: 'w-10 h-10',
-  medium: 'w-15 h-15',
-  large: 'w-20 h-20',
-};
+const ColorSwatch = React.forwardRef<HTMLDivElement, ColorSwatchProps>(({ colorName, colorValue, size = 'medium', className }, ref) => {
+  const sizeStyles = {
+    small: { width: '40px', height: '40px' },
+    medium: { width: '60px', height: '60px' },
+    large: { width: '80px', height: '80px' },
+  };
 
-const ColorSwatch = forwardRef<HTMLDivElement, ColorSwatchProps>(({
-  colorName,
-  colorValue,
-  size = 'medium',
-  className,
-}, ref) => {
   return (
     <div
       ref={ref}
-      className={clsx(
-        'flex flex-col items-center justify-center border border-gray-300 rounded',
-        sizeClasses[size],
-        className
-      )}
-      style={{ backgroundColor: `var(--color-${colorName})` }}
+      className={className}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: colorValue,
+        ...sizeStyles[size],
+        borderRadius: '4px',
+        padding: '8px',
+        boxSizing: 'border-box',
+      }}
     >
-      <div className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>{colorName}</div>
-      <div className="text-xs" style={{ color: 'var(--color-text-helper)' }}>{colorValue}</div>
+      <div style={{
+        fontFamily: 'var(--font-label-sm-family)',
+        fontSize: 'var(--font-label-sm-size)',
+        fontWeight: 'var(--font-label-sm-weight)',
+        lineHeight: 'var(--font-label-sm-line-height)',
+        color: 'var(--color-input-dropdown-text)',
+        marginBottom: '4px',
+      }}>
+        {colorName}
+      </div>
+      <div style={{
+        fontFamily: 'var(--font-body-sm-family)',
+        fontSize: 'var(--font-body-sm-size)',
+        fontWeight: 'var(--font-body-sm-weight)',
+        lineHeight: 'var(--font-body-sm-line-height)',
+        color: 'var(--color-input-dropdown-text)',
+      }}>
+        {colorValue}
+      </div>
     </div>
   );
 });

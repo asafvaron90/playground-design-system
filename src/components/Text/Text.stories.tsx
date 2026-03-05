@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Text } from './Text';
+import Text, { TextProps } from './Text';
 
 export default {
   title: 'Components/Text',
@@ -14,16 +14,16 @@ export default {
         options: ['heading1', 'heading2', 'heading3', 'body', 'caption'],
       },
     },
-    className: {
+    children: {
       control: 'text',
     },
-    children: {
+    className: {
       control: 'text',
     },
   },
 } as Meta;
 
-const Template: Story = (args) => <Text {...args} />;
+const Template: Story<TextProps> = (args) => <Text {...args} />;
 
 export const Heading1 = Template.bind({});
 Heading1.args = {

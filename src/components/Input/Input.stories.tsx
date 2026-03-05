@@ -39,18 +39,8 @@ export const WithError = Template.bind({});
 WithError.args = {
   label: 'Label',
   placeholder: 'Placeholder',
-  helperText: 'Helper text',
+  helperText: '',
   error: 'Error message',
   disabled: false,
-  size: 'medium',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Label',
-  placeholder: 'Placeholder',
-  helperText: 'Helper text',
-  error: '',
-  disabled: true,
   size: 'medium',
 };

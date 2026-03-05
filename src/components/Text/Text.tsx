@@ -1,17 +1,16 @@
 // Text.tsx
 
 import React, { forwardRef, HTMLAttributes } from 'react';
-import clsx from 'clsx';
 
 /**
  * Typography variants mapped to design tokens.
  */
 const typographyVariants = {
-  heading1: 'var(--font-large-header-family)', // Updated to use the latest design token
-  heading2: 'var(--font-large-header-family)', // Updated to use the latest design token
-  heading3: 'var(--font-large-header-family)', // Updated to use the latest design token
-  body: 'var(--font-text-family)', // Updated to use the latest design token
-  caption: 'var(--font-label-family)' // Updated to use the latest design token
+  heading1: 'var(--font-heading-lg-family)',
+  heading2: 'var(--font-heading-lg-family)',
+  heading3: 'var(--font-heading-lg-family)',
+  body: 'var(--font-body-sm-family)',
+  caption: 'var(--font-label-sm-family)'
 };
 
 /**
@@ -36,7 +35,7 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(
     return (
       <p
         ref={ref}
-        className={clsx(className)}
+        className={className}
         style={{ fontFamily: typographyVariants[variant] }}
         {...props}
       >

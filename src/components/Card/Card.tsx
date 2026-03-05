@@ -1,35 +1,19 @@
 // Card.tsx
-import React, { ReactNode, forwardRef } from 'react';
-import clsx from 'clsx';
+import React, { ReactNode, forwardRef, HTMLAttributes } from 'react';
 
-interface CardProps {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /**
-   * Optional class name for custom styling
+   * Padding inside the card
    */
-  className?: string;
+  padding?: string;
   /**
-   * Padding size of the card
-   * - 'small': 8px
-   * - 'medium': 16px
-   * - 'large': 24px
+   * Shadow style for the card
    */
-  padding?: 'small' | 'medium' | 'large';
+  shadow?: string;
   /**
-   * Shadow variant of the card
-   * - 'none': No shadow
-   * - 'small': Small shadow
-   * - 'medium': Medium shadow
-   * - 'large': Large shadow
+   * Border radius for the card
    */
-  shadow?: 'none' | 'small' | 'medium' | 'large';
-  /**
-   * Border radius of the card
-   * - 'none': No border radius
-   * - 'small': Small border radius
-   * - 'medium': Medium border radius
-   * - 'large': Large border radius
-   */
-  borderRadius?: 'none' | 'small' | 'medium' | 'large';
+  borderRadius?: string;
   /**
    * Optional header content
    */
@@ -39,43 +23,71 @@ interface CardProps {
    */
   footer?: ReactNode;
   /**
-   * Main content of the card
+   * Variant of the card
    */
-  children: ReactNode;
+  variant?: 'default' | 'outlined' | 'elevated';
+  /**
+   * Size of the card
+   */
+  size?: 'small' | 'medium' | 'large';
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(({ 
-  className,
-  padding = 'medium',
-  shadow = 'none',
-  borderRadius = 'medium',
+const Card = forwardRef<HTMLDivElement, CardProps>(({
+  padding = '16px',
+  shadow = '0 1px 3px rgba(0, 0, 0, 0.1)',
+  borderRadius = '8px',
   header,
   footer,
+  variant = 'default',
+  size = 'medium',
+  style,
   children,
+  ...props
 }, ref) => {
+  const variantStyles = {
+    default: {
+      backgroundColor: 'var(--color-bg-surface)',
+      border: 'none',
+    },
+    outlined: {
+      backgroundColor: 'var(--color-bg-surface)',
+      border: '1px solid var(--color-vector)',
+    },
+    elevated: {
+      backgroundColor: 'var(--color-bg-surface)',
+      boxShadow: shadow,
+    },
+  };
+
+  const sizeStyles = {
+    small: {
+      padding: '8px',
+    },
+    medium: {
+      padding: '16px',
+    },
+    large: {
+      padding: '24px',
+    },
+  };
+
   return (
     <div
       ref={ref}
-      className={clsx(
-        'card',
-        className,
-        `padding-${padding}`,
-        `shadow-${shadow}`,
-        `border-radius-${borderRadius}`
-      )}
       style={{
-        padding: `var(--spacing-${padding})`,
-        boxShadow: `var(--shadow-${shadow})`,
-        borderRadius: `var(--border-radius-${borderRadius})`,
-        backgroundColor: 'var(--color-bg-surface)', // Updated color token
+        ...variantStyles[variant],
+        ...sizeStyles[size],
+        borderRadius,
+        ...style,
       }}
+      {...props}
     >
-      {header && <div className="card-header">{header}</div>}
-      <div className="card-content">{children}</div>
-      {footer && <div className="card-footer">{footer}</div>}
+      {header && <div>{header}</div>}
+      <div>{children}</div>
+      {footer && <div>{footer}</div>}
     </div>
   );
 });
 
-export default Card;
 export { Card };
+export default Card;
