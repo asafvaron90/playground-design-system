@@ -11,9 +11,9 @@ const VARIANTS = {
 
 // Define the button sizes
 const SIZES = {
-  sm: 'py-1 px-3 text-var(--font-body-sm-size)',
-  md: 'py-2 px-4 text-var(--font-body-md-size)',
-  lg: 'py-3 px-5 text-var(--font-body-lg-size)',
+  sm: 'py-1 px-3 text-var(--font-text-size)',
+  md: 'py-2 px-4 text-var(--font-default-size)',
+  lg: 'py-3 px-5 text-var(--font-large-header-size)',
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

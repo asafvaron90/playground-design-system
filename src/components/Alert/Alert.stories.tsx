@@ -23,34 +23,31 @@ export default {
     className: {
       control: 'text',
     },
-    children: {
-      control: 'text',
-    },
   },
 } as Meta;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />;
+const Template: Story<AlertProps> = (args) => <Alert {...args}>This is an alert message!</Alert>;
 
 export const Info = Template.bind({});
 Info.args = {
   variant: 'info',
-  children: 'This is an info alert',
+  size: 'medium',
 };
 
 export const Success = Template.bind({});
 Success.args = {
   variant: 'success',
-  children: 'This is a success alert',
+  size: 'medium',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   variant: 'warning',
-  children: 'This is a warning alert',
+  size: 'medium',
 };
 
 export const Error = Template.bind({});
 Error.args = {
   variant: 'error',
-  children: 'This is an error alert',
+  size: 'medium',
 };

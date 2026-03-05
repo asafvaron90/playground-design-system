@@ -46,7 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
 }, ref) => {
   return (
     <div className={clsx('input-wrapper', className)}>
-      <label className="input-label" style={{ fontFamily: 'var(--font-label-sm-family)', fontSize: 'var(--font-label-sm-size)', fontWeight: 'var(--font-label-sm-weight)', lineHeight: 'var(--font-label-sm-line-height)' }}>
+      <label className="input-label" style={{ fontFamily: 'var(--font-label-family)', fontSize: 'var(--font-label-size)', fontWeight: 'var(--font-label-weight)', lineHeight: 'var(--font-label-line-height)' }}>
         {label}
       </label>
       <input
@@ -64,15 +64,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
           color: 'var(--color-input-text)',
           backgroundColor: 'var(--color-input-bg)',
           borderColor: error ? 'var(--color-error)' : 'var(--color-bg-surface)',
-          fontFamily: 'var(--font-body-md-family)',
-          fontSize: 'var(--font-body-md-size)',
-          fontWeight: 'var(--font-body-md-weight)',
-          lineHeight: 'var(--font-body-md-line-height)',
+          fontFamily: 'var(--font-text-field-family)',
+          fontSize: 'var(--font-text-field-size)',
+          fontWeight: 'var(--font-text-field-weight)',
+          lineHeight: 'var(--font-text-field-line-height)',
         }}
         {...props}
       />
       {helperText && !error && (
-        <span className="input-helper-text" style={{ fontFamily: 'var(--font-body-sm-family)', fontSize: 'var(--font-body-sm-size)', fontWeight: 'var(--font-body-sm-weight)', lineHeight: 'var(--font-body-sm-line-height)', color: 'var(--color-text-helper)' }}>
+        <span className="input-helper-text" style={{ fontFamily: 'var(--font-assistive-text-family)', fontSize: 'var(--font-assistive-text-size)', fontWeight: 'var(--font-assistive-text-weight)', lineHeight: 'var(--font-assistive-text-line-height)', color: 'var(--color-helper-text)' }}>
           {helperText}
         </span>
       )}

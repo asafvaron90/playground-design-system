@@ -58,7 +58,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({
       {src ? (
         <img src={src} alt="Avatar" className="w-full h-full object-cover" />
       ) : (
-        <span className="text-gray-700" style={{ fontSize: 'var(--font-body-md-size)' }}>
+        <span className="text-gray-700" style={{ fontSize: 'var(--font-text-size)' }}>
           {initials}
         </span>
       )}

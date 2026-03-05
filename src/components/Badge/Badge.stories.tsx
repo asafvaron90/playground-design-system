@@ -29,7 +29,7 @@ const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Default Badge',
+  children: 'Badge',
   size: 'medium',
   variant: 'default',
   disabled: false,

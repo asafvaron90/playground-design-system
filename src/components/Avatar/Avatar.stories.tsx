@@ -9,18 +9,8 @@ export default {
   argTypes: {
     src: { control: 'text' },
     initials: { control: 'text' },
-    size: {
-      control: {
-        type: 'select',
-        options: ['small', 'medium', 'large'],
-      },
-    },
-    shape: {
-      control: {
-        type: 'select',
-        options: ['circle', 'rounded', 'square'],
-      },
-    },
+    size: { control: 'select', options: ['small', 'medium', 'large'] },
+    shape: { control: 'select', options: ['circle', 'rounded', 'square'] },
     className: { control: 'text' },
   },
 } as Meta;
@@ -33,4 +23,44 @@ Default.args = {
   initials: 'AB',
   size: 'medium',
   shape: 'circle',
+};
+
+export const WithImage = Template.bind({});
+WithImage.args = {
+  src: 'https://via.placeholder.com/150',
+  initials: '',
+  size: 'medium',
+  shape: 'circle',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  src: '',
+  initials: 'AB',
+  size: 'small',
+  shape: 'circle',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  src: '',
+  initials: 'AB',
+  size: 'large',
+  shape: 'circle',
+};
+
+export const Rounded = Template.bind({});
+Rounded.args = {
+  src: '',
+  initials: 'AB',
+  size: 'medium',
+  shape: 'rounded',
+};
+
+export const Square = Template.bind({});
+Square.args = {
+  src: '',
+  initials: 'AB',
+  size: 'medium',
+  shape: 'square',
 };
