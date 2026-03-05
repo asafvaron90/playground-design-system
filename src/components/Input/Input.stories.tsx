@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Input, InputProps } from './Input';
+import Input, { InputProps } from './Input';
 
 export default {
   title: 'Components/Input',
@@ -37,12 +37,20 @@ Default.args = {
 
 export const WithError = Template.bind({});
 WithError.args = {
-  ...Default.args,
-  error: 'This field is required',
+  label: 'Label',
+  placeholder: 'Placeholder',
+  helperText: 'Helper text',
+  error: 'Error message',
+  disabled: false,
+  size: 'medium',
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  ...Default.args,
+  label: 'Label',
+  placeholder: 'Placeholder',
+  helperText: 'Helper text',
+  error: '',
   disabled: true,
+  size: 'medium',
 };

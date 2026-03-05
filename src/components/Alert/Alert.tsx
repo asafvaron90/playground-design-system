@@ -28,9 +28,9 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
     };
 
     const sizeClasses = {
-      small: 'p-2 text-sm',
-      medium: 'p-4 text-base',
-      large: 'p-6 text-lg',
+      small: 'p-2 text-[var(--font-text-size)]',
+      medium: 'p-4 text-[var(--font-default-size)]',
+      large: 'p-6 text-[var(--font-large-header-size)]',
     };
 
     return (

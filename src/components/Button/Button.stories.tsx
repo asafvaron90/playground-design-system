@@ -1,7 +1,7 @@
 // Button.stories.tsx
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Button, ButtonProps } from './Button';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Button, { ButtonProps } from './Button';
 
 export default {
   title: 'Components/Button',
@@ -29,30 +29,43 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+} as ComponentMeta<typeof Button>;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args}>Button</Button>;
+const Template: ComponentStory<typeof Button> = (args: ButtonProps) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
   size: 'md',
-  loading: false,
-  disabled: false,
+  children: 'Primary Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
   size: 'md',
-  loading: false,
-  disabled: false,
+  children: 'Secondary Button',
 };
 
 export const Ghost = Template.bind({});
 Ghost.args = {
   variant: 'ghost',
   size: 'md',
-  loading: false,
-  disabled: false,
+  children: 'Ghost Button',
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  variant: 'primary',
+  size: 'md',
+  loading: true,
+  children: 'Loading...',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  variant: 'primary',
+  size: 'md',
+  disabled: true,
+  children: 'Disabled Button',
 };
