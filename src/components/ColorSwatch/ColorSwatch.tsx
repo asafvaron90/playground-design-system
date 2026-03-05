@@ -46,8 +46,8 @@ const ColorSwatch = forwardRef<HTMLDivElement, ColorSwatchProps>(({
       )}
       style={{ backgroundColor: `var(--color-${colorName})` }}
     >
-      <div className="text-sm font-bold" style={{ color: 'var(--font-text-*)' }}>{colorName}</div>
-      <div className="text-xs" style={{ color: 'var(--font-helper-text-*)' }}>{colorValue}</div>
+      <div className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>{colorName}</div>
+      <div className="text-xs" style={{ color: 'var(--color-text-helper)' }}>{colorValue}</div>
     </div>
   );
 });

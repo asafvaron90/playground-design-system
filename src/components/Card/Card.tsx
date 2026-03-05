@@ -67,7 +67,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({
         padding: `var(--spacing-${padding})`,
         boxShadow: `var(--shadow-${shadow})`,
         borderRadius: `var(--border-radius-${borderRadius})`,
-        backgroundColor: 'var(--color-0e92cb)', // Updated color token
+        backgroundColor: 'var(--color-bg-surface)', // Updated color token
       }}
     >
       {header && <div className="card-header">{header}</div>}
