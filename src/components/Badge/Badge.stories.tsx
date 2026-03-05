@@ -7,20 +7,22 @@ export default {
   title: 'Components/Badge',
   component: Badge,
   argTypes: {
-    children: { control: 'text' },
+    children: { control: 'text', defaultValue: 'Badge' },
     size: {
       control: {
         type: 'select',
         options: ['small', 'medium', 'large'],
       },
+      defaultValue: 'medium',
     },
     variant: {
       control: {
         type: 'select',
         options: ['default', 'primary', 'success', 'warning', 'error'],
       },
+      defaultValue: 'default',
     },
-    disabled: { control: 'boolean' },
+    disabled: { control: 'boolean', defaultValue: false },
     className: { control: 'text' },
   },
 } as Meta;
@@ -29,40 +31,35 @@ const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Badge',
-  size: 'medium',
-  variant: 'default',
-  disabled: false,
+  children: 'Default Badge',
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Primary Badge',
-  size: 'medium',
   variant: 'primary',
-  disabled: false,
 };
 
 export const Success = Template.bind({});
 Success.args = {
   children: 'Success Badge',
-  size: 'medium',
   variant: 'success',
-  disabled: false,
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   children: 'Warning Badge',
-  size: 'medium',
   variant: 'warning',
-  disabled: false,
 };
 
 export const Error = Template.bind({});
 Error.args = {
   children: 'Error Badge',
-  size: 'medium',
   variant: 'error',
-  disabled: false,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Badge',
+  disabled: true,
 };

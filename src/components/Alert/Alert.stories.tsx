@@ -26,7 +26,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args}>This is an alert message!</Alert>;
+const Template: Story<AlertProps> = (args) => <Alert {...args}>This is an alert</Alert>;
 
 export const Info = Template.bind({});
 Info.args = {

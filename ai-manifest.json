@@ -1,7 +1,76 @@
 {
-  "version": "0.0.5",
-  "generatedAt": "2026-03-05T00:22:16.433Z",
+  "version": "0.0.6",
+  "generatedAt": "2026-03-05T08:30:22.237Z",
   "components": [
+    {
+      "name": "ColorSwatch",
+      "path": "src/components/ColorSwatch/ColorSwatch.tsx",
+      "description": "ColorSwatch component",
+      "props": {
+        "colorName": {
+          "type": "string",
+          "required": true,
+          "description": "The name of the color token to display"
+        },
+        "colorValue": {
+          "type": "string",
+          "required": true,
+          "description": "The hex value of the color"
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the swatch"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Optional className for consumer overrides"
+        }
+      }
+    },
+    {
+      "name": "Card",
+      "path": "src/components/Card/Card.tsx",
+      "description": "Card component",
+      "props": {
+        "padding": {
+          "type": "string",
+          "required": false,
+          "description": "Padding inside the card"
+        },
+        "shadow": {
+          "type": "string",
+          "required": false,
+          "description": "Shadow style for the card"
+        },
+        "borderRadius": {
+          "type": "string",
+          "required": false,
+          "description": "Border radius for the card"
+        },
+        "header": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional header content"
+        },
+        "footer": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "Optional footer content"
+        },
+        "variant": {
+          "type": "'default' | 'outlined' | 'elevated'",
+          "required": false,
+          "description": "Variant of the card"
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Size of the card"
+        }
+      }
+    },
     {
       "name": "Button",
       "path": "src/components/Button/Button.tsx",
