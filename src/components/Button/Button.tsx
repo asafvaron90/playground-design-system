@@ -1,93 +1,54 @@
-// Button.tsx
 import React, { ButtonHTMLAttributes, forwardRef } from 'react';
+import { CSSProperties } from 'react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+/**
+ * Button variants
+ */
+export type ButtonVariant = 'default' | 'flat' | 'stroked' | 'basic' | 'toggle' | 'multi' | 'pressed' | 'disabled' | 'icon';
+
+/**
+ * Button sizes
+ */
+export type ButtonSize = 'small' | 'medium' | 'large';
+
+/**
+ * Button props
+ */
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * The variant of the button.
-   * - 'default': Standard button with background color.
-   * - 'flat': Button with no background.
-   * - 'stroked': Button with a border.
-   * - 'basic': Basic button with minimal styling.
-   * - 'icon': Button meant for icons.
+   * The variant of the button
    */
-  variant?: 'default' | 'flat' | 'stroked' | 'basic' | 'icon';
+  variant?: ButtonVariant;
   /**
-   * The size of the button.
-   * - 'small': Small button size.
-   * - 'medium': Medium button size.
-   * - 'large': Large button size.
+   * The size of the button
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: ButtonSize;
   /**
-   * If true, the button will be disabled.
-   */
-  disabled?: boolean;
-  /**
-   * Additional class names to apply to the button.
+   * Additional class name for custom styling
    */
   className?: string;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
-  variant = 'default',
-  size = 'medium',
-  disabled = false,
-  className = '',
-  children,
-  ...props
-}, ref) => {
-  const styles = {
-    base: {
-      fontFamily: 'var(--font-large-header)',
-      borderRadius: '4px',
-      cursor: disabled ? 'not-allowed' : 'pointer',
-      padding: size === 'small' ? '4px 8px' : size === 'large' ? '12px 24px' : '8px 16px',
-      fontSize: size === 'small' ? '12px' : size === 'large' ? '18px' : '14px',
-      opacity: disabled ? 0.6 : 1,
-      transition: 'background-color 0.3s, border-color 0.3s',
-    },
-    default: {
-      backgroundColor: 'var(--color-primary-buttons)',
-      color: 'var(--color-white)',
-      border: 'none',
-    },
-    flat: {
-      backgroundColor: 'transparent',
-      color: 'var(--color-primary-buttons)',
-      border: 'none',
-    },
-    stroked: {
-      backgroundColor: 'transparent',
-      color: 'var(--color-primary-buttons)',
-      border: `1px solid var(--color-primary-buttons)`,
-    },
-    basic: {
-      backgroundColor: 'var(--color-buttons-input)',
-      color: 'var(--color-text-field)',
-      border: 'none',
-    },
-    icon: {
-      backgroundColor: 'transparent',
-      color: 'var(--color-primary-buttons)',
-      border: 'none',
-      padding: '8px',
-    },
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant = 'default', size = 'medium', className = '', ...props }, ref) => {
+  const styles: CSSProperties = {
+    padding: size === 'small' ? '8px 12px' : size === 'large' ? '16px 24px' : '12px 18px',
+    backgroundColor: variant === 'disabled' ? 'var(--color-disabled)' : 'var(--color-primary-buttons)',
+    color: variant === 'disabled' ? 'var(--color-disabled-text)' : 'var(--color-text)',
+    border: variant === 'stroked' ? '1px solid var(--color-divider-stroke)' : 'none',
+    borderRadius: '4px',
+    cursor: variant === 'disabled' ? 'not-allowed' : 'pointer',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontFamily: 'var(--font-inter-medium-*)',
+    fontSize: '14px',
+    fontWeight: 500,
   };
 
-  const variantStyle = styles[variant];
-
   return (
-    <button
-      ref={ref}
-      className={className}
-      style={{ ...styles.base, ...variantStyle }}
-      disabled={disabled}
-      {...props}
-    >
-      {children}
-    </button>
+    <button ref={ref} className={className} style={styles} {...props} />
   );
 });
 
-export { Button };
 export default Button;
+export { Button };

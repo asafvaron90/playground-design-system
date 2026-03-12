@@ -1,31 +1,31 @@
 {
-  "version": "0.0.1",
-  "generatedAt": "2026-03-08T10:10:13.813Z",
+  "version": "0.0.2",
+  "generatedAt": "2026-03-12T15:26:52.104Z",
   "components": [
     {
       "name": "TextField",
       "path": "src/components/TextField/TextField.tsx",
       "description": "TextField component",
       "props": {
+        "variant": {
+          "type": "'default' | 'light' | 'dark'",
+          "required": false,
+          "description": "The variant of the text field, which determines the background color."
+        },
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the text field"
-        },
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked'",
-          "required": false,
-          "description": "The variant of the text field"
+          "description": "The size of the text field."
         },
         "disabled": {
           "type": "boolean",
           "required": false,
-          "description": "If true, the text field will be disabled"
+          "description": "If true, the text field will be disabled."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class names for styling"
+          "description": "Additional class name for custom styling."
         }
       }
     },
@@ -35,114 +35,34 @@
       "description": "Button component",
       "props": {
         "variant": {
-          "type": "'default' | 'flat' | 'stroked' | 'basic' | 'icon'",
+          "type": "ButtonVariant",
           "required": false,
-          "description": "The variant of the button.\n- 'default': Standard button with background color.\n- 'flat': Button with no background.\n- 'stroked': Button with a border.\n- 'basic': Basic button with minimal styling.\n- 'icon': Button meant for icons."
-        },
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the button.\n- 'small': Small button size.\n- 'medium': Medium button size.\n- 'large': Large button size."
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the button will be disabled."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class names to apply to the button."
-        }
-      }
-    },
-    {
-      "name": "LightDarkModeToggle",
-      "path": "src/components/LightDarkModeToggle/LightDarkModeToggle.tsx",
-      "description": "LightDarkModeToggle component",
-      "props": {
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "default": "'medium'",
-          "description": "The size of the button"
-        },
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked'",
-          "required": false,
-          "default": "'default'",
           "description": "The variant of the button"
         },
-        "disabled": {
-          "type": "boolean",
+        "size": {
+          "type": "ButtonSize",
           "required": false,
-          "default": "false",
-          "description": "If true, the button will be disabled"
+          "description": "The size of the button"
         },
         "className": {
           "type": "string",
           "required": false,
           "description": "Additional class name for custom styling"
-        },
-        "onClick": {
-          "type": "() => void",
-          "required": false,
-          "description": "Callback fired when the button is clicked"
-        }
-      }
-    },
-    {
-      "name": "MultiFunctionButton",
-      "path": "src/components/MultiFunctionButton/MultiFunctionButton.tsx",
-      "description": "MultiFunctionButton component",
-      "props": {
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "default": "'medium'",
-          "description": "The size of the button"
-        },
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked' | 'basic'",
-          "required": false,
-          "default": "'default'",
-          "description": "The variant of the button"
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "default": "false",
-          "description": "If true, the button will be disabled"
-        },
-        "children": {
-          "type": "React.ReactNode",
-          "required": true,
-          "description": "The content of the button"
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling"
-        },
-        "onClick": {
-          "type": "() => void",
-          "required": false,
-          "description": "Click event handler"
         }
       }
     }
   ],
   "tokens": {
-    "colors": 28,
+    "colors": 36,
     "typography": 24,
-    "radius": 18,
-    "shadows": 4,
+    "radius": 21,
+    "shadows": 5,
     "elevations": 2,
-    "borders": 23,
+    "borders": 26,
     "gaps": 0,
     "sizes": 0,
-    "opacity": 9,
-    "gradients": 1,
+    "opacity": 13,
+    "gradients": 2,
     "blurs": 0,
     "layoutGrids": 1,
     "icons": 0

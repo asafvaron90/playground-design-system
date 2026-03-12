@@ -3,60 +3,60 @@ import React, { InputHTMLAttributes } from 'react';
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
-   * The size of the text field
+   * The variant of the text field, which determines the background color.
+   */
+  variant?: 'default' | 'light' | 'dark';
+  /**
+   * The size of the text field.
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * The variant of the text field
-   */
-  variant?: 'default' | 'flat' | 'stroked';
-  /**
-   * If true, the text field will be disabled
+   * If true, the text field will be disabled.
    */
   disabled?: boolean;
   /**
-   * Additional class names for styling
+   * Additional class name for custom styling.
    */
   className?: string;
 }
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(({
-  size = 'medium',
   variant = 'default',
+  size = 'medium',
   disabled = false,
   className,
   ...props
 }, ref) => {
+  const backgroundColor = {
+    default: 'var(--color-dialog-sections)',
+    light: 'var(--color-white-white)',
+    dark: 'var(--color-section)',
+  }[variant];
+
+  const fontSize = {
+    small: 'var(--font-inter-12-regular)',
+    medium: 'var(--font-inter-regular)',
+    large: 'var(--font-body-text)',
+  }[size];
+
   const styles = {
-    base: {
-      padding: size === 'small' ? '4px 8px' : size === 'large' ? '12px 16px' : '8px 12px',
-      backgroundColor: variant === 'flat' ? 'var(--color-buttons-input)' : 'var(--color-white)',
-      border: variant === 'stroked' ? '1px solid var(--color-divider-stroke)' : 'none',
-      borderRadius: '4px',
-      color: 'var(--color-text)',
-      fontFamily: 'var(--font-inter-regular-*)',
-      fontSize: '14px',
-      outline: 'none',
-      transition: 'background-color 0.3s ease',
-      width: '100%',
-    },
-    disabled: {
-      backgroundColor: 'var(--color-disabled)',
-      color: 'var(--color-disabled-text)',
-      cursor: 'not-allowed',
-    },
+    backgroundColor,
+    fontSize,
+    padding: '8px 12px',
+    border: `1px solid ${disabled ? 'var(--color-disabled)' : 'var(--color-divider-stroke)'}`,
+    borderRadius: '4px',
+    color: disabled ? 'var(--color-disabled-text)' : 'var(--color-body-text)',
+    width: '100%',
+    boxSizing: 'border-box' as const,
   };
 
   return (
     <input
       ref={ref}
       type="text"
-      className={className}
       disabled={disabled}
-      style={{
-        ...styles.base,
-        ...(disabled ? styles.disabled : {}),
-      }}
+      className={className}
+      style={styles}
       {...props}
     />
   );
