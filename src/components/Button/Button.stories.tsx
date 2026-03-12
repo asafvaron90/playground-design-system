@@ -1,7 +1,6 @@
-// Button.stories.tsx
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Button, { ButtonProps } from './Button';
+import Button, { ButtonProps, ButtonVariant, ButtonSize } from './Button';
 
 export default {
   title: 'Components/Button',
@@ -10,7 +9,7 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: ['default', 'flat', 'stroked', 'basic', 'icon'],
+        options: ['default', 'flat', 'stroked', 'basic', 'toggle', 'multi', 'pressed', 'disabled', 'icon'],
       },
     },
     size: {
@@ -19,53 +18,62 @@ export default {
         options: ['small', 'medium', 'large'],
       },
     },
-    disabled: {
-      control: 'boolean',
-    },
-    children: {
-      control: 'text',
-    },
+    onClick: { action: 'clicked' },
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args}>Button</Button>;
 
 export const Default = Template.bind({});
 Default.args = {
   variant: 'default',
   size: 'medium',
-  disabled: false,
-  children: 'Default Button',
 };
 
 export const Flat = Template.bind({});
 Flat.args = {
   variant: 'flat',
   size: 'medium',
-  disabled: false,
-  children: 'Flat Button',
 };
 
 export const Stroked = Template.bind({});
 Stroked.args = {
   variant: 'stroked',
   size: 'medium',
-  disabled: false,
-  children: 'Stroked Button',
 };
 
 export const Basic = Template.bind({});
 Basic.args = {
   variant: 'basic',
   size: 'medium',
-  disabled: false,
-  children: 'Basic Button',
+};
+
+export const Toggle = Template.bind({});
+Toggle.args = {
+  variant: 'toggle',
+  size: 'medium',
+};
+
+export const Multi = Template.bind({});
+Multi.args = {
+  variant: 'multi',
+  size: 'medium',
+};
+
+export const Pressed = Template.bind({});
+Pressed.args = {
+  variant: 'pressed',
+  size: 'medium',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  variant: 'disabled',
+  size: 'medium',
 };
 
 export const Icon = Template.bind({});
 Icon.args = {
   variant: 'icon',
   size: 'medium',
-  disabled: false,
-  children: '🔍',
 };
