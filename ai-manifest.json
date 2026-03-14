@@ -1,31 +1,31 @@
 {
-  "version": "0.0.2",
-  "generatedAt": "2026-03-12T15:26:52.104Z",
+  "version": "0.0.3",
+  "generatedAt": "2026-03-14T00:22:20.480Z",
   "components": [
     {
       "name": "TextField",
       "path": "src/components/TextField/TextField.tsx",
       "description": "TextField component",
       "props": {
-        "variant": {
-          "type": "'default' | 'light' | 'dark'",
-          "required": false,
-          "description": "The variant of the text field, which determines the background color."
-        },
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the text field."
+          "description": "The size of the text field"
         },
-        "disabled": {
-          "type": "boolean",
+        "variant": {
+          "type": "'outlined' | 'filled' | 'standard'",
           "required": false,
-          "description": "If true, the text field will be disabled."
+          "description": "The variant of the text field"
+        },
+        "state": {
+          "type": "'default' | 'error' | 'disabled'",
+          "required": false,
+          "description": "The state of the text field"
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class name for custom styling."
+          "description": "Additional class name for custom styling"
         }
       }
     },
@@ -35,19 +35,24 @@
       "description": "Button component",
       "props": {
         "variant": {
-          "type": "ButtonVariant",
+          "type": "'default' | 'flat' | 'stroked' | 'basic' | 'toggle' | 'multi' | 'pressed' | 'disabled' | 'icon'",
           "required": false,
-          "description": "The variant of the button"
+          "description": "The variant of the button."
         },
         "size": {
-          "type": "ButtonSize",
+          "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the button"
+          "description": "The size of the button."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will be disabled."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class name for custom styling"
+          "description": "Additional class name for custom styling."
         }
       }
     }
