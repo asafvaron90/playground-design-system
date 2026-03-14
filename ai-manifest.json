@@ -1,26 +1,96 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-14T00:22:20.480Z",
+  "version": "0.0.4",
+  "generatedAt": "2026-03-14T13:55:33.335Z",
   "components": [
     {
-      "name": "TextField",
-      "path": "src/components/TextField/TextField.tsx",
-      "description": "TextField component",
+      "name": "Button",
+      "path": "src/components/Button/Button.tsx",
+      "description": "Button component",
+      "props": {}
+    },
+    {
+      "name": "IconTextButton",
+      "path": "src/components/IconTextButton/IconTextButton.tsx",
+      "description": "IconTextButton component",
       "props": {
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the text field"
+          "description": "The size of the button"
         },
         "variant": {
-          "type": "'outlined' | 'filled' | 'standard'",
+          "type": "'primary' | 'secondary' | 'tertiary'",
           "required": false,
-          "description": "The variant of the text field"
+          "description": "The variant of the button"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will be disabled"
+        },
+        "text": {
+          "type": "string",
+          "required": true,
+          "description": "The text to display inside the button"
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The icon to display inside the button"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the button"
+        }
+      }
+    },
+    {
+      "name": "InputsControls",
+      "path": "src/components/InputsControls/InputsControls.tsx",
+      "description": "InputsControls component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the input control"
+        },
+        "variant": {
+          "type": "'default' | 'outlined'",
+          "required": false,
+          "description": "The variant of the input control"
         },
         "state": {
-          "type": "'default' | 'error' | 'disabled'",
+          "type": "'normal' | 'disabled' | 'error'",
           "required": false,
-          "description": "The state of the text field"
+          "description": "The state of the input control"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class name for styling overrides"
+        }
+      }
+    },
+    {
+      "name": "MenuActionItem",
+      "path": "src/components/MenuActionItem/MenuActionItem.tsx",
+      "description": "MenuActionItem component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the menu action item"
+        },
+        "variant": {
+          "type": "'default' | 'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the menu action item"
+        },
+        "state": {
+          "type": "'normal' | 'disabled' | 'active'",
+          "required": false,
+          "description": "The state of the menu action item"
         },
         "className": {
           "type": "string",
@@ -28,48 +98,21 @@
           "description": "Additional class name for custom styling"
         }
       }
-    },
-    {
-      "name": "Button",
-      "path": "src/components/Button/Button.tsx",
-      "description": "Button component",
-      "props": {
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked' | 'basic' | 'toggle' | 'multi' | 'pressed' | 'disabled' | 'icon'",
-          "required": false,
-          "description": "The variant of the button."
-        },
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the button."
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the button will be disabled."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling."
-        }
-      }
     }
   ],
   "tokens": {
-    "colors": 36,
-    "typography": 24,
-    "radius": 21,
-    "shadows": 5,
-    "elevations": 2,
-    "borders": 26,
+    "colors": 33,
+    "typography": 20,
+    "radius": 18,
+    "shadows": 2,
+    "elevations": 1,
+    "borders": 29,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 13,
-    "gradients": 2,
-    "blurs": 0,
-    "layoutGrids": 1,
+    "sizes": 13,
+    "opacity": 12,
+    "gradients": 8,
+    "blurs": 2,
+    "layoutGrids": 0,
     "icons": 0
   }
 }
