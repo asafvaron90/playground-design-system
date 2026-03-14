@@ -1,26 +1,42 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-14T00:22:20.480Z",
+  "version": "0.0.4",
+  "generatedAt": "2026-03-14T13:36:31.966Z",
   "components": [
     {
-      "name": "TextField",
-      "path": "src/components/TextField/TextField.tsx",
-      "description": "TextField component",
+      "name": "Button",
+      "path": "src/components/Button/Button.tsx",
+      "description": "Button component",
+      "props": {}
+    },
+    {
+      "name": "IconText",
+      "path": "src/components/IconText/IconText.tsx",
+      "description": "IconText component",
       "props": {
+        "icon": {
+          "type": "ReactNode",
+          "required": true,
+          "description": "The icon to display, typically an SVG or an icon component"
+        },
+        "text": {
+          "type": "string",
+          "required": true,
+          "description": "The text to display next to the icon"
+        },
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the text field"
+          "description": "The size of the component\n- 'small': 12px font size\n- 'medium': 14px font size\n- 'large': 16px font size"
         },
         "variant": {
-          "type": "'outlined' | 'filled' | 'standard'",
+          "type": "'default' | 'primary'",
           "required": false,
-          "description": "The variant of the text field"
+          "description": "The variant of the component\n- 'default': standard style\n- 'primary': primary style"
         },
-        "state": {
-          "type": "'default' | 'error' | 'disabled'",
+        "disabled": {
+          "type": "boolean",
           "required": false,
-          "description": "The state of the text field"
+          "description": "Whether the component is disabled"
         },
         "className": {
           "type": "string",
@@ -30,46 +46,78 @@
       }
     },
     {
-      "name": "Button",
-      "path": "src/components/Button/Button.tsx",
-      "description": "Button component",
+      "name": "InputsControls",
+      "path": "src/components/InputsControls/InputsControls.tsx",
+      "description": "InputsControls component",
       "props": {
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked' | 'basic' | 'toggle' | 'multi' | 'pressed' | 'disabled' | 'icon'",
-          "required": false,
-          "description": "The variant of the button."
+        "children": {
+          "type": "ReactNode",
+          "required": true,
+          "description": "The content of the InputsControls component."
         },
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the button."
+          "description": "The size of the component.\n'small' | 'medium' | 'large'"
+        },
+        "variant": {
+          "type": "'default' | 'outlined'",
+          "required": false,
+          "description": "The variant of the component.\n'default' | 'outlined'"
         },
         "disabled": {
           "type": "boolean",
           "required": false,
-          "description": "If true, the button will be disabled."
+          "description": "If true, the component is disabled."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class name for custom styling."
+          "description": "Additional class name for styling overrides."
+        }
+      }
+    },
+    {
+      "name": "MenuActionItemSingle",
+      "path": "src/components/MenuActionItemSingle/MenuActionItemSingle.tsx",
+      "description": "MenuActionItemSingle component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the menu item"
+        },
+        "variant": {
+          "type": "'default' | 'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the menu item"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Whether the menu item is disabled"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class name for custom styling"
         }
       }
     }
   ],
   "tokens": {
-    "colors": 36,
-    "typography": 24,
-    "radius": 21,
-    "shadows": 5,
-    "elevations": 2,
-    "borders": 26,
+    "colors": 33,
+    "typography": 20,
+    "radius": 18,
+    "shadows": 2,
+    "elevations": 1,
+    "borders": 29,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 13,
-    "gradients": 2,
-    "blurs": 0,
-    "layoutGrids": 1,
+    "sizes": 13,
+    "opacity": 12,
+    "gradients": 8,
+    "blurs": 2,
+    "layoutGrids": 0,
     "icons": 0
   }
 }
