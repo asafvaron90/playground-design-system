@@ -3,89 +3,64 @@
 export const tokens = {
   "colors": [
     {
-      "name": "",
-      "value": "#0E92CB",
-      "category": "Typography / Section / Title"
+      "name": "Body-text-Frame-2147225184-Default",
+      "value": "#295365",
+      "category": "Frame 2147225184/Default"
     },
     {
-      "name": "Divider",
-      "value": "#000000",
-      "category": "Filters / Filters open / Filters / mat-card"
-    },
-    {
-      "name": "Dialog-sections",
-      "value": "#F6F6F9",
-      "category": "Master table / Master table"
-    },
-    {
-      "name": "Buttons-Input",
-      "value": "#F5F5F5",
-      "category": "Text field / Text Field / State=Default, Assistive text=False / Input"
-    },
-    {
-      "name": "Buttons-Text-field",
-      "value": "#1B293A",
-      "category": "Text field"
-    },
-    {
-      "name": "Buttons-Secondary-button",
-      "value": "#191836",
-      "category": "New buttons / Secondary button"
-    },
-    {
-      "name": "Icons-1",
-      "value": "#D7E3EC",
-      "category": "General"
-    },
-    {
-      "name": "Icons-table-cell",
-      "value": "#7C88A6",
-      "category": "Master table / Master table / table cell"
-    },
-    {
-      "name": "Body-text",
+      "name": "Body-text-Buttons",
       "value": "#1D1D1D",
       "category": "Buttons"
     },
     {
-      "name": "Text",
-      "value": "#295365",
-      "category": "Selected / Master table / pagination"
+      "name": "Icons",
+      "value": "#D7E3EC",
+      "category": "New buttons / Group"
     },
     {
-      "name": "Dialog-layout",
+      "name": "Buttons",
+      "value": "#191836",
+      "category": "New buttons / Secondary button"
+    },
+    {
+      "name": "grey-page-1",
       "value": "#091C2A",
-      "category": "New buttons"
+      "category": "Colors"
+    },
+    {
+      "name": "grey-page-2",
+      "value": "#051321",
+      "category": "General"
     },
     {
       "name": "Disabled",
       "value": "#505D6F",
-      "category": "New buttons / Buttons / Variant=Tertiary, State=Disabled, Icon=False"
+      "category": "New buttons / Primary button"
     },
     {
       "name": "Disabled-text",
       "value": "#6C7683",
-      "category": "General"
+      "category": "New buttons / Confirm / state=disabled, icon=false"
     },
     {
-      "name": "Divider-stroke",
-      "value": "#7A7A7A",
-      "category": "General"
-    },
-    {
-      "name": "Error",
-      "value": "#F05656",
-      "category": "Filters / Filters open / Filters / mat-card"
-    },
-    {
-      "name": "Section",
+      "name": "Figma-section",
       "value": "#232D42",
-      "category": "Text field"
+      "category": "General"
     },
     {
-      "name": "Green-Success",
-      "value": "#25A96B",
-      "category": "General"
+      "name": "Grey-100",
+      "value": "#EFEFEF",
+      "category": "Menu/Action Item - Single"
+    },
+    {
+      "name": "Grey-500",
+      "value": "#7C7C7C",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done / Icon / Done"
+    },
+    {
+      "name": "Grey-600-text",
+      "value": "#656565",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done / note text"
     },
     {
       "name": "Header-Icons",
@@ -93,59 +68,19 @@ export const tokens = {
       "category": "Buttons / audiocodes-logo-svg (3) 2"
     },
     {
-      "name": "Hover",
-      "value": "#2F3545",
-      "category": "General"
-    },
-    {
-      "name": "Orange-Warning",
-      "value": "#BA7714",
-      "category": "General"
-    },
-    {
-      "name": "Primary-Buttons",
+      "name": "Primary",
       "value": "#8A5ADB",
       "category": "Buttons"
     },
     {
-      "name": "Primary-Text-field",
-      "value": "#0C98B0",
-      "category": "Text field"
-    },
-    {
-      "name": "Primary-3",
-      "value": "#2196F3",
-      "category": "Typography"
-    },
-    {
-      "name": "Primary-Primary-button",
+      "name": "purple-purple",
       "value": "#9B5DFF",
-      "category": "New buttons / Primary button"
+      "category": "Colors"
     },
     {
-      "name": "Purple",
-      "value": "#8B4ED6",
-      "category": "General"
-    },
-    {
-      "name": "Red-Error-Text-field",
-      "value": "#C84747",
-      "category": "Text field"
-    },
-    {
-      "name": "Red-Error-icons",
+      "name": "Red-Error",
       "value": "#EF355D",
       "category": "New buttons / icons"
-    },
-    {
-      "name": "Select",
-      "value": "#E7F4FD",
-      "category": "Selected / Master table"
-    },
-    {
-      "name": "Selected-1",
-      "value": "#223B4E",
-      "category": "General"
     },
     {
       "name": "Selected-Secondary-button",
@@ -158,67 +93,90 @@ export const tokens = {
       "category": "New buttons / <Menu> / <Paper> / <MenuList>"
     },
     {
-      "name": "Text-field-Text-Field",
-      "value": "#2F3649",
-      "category": "Text field / Text Field"
+      "name": "Tag-Green-44DB95",
+      "value": "#44DB95",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / all tabs / Planner / Monday / monday logo 1"
     },
     {
-      "name": "Text-field-Menu",
+      "name": "Text-field",
       "value": "#2B344D",
       "category": "New buttons / <Menu>"
     },
     {
       "name": "white-white",
       "value": "#FFFFFF",
-      "category": "New buttons / Primary button"
+      "category": "Colors"
     },
     {
-      "name": "Text-field-Header",
-      "value": "#ACBFCB",
-      "category": "Text field / Text Field / State=Default, Assistive text=True / <FormHelperText>"
+      "name": "blue-blue",
+      "value": "#3074F3",
+      "category": "Colors"
     },
     {
-      "name": "blue-Info",
-      "value": "#1A99CD",
-      "category": "General"
+      "name": "green-green",
+      "value": "#25A96B",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-buttons-bg",
+      "value": "#1B293A",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-drawer-handle",
+      "value": "#ADB4CA",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-grey",
+      "value": "#C9CFDC",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-secondary-body-text",
+      "value": "#90A3B1",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-stroke",
+      "value": "#2A4051",
+      "category": "Colors"
+    },
+    {
+      "name": "grey-text-field",
+      "value": "#2F3649",
+      "category": "Colors"
+    },
+    {
+      "name": "orange-orange-warning",
+      "value": "#FFA000",
+      "category": "Colors"
+    },
+    {
+      "name": "red-red-error",
+      "value": "#C84747",
+      "category": "Colors"
+    },
+    {
+      "name": "red-red-warning",
+      "value": "#FF4B4B",
+      "category": "Colors"
+    },
+    {
+      "name": "turquoise-turquoise",
+      "value": "#00FFFF",
+      "category": "Colors"
     }
   ],
   "typography": [
     {
-      "name": "Inter-SmiBold",
-      "fontFamily": "Inter",
-      "fontSize": 14,
-      "fontWeight": 700,
-      "lineHeight": "normal",
-      "category": "Typography / Section / Infos",
-      "color": "#000000"
-    },
-    {
-      "name": "Inter-Regular",
-      "fontFamily": "Inter",
-      "fontSize": 14,
-      "fontWeight": 400,
-      "lineHeight": "normal",
-      "category": "Typography / Section / Infos",
-      "color": "#000000"
-    },
-    {
-      "name": "Inter-Medium",
-      "fontFamily": "Inter",
-      "fontSize": 14,
-      "fontWeight": 500,
-      "lineHeight": "normal",
-      "category": "Typography / Section / Infos",
-      "color": "#000000"
-    },
-    {
-      "name": "element-30-2914",
+      "name": "Primary",
       "fontFamily": "Inter",
       "fontSize": 64,
       "fontWeight": 600,
       "lineHeight": "normal",
-      "category": "Colors",
-      "color": "#0E92CB"
+      "category": "Buttons",
+      "color": "#8A5ADB"
     },
     {
       "name": "Body-text",
@@ -230,87 +188,158 @@ export const tokens = {
       "color": "#1D1D1D"
     },
     {
-      "name": "Text-Body",
-      "fontFamily": "Inter",
-      "fontSize": 18,
-      "fontWeight": 500,
+      "name": "white-white-Status-Bar",
+      "fontFamily": "SF Pro",
+      "fontSize": 15,
+      "fontWeight": 600,
       "lineHeight": "normal",
-      "category": "Typography / Section / Title",
-      "color": "#0E92CB"
+      "category": "componets / Navigation Bar / Property 1=Old / Status Bar",
+      "color": "#FFFFFF",
+      "letterSpacing": -0.17
     },
     {
-      "name": "Large-Header",
+      "name": "white-white-Container",
+      "fontFamily": "SF Pro Text",
+      "fontSize": 17,
+      "fontWeight": 400,
+      "lineHeight": "normal",
+      "category": "componets / Navigation Bar / Property 1=Old / Status Bar / Container",
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "white-white-Container-2",
+      "fontFamily": "SF Pro Text",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": "normal",
+      "category": "componets / Navigation Bar / Property 1=Old / Status Bar / Container",
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "Grey-600-text",
+      "fontFamily": "Segoe UI",
+      "fontSize": 12,
+      "fontWeight": 400,
+      "lineHeight": 13,
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done / note text",
+      "color": "#656565"
+    },
+    {
+      "name": "16-Reg",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 24,
+      "category": "Frame 2147225184/Default",
+      "color": "#295365"
+    },
+    {
+      "name": "grey-text-icons",
+      "fontFamily": "Heebo",
+      "fontSize": 14,
+      "fontWeight": 500,
+      "lineHeight": "normal",
+      "category": "componets / Navigation Bar / Property 1=Old",
+      "color": "#D7E3EC",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "LabelSml",
+      "fontFamily": "Inter",
+      "fontSize": 12,
+      "fontWeight": 400,
+      "lineHeight": "normal",
+      "category": "componets / Inputs & Controls",
+      "color": "#FFFFFF",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "Lable-Sami-12",
+      "fontFamily": "Inter",
+      "fontSize": 12,
+      "fontWeight": 600,
+      "lineHeight": "normal",
+      "category": "componets / Menu / Property 1=Home / navigation",
+      "color": "#FFFFFF",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "Inter-20-SemiBold",
       "fontFamily": "Inter",
       "fontSize": 20,
       "fontWeight": 600,
       "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
+      "category": "New buttons",
+      "color": "#1D1D1D"
     },
     {
-      "name": "Subheader",
-      "fontFamily": "Inter",
-      "fontSize": 17,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
-    },
-    {
-      "name": "Header-Section",
-      "fontFamily": "Inter",
-      "fontSize": 17,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000",
-      "letterSpacing": 0.5
-    },
-    {
-      "name": "Header-Text-field",
-      "fontFamily": "Inter",
-      "fontSize": 32,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Text field",
-      "color": "#7C88A6"
-    },
-    {
-      "name": "Header-Text-field-2",
-      "fontFamily": "Inter",
-      "fontSize": 32,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Text field",
-      "color": "#7C88A6",
-      "textTransform": "uppercase"
-    },
-    {
-      "name": "Header-Text-field-3",
-      "fontFamily": "Inter",
-      "fontSize": 24,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Text field",
-      "color": "#7C88A6"
-    },
-    {
-      "name": "Table-header",
-      "fontFamily": "Inter",
-      "fontSize": 14,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
-    },
-    {
-      "name": "Body-bold",
+      "name": "Button-text",
       "fontFamily": "Inter",
       "fontSize": 14,
       "fontWeight": 500,
       "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
+      "category": "New buttons / Confirm / state=Default, icon=false",
+      "color": "#8A5ADB",
+      "letterSpacing": 1
+    },
+    {
+      "name": "LabelLarge-14-Med",
+      "fontFamily": "Inter",
+      "fontSize": 14,
+      "fontWeight": 500,
+      "lineHeight": "normal",
+      "category": "componets / Navigation Bar / Property 1=New / Icon + Text",
+      "color": "#FFFFFF",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "LabelReg-14-Reg",
+      "fontFamily": "Inter",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": "normal",
+      "category": "componets / Label / Property 1=Default",
+      "color": "#FFFFFF",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "HeadlineReg-16-Med",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": "normal",
+      "category": "componets / Button CTA / New Recording=Variant2",
+      "color": "#FFFFFF",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "14-Regular",
+      "fontFamily": "Inter",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 20,
+      "category": "componets / Search Bar / Property 1=Search Bar - Back",
+      "color": "#90A3B1"
+    },
+    {
+      "name": "HeadlineMed-18-Med",
+      "fontFamily": "Inter",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": "normal",
+      "category": "componets / Popup",
+      "color": "#D7E3EC",
+      "textTransform": "capitalize"
+    },
+    {
+      "name": "HeadlineReg-16-Reg",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": "normal",
+      "category": "componets / Popup",
+      "color": "#D7E3EC",
+      "textTransform": "capitalize"
     },
     {
       "name": "Body",
@@ -318,188 +347,121 @@ export const tokens = {
       "fontSize": 14,
       "fontWeight": 400,
       "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
+      "category": "New buttons",
+      "color": "#7C88A6"
     },
     {
-      "name": "Inter-14-Med-Button",
+      "name": "Body-bold",
       "fontFamily": "Inter",
       "fontSize": 14,
       "fontWeight": 500,
       "lineHeight": 1.25,
-      "category": "Filters / Filters open / Filters / mat-card / Button",
-      "color": "#0E92CB",
-      "letterSpacing": 1
-    },
-    {
-      "name": "Bold-small-text",
-      "fontFamily": "Inter",
-      "fontSize": 12,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Typography / Section",
-      "color": "#000000"
-    },
-    {
-      "name": "Inter-12-Regular",
-      "fontFamily": "Inter",
-      "fontSize": 12,
-      "fontWeight": 400,
-      "lineHeight": 1.25,
-      "category": "Text field / Text Field / State=Default / Input Field",
-      "color": "#D7E3EC"
-    },
-    {
-      "name": "Hebrew",
-      "fontFamily": "Open Sans",
-      "fontSize": 12,
-      "fontWeight": 400,
-      "lineHeight": 0.9,
-      "category": "Typography / Section",
-      "color": "#000000",
-      "letterSpacing": 0.5
-    },
-    {
-      "name": "Primary",
-      "fontFamily": "Inter",
-      "fontSize": 64,
-      "fontWeight": 600,
-      "lineHeight": "normal",
-      "category": "Typography",
-      "color": "#2196F3",
-      "textTransform": "uppercase"
-    },
-    {
-      "name": "Text-Default",
-      "fontFamily": "Inter",
-      "fontSize": 64,
-      "fontWeight": 600,
-      "lineHeight": 1.25,
-      "category": "Master table",
-      "color": "#0E92CB"
-    },
-    {
-      "name": "Error",
-      "fontFamily": "Inter",
-      "fontSize": 10,
-      "fontWeight": 500,
-      "lineHeight": 1.25,
-      "category": "Sorting / Sorting guidelines",
-      "color": "#F05656"
-    },
-    {
-      "name": "Inter-17-Regular",
-      "fontFamily": "Inter",
-      "fontSize": 17,
-      "fontWeight": 400,
-      "lineHeight": 1.25,
-      "category": "Table Settings / Guidelines",
-      "color": "#0E92CB"
-    },
-    {
-      "name": "subtitle2",
-      "fontFamily": "Roboto",
-      "fontSize": 14,
-      "fontWeight": 500,
-      "lineHeight": 1.57,
-      "category": "Slider / Sldiers / <Slider> / Slider / _SliderLabel / Tooltip",
-      "color": "#295365",
-      "letterSpacing": 0.1
+      "category": "New buttons",
+      "color": "#FFFFFF"
     }
   ],
   "radius": [
     {
-      "name": "table-cell",
-      "value": 5,
-      "topLeft": 5,
-      "topRight": 5,
-      "bottomRight": 5,
-      "bottomLeft": 5,
-      "category": "Table for Figma work"
-    },
-    {
-      "name": "Buttons-New-buttons",
-      "value": 12,
-      "topLeft": 12,
-      "topRight": 12,
-      "bottomRight": 12,
-      "bottomLeft": 12,
-      "category": "New buttons"
-    },
-    {
-      "name": "Buttons-Text-field",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 4,
-      "bottomRight": 4,
-      "bottomLeft": 0,
-      "category": "Text field"
-    },
-    {
-      "name": "",
-      "value": 4,
-      "topLeft": 4,
-      "topRight": 4,
-      "bottomRight": 4,
-      "bottomLeft": 4,
-      "category": "Filters / Filters open / Filters / mat-card"
-    },
-    {
-      "name": "Menu-New-buttons",
-      "value": 8,
-      "topLeft": 8,
-      "topRight": 8,
-      "bottomRight": 8,
-      "bottomLeft": 8,
-      "category": "New buttons"
-    },
-    {
-      "name": "Menu-Filters-open",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 0,
-      "bottomRight": 4,
-      "bottomLeft": 4,
-      "category": "Filters / Filters open"
-    },
-    {
-      "name": "Icons",
-      "value": 11,
-      "topLeft": 11,
-      "topRight": 11,
-      "bottomRight": 11,
-      "bottomLeft": 11,
-      "category": "General"
-    },
-    {
-      "name": "Search",
+      "name": "Radius-XXS",
       "value": 2,
       "topLeft": 2,
       "topRight": 2,
       "bottomRight": 2,
       "bottomLeft": 2,
-      "category": "Search bar"
+      "category": "Size Token"
     },
     {
-      "name": "Frame-627217",
-      "value": 0,
+      "name": "Radius-XS",
+      "value": 4,
+      "topLeft": 4,
+      "topRight": 4,
+      "bottomRight": 4,
+      "bottomLeft": 4,
+      "category": "Size Token"
+    },
+    {
+      "name": "Radius-S",
+      "value": 8,
+      "topLeft": 8,
+      "topRight": 8,
+      "bottomRight": 8,
+      "bottomLeft": 8,
+      "category": "Size Token"
+    },
+    {
+      "name": "Radius-M",
+      "value": 12,
+      "topLeft": 12,
+      "topRight": 12,
+      "bottomRight": 12,
+      "bottomLeft": 12,
+      "category": "Size Token"
+    },
+    {
+      "name": "Radius-L",
+      "value": 16,
+      "topLeft": 16,
+      "topRight": 16,
+      "bottomRight": 16,
+      "bottomLeft": 16,
+      "category": "Size Token"
+    },
+    {
+      "name": "Radius-XL",
+      "value": 20,
       "topLeft": 20,
-      "topRight": 0,
-      "bottomRight": 0,
+      "topRight": 20,
+      "bottomRight": 20,
       "bottomLeft": 20,
-      "category": "Master table / Master table"
+      "category": "Size Token"
     },
     {
-      "name": "Primary-Slider",
-      "value": 100,
-      "topLeft": 100,
-      "topRight": 100,
-      "bottomRight": 100,
-      "bottomLeft": 100,
-      "category": "Slider / Sldiers / <Slider> / Slider"
+      "name": "Radius-Full",
+      "value": 99,
+      "topLeft": 99,
+      "topRight": 99,
+      "bottomRight": 99,
+      "bottomLeft": 99,
+      "category": "Size Token"
     },
     {
-      "name": "Primary-state-Default-icon-false",
+      "name": "Menu",
+      "value": 5,
+      "topLeft": 5,
+      "topRight": 5,
+      "bottomRight": 5,
+      "bottomLeft": 5,
+      "category": "componets"
+    },
+    {
+      "name": "Icons",
+      "value": 1133.3333740234375,
+      "topLeft": 1133.3333740234375,
+      "topRight": 1133.3333740234375,
+      "bottomRight": 1133.3333740234375,
+      "bottomLeft": 1133.3333740234375,
+      "category": "componets / Navigation Bar / Property 1=New"
+    },
+    {
+      "name": "Rectangle-20",
+      "value": 10,
+      "topLeft": 10,
+      "topRight": 10,
+      "bottomRight": 10,
+      "bottomLeft": 10,
+      "category": "componets / Menu / Property 1=Home / navigation/menu - left"
+    },
+    {
+      "name": "Icon-Done",
+      "value": 30,
+      "topLeft": 30,
+      "topRight": 30,
+      "bottomRight": 30,
+      "bottomLeft": 30,
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done"
+    },
+    {
+      "name": "Primary",
       "value": 156.69219970703125,
       "topLeft": 156.69219970703125,
       "topRight": 156.69219970703125,
@@ -508,129 +470,63 @@ export const tokens = {
       "category": "New buttons / Secondary button / state=Default, icon=false"
     },
     {
-      "name": "Primary-_SliderThumb",
-      "value": 20,
-      "topLeft": 20,
-      "topRight": 20,
-      "bottomRight": 20,
-      "bottomLeft": 20,
-      "category": "Slider / Sldiers / <Slider> / Slider / _SliderThumb"
+      "name": "Rectangle",
+      "value": 1.2000000476837158,
+      "topLeft": 1.2000000476837158,
+      "topRight": 1.2000000476837158,
+      "bottomRight": 1.2000000476837158,
+      "bottomLeft": 1.2000000476837158,
+      "category": "componets / Navigation Bar / Property 1=Old / Status Bar / Container / Combined Shape"
     },
     {
-      "name": "Text-field",
-      "value": 0,
-      "topLeft": 4,
-      "topRight": 4,
-      "bottomRight": 0,
-      "bottomLeft": 0,
-      "category": "Text field / Text Field"
+      "name": "grey-buttons-bg",
+      "value": 1400,
+      "topLeft": 1400,
+      "topRight": 1400,
+      "bottomRight": 1400,
+      "bottomLeft": 1400,
+      "category": "componets / Navigation Bar / Property 1=Old"
     },
     {
-      "name": "Dialog-sections-New-buttons",
-      "value": 6,
-      "topLeft": 6,
-      "topRight": 6,
-      "bottomRight": 6,
-      "bottomLeft": 6,
-      "category": "New buttons"
+      "name": "Rectangle-9",
+      "value": 200,
+      "topLeft": 200,
+      "topRight": 200,
+      "bottomRight": 200,
+      "bottomLeft": 200,
+      "category": "componets / Button CTA / New Recording=Variant2"
     },
     {
-      "name": "Dialog-sections-Master-table",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 0,
-      "bottomRight": 5,
-      "bottomLeft": 5,
-      "category": "Table for Figma work / Master table"
+      "name": "grey-page",
+      "value": 24,
+      "topLeft": 24,
+      "topRight": 24,
+      "bottomRight": 24,
+      "bottomLeft": 24,
+      "category": "componets / Popup"
     },
     {
-      "name": "Dialog-sections-Master-table-2",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 5,
-      "bottomRight": 0,
-      "bottomLeft": 0,
-      "category": "Master table / Master table"
+      "name": "Frame-1973342108",
+      "value": 44.4444465637207,
+      "topLeft": 44.4444465637207,
+      "topRight": 44.4444465637207,
+      "bottomRight": 44.4444465637207,
+      "bottomLeft": 44.4444465637207,
+      "category": "componets / Popup"
     },
     {
-      "name": "mat-input-selection-controls",
-      "value": 32,
-      "topLeft": 32,
-      "topRight": 32,
-      "bottomRight": 32,
-      "bottomLeft": 32,
-      "category": "Master table / Master table / table cell / mat-input--selection-controls"
-    },
-    {
-      "name": "Frame-627157",
-      "value": 0,
-      "topLeft": 3.708608865737915,
-      "topRight": 3.708608865737915,
-      "bottomRight": 0,
-      "bottomLeft": 0,
-      "category": "Table Settings / Table settings - default - default- 1st page"
-    },
-    {
-      "name": "Frame-627159",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 0,
-      "bottomRight": 3.6848485469818115,
-      "bottomLeft": 3.6848485469818115,
-      "category": "Table Settings / Table settings - default - default- 1st page"
-    },
-    {
-      "name": "White",
-      "value": 0,
-      "topLeft": 0,
-      "topRight": 0,
-      "bottomRight": 3.708608865737915,
-      "bottomLeft": 3.708608865737915,
-      "category": "Table Settings / Table settings - default - default- 1st page"
-    },
-    {
-      "name": "Divider",
-      "value": 50,
-      "topLeft": 50,
-      "topRight": 50,
-      "bottomRight": 50,
-      "bottomLeft": 50,
-      "category": "Filters / Filters open / <Menu> / <Paper>"
+      "name": "tertiary",
+      "value": 58,
+      "topLeft": 58,
+      "topRight": 58,
+      "bottomRight": 58,
+      "bottomLeft": 58,
+      "category": "componets / Popup"
     }
   ],
   "shadows": [
     {
-      "name": "Master-table",
-      "shadows": [
-        {
-          "type": "drop",
-          "color": "#101828",
-          "opacity": 0.05,
-          "offsetX": 0,
-          "offsetY": 1,
-          "blur": 2,
-          "spread": 0
-        }
-      ],
-      "category": "Master table"
-    },
-    {
-      "name": "image-11",
-      "shadows": [
-        {
-          "type": "drop",
-          "color": "#000000",
-          "opacity": 0.1,
-          "offsetX": -3,
-          "offsetY": 5,
-          "blur": 4,
-          "spread": 3
-        }
-      ],
-      "category": "Master table"
-    },
-    {
-      "name": "Background-Page-Dialog",
+      "name": "Vector",
       "shadows": [
         {
           "type": "drop",
@@ -642,22 +538,7 @@ export const tokens = {
           "spread": 0
         }
       ],
-      "category": "Filters / Filters open / Filters"
-    },
-    {
-      "name": "Shadow - Light System",
-      "shadows": [
-        {
-          "type": "drop",
-          "color": "#000000",
-          "opacity": 0.22,
-          "offsetX": 0,
-          "offsetY": 1,
-          "blur": 1,
-          "spread": 0
-        }
-      ],
-      "category": "Search bar / Search"
+      "category": "componets / Icons / Property 1=Filter / Frame"
     },
     {
       "name": "Design system/Button shadow",
@@ -708,91 +589,163 @@ export const tokens = {
         }
       ],
       "category": "New buttons / <Menu>"
-    },
-    {
-      "name": "elevation/2",
-      "shadows": [
-        {
-          "type": "drop",
-          "color": "#000000",
-          "opacity": 0.2,
-          "offsetX": 0,
-          "offsetY": 3,
-          "blur": 1,
-          "spread": -2
-        },
-        {
-          "type": "drop",
-          "color": "#000000",
-          "opacity": 0.14,
-          "offsetX": 0,
-          "offsetY": 2,
-          "blur": 2,
-          "spread": 0
-        },
-        {
-          "type": "drop",
-          "color": "#000000",
-          "opacity": 0.12,
-          "offsetX": 0,
-          "offsetY": 1,
-          "blur": 5,
-          "spread": 0
-        }
-      ],
-      "category": "Slider / Sldiers / <Slider> / Slider / _SliderThumb"
     }
   ],
   "borders": [
     {
-      "name": "Text-Field",
-      "color": "#0C98B0",
+      "name": "grey-page-Meeting-list-Item",
+      "color": "#2A4051",
       "weight": 1,
       "strokeAlign": "INSIDE",
-      "category": "Text field",
+      "category": "componets / Meeting list - Item"
+    },
+    {
+      "name": "grey-page-Property-1-Home",
+      "color": "#2A4051",
+      "weight": 1,
+      "strokeAlign": "OUTSIDE",
+      "category": "componets / Menu / Property 1=Home",
+      "strokeCap": "ROUND"
+    },
+    {
+      "name": "Menu",
+      "color": "#8A38F5",
+      "weight": 1,
+      "strokeAlign": "INSIDE",
+      "category": "componets",
       "dashPattern": [
         10,
         5
       ]
     },
     {
-      "name": "White-New-buttons",
-      "color": "#000000",
-      "weight": 1,
+      "name": "Vector-Icons",
+      "color": "#90A3B1",
+      "weight": 1.5,
+      "strokeAlign": "CENTER",
+      "category": "componets / Navigation Bar / Property 1=New / Icons",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame",
+      "color": "#FFFFFF",
+      "weight": 1.25,
+      "strokeAlign": "CENTER",
+      "category": "componets / Inputs & Controls / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-navigation",
+      "color": "#FFFFFF",
+      "weight": 1.5833332538604736,
+      "strokeAlign": "CENTER",
+      "category": "componets / Menu / Property 1=Home / navigation",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-navigation-2",
+      "color": "#FFFFFF",
+      "weight": 1.5,
       "strokeAlign": "INSIDE",
-      "category": "New buttons"
+      "category": "componets / Menu / Property 1=Meetings / navigation"
     },
     {
-      "name": "White-Table-settings-default-default-1st-page",
-      "color": "#295365",
-      "weight": 0.7155872583389282,
+      "name": "Vector-Frame-2",
+      "color": "#FFFFFF",
+      "weight": 1,
+      "strokeAlign": "CENTER",
+      "category": "componets / Search Bar / Property 1=Search AI / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-3",
+      "color": "#D7E3EC",
+      "weight": 1.5,
+      "strokeAlign": "CENTER",
+      "category": "componets / Navigation Bar / Property 1=Old / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-4",
+      "color": "#D7E3EC",
+      "weight": 1.25,
+      "strokeAlign": "CENTER",
+      "category": "componets / Icons / Property 1=Filter / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-5",
+      "color": "#FFFFFF",
+      "weight": 1.5,
+      "strokeAlign": "CENTER",
+      "category": "componets / Button CTA / New Recording=Variant2 / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-6",
+      "color": "#C84747",
+      "weight": 1,
+      "strokeAlign": "CENTER",
+      "category": "componets / Meeting list - Item / Property 1=Variant2 / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-7",
+      "color": "#FFFFFF",
+      "weight": 1.0416666269302368,
+      "strokeAlign": "CENTER",
+      "category": "componets / Button Menu / Property 1=Done / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-8",
+      "color": "#D7E3EC",
+      "weight": 1.0416666269302368,
+      "strokeAlign": "CENTER",
+      "category": "componets / Button Menu / Property 1=edit / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-Frame-9",
+      "color": "#FF4B4B",
+      "weight": 1.25,
+      "strokeAlign": "CENTER",
+      "category": "componets / Button Menu / Property 1=Logout / Frame",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Vector-ai-search-02",
+      "color": "#D7E3EC",
+      "weight": 1.125,
+      "strokeAlign": "CENTER",
+      "category": "componets / Search Bar / Property 1=Search AI / ai-search-02",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    },
+    {
+      "name": "Icon-Done",
+      "color": "#7C7C7C",
+      "weight": 2,
       "strokeAlign": "INSIDE",
-      "category": "Table Settings / Table settings - default - default- 1st page"
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done"
     },
     {
-      "name": "Master-table-Master-table",
-      "color": "#000000",
+      "name": "Line-10",
+      "color": "#525C6D",
       "weight": 1,
-      "strokeAlign": "OUTSIDE",
-      "category": "Master table"
-    },
-    {
-      "name": "Master-table-Table-for-Figma-work",
-      "color": "#7A7A7A",
-      "weight": 1,
-      "strokeAlign": "OUTSIDE",
-      "category": "Table for Figma work"
-    },
-    {
-      "name": "table-cell",
-      "color": "#8B4ED6",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Table for Figma work",
-      "dashPattern": [
-        10,
-        5
-      ]
+      "strokeAlign": "CENTER",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs"
     },
     {
       "name": "Confirm",
@@ -806,94 +759,40 @@ export const tokens = {
       ]
     },
     {
-      "name": "Input-State-Default-Assistive-text-False",
-      "color": "#295365",
+      "name": "grey-buttons-bg",
+      "color": "#2A4051",
+      "weight": 1.1333333253860474,
+      "strokeAlign": "INSIDE",
+      "category": "componets / Navigation Bar / Property 1=New"
+    },
+    {
+      "name": "Line-1",
+      "color": "#90A3B1",
       "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Text field / Text Field / State=Default, Assistive text=False"
+      "strokeAlign": "CENTER",
+      "category": "componets / Search Bar / Property 1=Search Bar - Back"
     },
     {
-      "name": "Input-State-Disabled-Assistive-text-False",
-      "color": "#505D6F",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Text field / Text Field / State=Disabled, Assistive text=False"
-    },
-    {
-      "name": "Input-State-Error-Assistive-text-False",
-      "color": "#F05656",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Text field / Text Field / State=Error, Assistive text=False"
-    },
-    {
-      "name": "border-30-4739",
-      "color": "#0E92CB",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Filters / Filters open / Filters / mat-card"
-    },
-    {
-      "name": "Buttons-pagination",
-      "color": "#7A7A7A",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Table for Figma work / Master table / pagination"
-    },
-    {
-      "name": "Buttons-Buttons",
-      "color": "#0C98B0",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "New buttons / Buttons"
-    },
-    {
-      "name": "Text-field",
-      "color": "#C84747",
-      "weight": 1,
-      "strokeAlign": "INSIDE",
-      "category": "Text field / Text Field / State=Default, Assistive text=Assistive text11"
-    },
-    {
-      "name": "Disabled",
-      "color": "#505D6F",
-      "weight": 0.02083333395421505,
-      "strokeAlign": "INSIDE",
-      "category": "New buttons / Buttons / Variant=Tertiary, State=Disabled, Icon=True"
-    },
-    {
-      "name": "Icons",
-      "color": "#D7E3EC",
-      "weight": 0.30000001192092896,
-      "strokeAlign": "OUTSIDE",
-      "category": "Search bar / Search / clarity:close-line"
-    },
-    {
-      "name": "border-30-4597",
-      "color": "#0E92CB",
+      "name": "Grey-500-Done",
+      "color": "#7C7C7C",
       "weight": 2,
       "strokeAlign": "CENTER",
-      "category": "Master table",
-      "strokeCap": "SQUARE"
-    },
-    {
-      "name": "border-30-4598",
-      "color": "#0E92CB",
-      "weight": 3,
-      "strokeAlign": "CENTER",
-      "category": "Master table",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / Done / Icon / Done",
       "strokeCap": "ROUND"
     },
     {
-      "name": "Frame-627149",
-      "color": "#0E92CB",
+      "name": "Grey-500-Group",
+      "color": "#7C7C7C",
+      "weight": 0.5,
+      "strokeAlign": "CENTER",
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / e icon+e text / email icon / copy 2 / Group / Group"
+    },
+    {
+      "name": "White",
+      "color": "#000000",
       "weight": 1,
       "strokeAlign": "INSIDE",
-      "category": "Sorting / Sorting guidelines",
-      "dashPattern": [
-        10,
-        5
-      ]
+      "category": "New buttons"
     },
     {
       "name": "Vector-1",
@@ -904,141 +803,240 @@ export const tokens = {
       "strokeCap": "ROUND"
     },
     {
-      "name": "Dialog-layout",
-      "color": "#2A4051",
+      "name": "Disabled",
+      "color": "#505D6F",
       "weight": 1,
       "strokeAlign": "INSIDE",
-      "category": "New buttons"
+      "category": "New buttons / Primary button"
     },
     {
-      "name": "Line04",
-      "color": "#7A7A7A",
-      "weight": 1,
+      "name": "grey-text-icons-Frame",
+      "color": "#D7E3EC",
+      "weight": 1.1773462295532227,
+      "strokeAlign": "INSIDE",
+      "category": "componets / Navigation Bar / Property 1=Old / Frame"
+    },
+    {
+      "name": "grey-text-icons-Frame-2",
+      "color": "#FFFFFF",
+      "weight": 1.1852092742919922,
+      "strokeAlign": "INSIDE",
+      "category": "componets / Navigation Bar / Property 1=New / Icon + Text / Frame"
+    },
+    {
+      "name": "grey-text-icons-ai-search-02",
+      "color": "#D7E3EC",
+      "weight": 0.7499999403953552,
       "strokeAlign": "CENTER",
-      "category": "Search bar / Search / Input/Dropdown / Open Dropdown / Open dropdown / Open dropdown"
+      "category": "componets / Search Bar / Property 1=Search AI / ai-search-02",
+      "strokeCap": "ROUND",
+      "strokeJoin": "ROUND"
+    }
+  ],
+  "sizes": [
+    {
+      "name": "Space-XXS",
+      "value": 4,
+      "category": "Size Token"
     },
     {
-      "name": "Divider",
-      "color": "#000000",
-      "weight": 1,
-      "strokeAlign": "CENTER",
-      "category": "Filters / Filters open / <Menu> / <Paper> / <MenuList> / <MenuItem> / <Divider> | Horizontal"
+      "name": "Space-XS",
+      "value": 8,
+      "category": "Size Token"
     },
     {
-      "name": "Background-Page-Dialog-Checkbox",
-      "color": "#000000",
-      "weight": 1.5,
-      "strokeAlign": "INSIDE",
-      "category": "Table Settings / Table settings - default - default- 1st page / mat-input--selection-controls / Checkbox"
+      "name": "Space-S",
+      "value": 12,
+      "category": "Size Token"
     },
     {
-      "name": "Background-Page-Dialog-Table-settings-compact-zebra-1st-page",
-      "color": "#000000",
-      "weight": 0.7155872583389282,
-      "strokeAlign": "INSIDE",
-      "category": "Table Settings / Table settings - compact - zebra - 1st page"
+      "name": "Space-M",
+      "value": 16,
+      "category": "Size Token"
     },
     {
-      "name": "Select",
-      "color": "#0E92CB",
-      "weight": 1.5,
-      "strokeAlign": "INSIDE",
-      "category": "Table Settings / Table settings - default - default- 1st page / mat-input--selection-controls / Checkbox"
+      "name": "Space-L",
+      "value": 20,
+      "category": "Size Token"
+    },
+    {
+      "name": "Space-XL",
+      "value": 24,
+      "category": "Size Token"
+    },
+    {
+      "name": "Space-XXL",
+      "value": 32,
+      "category": "Size Token"
+    },
+    {
+      "name": "Space-XXXL",
+      "value": 40,
+      "category": "Size Token"
+    },
+    {
+      "name": "Border-width-XXS",
+      "value": 1,
+      "category": "Size Token"
+    },
+    {
+      "name": "Border-width-XS",
+      "value": 1.25,
+      "category": "Size Token"
+    },
+    {
+      "name": "Border-width-S",
+      "value": 1.5,
+      "category": "Size Token"
+    },
+    {
+      "name": "Border-width-M",
+      "value": 1.75,
+      "category": "Size Token"
+    },
+    {
+      "name": "Border-width-L",
+      "value": 2,
+      "category": "Size Token"
     }
   ],
   "opacity": [
     {
-      "name": "Rectangle-10",
+      "name": "Frame",
+      "opacity": 1,
+      "category": "componets / Inputs & Controls",
+      "rotation": 90
+    },
+    {
+      "name": "Rectangle-20",
+      "opacity": 0.7,
+      "category": "componets / Menu / Property 1=Home / navigation/menu - left"
+    },
+    {
+      "name": "Line-1",
+      "opacity": 1,
+      "category": "componets / Search Bar / Property 1=Search Bar - Back",
+      "rotation": -90
+    },
+    {
+      "name": "email-icon",
+      "opacity": 1,
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / e icon+e text",
+      "rotation": 0
+    },
+    {
+      "name": "copy-2",
+      "opacity": 1,
+      "category": "Menu/Action Item - Single / inside menu highlight master / all tabs / e icon+e text / email icon",
+      "rotation": 180
+    },
+    {
+      "name": "Rectangle-10-state-Default-icon-false",
       "opacity": 0.25,
       "category": "New buttons / Primary button / state=Default, icon=false",
       "rotation": 68.42
     },
     {
-      "name": "Rectangle-9",
+      "name": "Rectangle-10-New-Recording-Variant2",
+      "opacity": 0.2,
+      "category": "componets / Button CTA / New Recording=Variant2",
+      "rotation": 67.92
+    },
+    {
+      "name": "Rectangle-9-state-Default-icon-false",
       "opacity": 0.2,
       "category": "New buttons / Primary button / state=Default, icon=false",
       "rotation": 68.42
     },
     {
-      "name": "Rectangle-11",
+      "name": "Rectangle-9-New-Recording-Variant2",
+      "opacity": 0.1,
+      "category": "componets / Button CTA / New Recording=Variant2",
+      "rotation": 67.92
+    },
+    {
+      "name": "Rectangle-11-state-Default-icon-false",
       "opacity": 0.4,
       "category": "New buttons / Primary button / state=Default, icon=false",
       "rotation": 14.23
     },
     {
-      "name": "White",
-      "opacity": 1,
-      "category": "New buttons / Buttons",
-      "rotation": -90
+      "name": "Rectangle-11-New-Recording-Variant2",
+      "opacity": 0.4,
+      "category": "componets / Button CTA / New Recording=Variant2",
+      "rotation": 13.89
     },
     {
-      "name": "Master-table",
-      "opacity": 1,
-      "category": "Master table",
-      "rotation": 180
-    },
-    {
-      "name": "Sorting",
-      "opacity": 1,
-      "category": "Sorting",
-      "rotation": 0
-    },
-    {
-      "name": "table-cell",
-      "opacity": 1,
-      "category": "Expanded tab / table cell",
-      "rotation": -180
-    },
-    {
-      "name": "Primary-Slider",
-      "opacity": 0.38,
-      "category": "Slider / Sldiers / <Slider> / Slider"
-    },
-    {
-      "name": "Primary-_SliderThumb",
-      "opacity": 0.16,
-      "category": "Slider / Sldiers / <Slider> / Slider / _SliderThumb"
-    },
-    {
-      "name": "Primary-state-Default-icon-false",
+      "name": "Primary",
       "opacity": 0.06,
       "category": "New buttons / Secondary button / state=Default, icon=false",
       "rotation": 14.23
-    },
-    {
-      "name": "background-paper-elevation-0",
-      "opacity": 0.8,
-      "category": "Slider / Sldiers / <Slider> / Slider / Marks / _SliderMark"
-    },
-    {
-      "name": "Body-text",
-      "opacity": 0.6,
-      "category": "Text field / Text Field / State=Focused, Assistive text=True / <FormHelperText>"
-    },
-    {
-      "name": "icons",
-      "opacity": 1,
-      "category": "Table Settings / Table settings - default - default- 1st page",
-      "rotation": 90
     }
   ],
   "gradients": [
     {
-      "name": "Buttons",
+      "name": "Vector",
       "gradientType": "linear",
       "stops": [
         {
           "position": 0,
-          "color": "#005DB1",
+          "color": "#34AD9E",
           "opacity": 1
         },
         {
-          "position": 0.806,
-          "color": "#00AAC6",
+          "position": 0.04,
+          "color": "#22B7B8",
+          "opacity": 1
+        },
+        {
+          "position": 0.12,
+          "color": "#09C6DE",
+          "opacity": 1
+        },
+        {
+          "position": 0.16,
+          "color": "#00CCED",
+          "opacity": 1
+        },
+        {
+          "position": 0.37,
+          "color": "#04C6E9",
+          "opacity": 1
+        },
+        {
+          "position": 0.63,
+          "color": "#11B8E0",
+          "opacity": 1
+        },
+        {
+          "position": 0.9,
+          "color": "#27A0D1",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#3096CB",
           "opacity": 1
         }
       ],
-      "category": "New buttons"
+      "category": "componets / Navigation Bar / Property 1=New / Group / Clip path group"
+    },
+    {
+      "name": "Rectangle-19",
+      "gradientType": "linear",
+      "stops": [
+        {
+          "position": 0.317,
+          "color": "#051321",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#051321",
+          "opacity": 0
+        }
+      ],
+      "category": "componets / Menu / Property 1=Home"
     },
     {
       "name": "Primary-button",
@@ -1061,1754 +1059,567 @@ export const tokens = {
         }
       ],
       "category": "New buttons"
-    }
-  ],
-  "layoutGrids": [
+    },
     {
-      "name": "",
-      "grids": [
+      "name": "white-white",
+      "gradientType": "radial",
+      "stops": [
         {
-          "pattern": "GRID",
-          "sectionSize": 10
+          "position": 0,
+          "color": "#3074F3",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#002152",
+          "opacity": 1
         }
       ],
-      "category": "Filters / mat-card"
+      "category": "componets / Button CTA / New Recording=Variant2"
+    },
+    {
+      "name": "Rectangle-9",
+      "gradientType": "radial",
+      "stops": [
+        {
+          "position": 0,
+          "color": "#150B46",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#8E65EB",
+          "opacity": 1
+        }
+      ],
+      "category": "componets / Button CTA / New Recording=Variant2"
+    },
+    {
+      "name": "Ellipse-3569",
+      "gradientType": "linear",
+      "stops": [
+        {
+          "position": 0,
+          "color": "#A268FF",
+          "opacity": 0.8
+        },
+        {
+          "position": 1,
+          "color": "#3E95D6",
+          "opacity": 1
+        }
+      ],
+      "category": "componets / Meeting list - Item / Property 1=Default"
+    },
+    {
+      "name": "Frame-1973342108",
+      "gradientType": "linear",
+      "stops": [
+        {
+          "position": 0,
+          "color": "#9B5DFF",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#30335D",
+          "opacity": 1
+        }
+      ],
+      "category": "componets / Popup"
+    },
+    {
+      "name": "Primary",
+      "gradientType": "linear",
+      "stops": [
+        {
+          "position": 0,
+          "color": "#6E3EBB",
+          "opacity": 1
+        },
+        {
+          "position": 1,
+          "color": "#30335D",
+          "opacity": 1
+        }
+      ],
+      "category": "componets / Popup"
+    }
+  ],
+  "blurs": [
+    {
+      "name": "Rectangle-20",
+      "blurType": "layer",
+      "radius": 42.599998474121094,
+      "category": "componets / Menu / Property 1=Home / navigation/menu - left"
+    },
+    {
+      "name": "Ellipse-3569",
+      "blurType": "layer",
+      "radius": 69.80000305175781,
+      "category": "componets / Meeting list - Item / Property 1=Default"
     }
   ],
   "structure": [
     {
-      "id": "30:1879",
-      "type": "FRAME",
-      "width": 1960,
-      "height": 1464,
-      "name": "Text field",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
-      "layoutSizingVertical": "HUG",
-      "children": [
-        {
-          "id": "30:1880",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        },
-        {
-          "id": "30:1888",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#EDEDED"
-            }
-          ]
-        },
-        {
-          "id": "30:2022",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#232D42"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:2643",
-      "type": "FRAME",
-      "width": 618,
-      "height": 805,
-      "x": 2446,
-      "y": 1,
-      "name": "Buttons",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
-      "children": [
-        {
-          "id": "30:2644",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:2652",
-      "type": "FRAME",
-      "width": 1450,
-      "height": 806,
-      "x": 3064,
-      "name": "New buttons",
-      "blendMode": "PASS_THROUGH",
+      "id": "525:6813",
+      "type": "SECTION",
+      "width": 2476,
+      "height": 1148,
+      "x": -412,
+      "y": -319,
+      "name": "componets",
       "fills": [
         {
           "type": "SOLID",
-          "color": "#EDEDED"
+          "color": "#051321"
         }
       ],
       "children": [
         {
-          "id": "30:2653",
-          "type": "TEXT",
+          "id": "524:12621",
+          "type": "COMPONENT_SET",
           "blendMode": "PASS_THROUGH",
-          "fills": [
+          "strokes": [
             {
               "type": "SOLID",
-              "color": "#295365"
+              "color": "#8A38F5",
+              "weight": 1
             }
           ],
-          "characters": "Default",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
+          "cornerRadius": 5
         },
         {
-          "id": "30:2654",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Flat",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2655",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Stroked",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2656",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Basic",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2657",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Light/Dark mode toggle",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2658",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "multi function button",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2659",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Multi function component",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2660",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Pressed",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2661",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Disabled",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2662",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#295365"
-            }
-          ],
-          "characters": "Icon",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        }
-      ]
-    },
-    {
-      "id": "30:2768",
-      "type": "FRAME",
-      "width": 1450,
-      "height": 805,
-      "x": 4514,
-      "y": 1,
-      "name": "New buttons",
-      "blendMode": "PASS_THROUGH",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#232D42"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:2769",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Default",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2770",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Flat",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2771",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Stroked",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2772",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Basic",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2773",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Light/Dark mode toggle",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2774",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "multi function button",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2775",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Multi function component",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2776",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Pressed",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2777",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Disabled",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:2778",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#D7E3EC"
-            }
-          ],
-          "characters": "Icon",
-          "fontSize": 20,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        }
-      ]
-    },
-    {
-      "id": "30:2911",
-      "type": "FRAME",
-      "width": 436,
-      "height": 3811,
-      "x": 6502,
-      "y": 1,
-      "name": "Colors",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
-      "children": [
-        {
-          "id": "30:2912",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutSizingVertical": "FILL",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:2919",
-      "type": "FRAME",
-      "width": 621,
-      "height": 3811,
-      "x": 6938,
-      "y": 1,
-      "name": "Frame 51",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "primaryAxisAlignItems": "MAX",
-      "layoutSizingHorizontal": "HUG",
-      "layoutSizingVertical": "HUG",
-      "children": [
-        {
-          "id": "30:2920",
-          "type": "FRAME",
+          "id": "530:6998",
+          "type": "COMPONENT_SET",
           "blendMode": "PASS_THROUGH",
           "layoutMode": "VERTICAL",
-          "paddingLeft": 100,
-          "paddingRight": 100,
-          "paddingTop": 60,
-          "paddingBottom": 60,
-          "itemSpacing": 30,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "itemSpacing": 14,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#8A38F5",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 5
+        },
+        {
+          "id": "530:7142",
+          "type": "COMPONENT",
+          "width": 73,
+          "height": 40,
+          "x": 139,
+          "y": 679,
+          "name": "Icon + Text",
+          "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 8,
+          "paddingRight": 8,
+          "paddingTop": 8,
+          "paddingBottom": 8,
+          "itemSpacing": 4,
           "layoutSizingHorizontal": "HUG",
           "fills": [
             {
               "type": "SOLID",
-              "color": "#EDEDED"
+              "color": "#1B293A"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 1400,
+          "componentId": "530:7142",
+          "children": [
+            {
+              "id": "530:7123",
+              "type": "FRAME",
+              "blendMode": "PASS_THROUGH",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "id": "530:7106",
+              "type": "TEXT",
+              "blendMode": "PASS_THROUGH",
+              "rotation": 0,
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "characters": "join",
+              "fontSize": 14,
+              "fontFamily": "Inter",
+              "fontWeight": 500
             }
           ]
         },
         {
-          "id": "30:3012",
-          "type": "FRAME",
+          "id": "530:11504",
+          "type": "COMPONENT_SET",
+          "blendMode": "PASS_THROUGH",
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#8A38F5",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 5
+        },
+        {
+          "id": "530:11998",
+          "type": "COMPONENT_SET",
+          "blendMode": "PASS_THROUGH",
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#8A38F5",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 5
+        },
+        {
+          "id": "530:12250",
+          "type": "COMPONENT",
+          "width": 69,
+          "height": 20,
+          "x": 460,
+          "y": 195,
+          "name": "Inputs & Controls",
+          "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "itemSpacing": 4,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "componentId": "530:12250",
+          "children": [
+            {
+              "id": "530:12205",
+              "type": "TEXT",
+              "blendMode": "PASS_THROUGH",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "characters": "View all",
+              "fontSize": 12,
+              "fontFamily": "Inter",
+              "fontWeight": 400
+            },
+            {
+              "id": "530:12237",
+              "type": "FRAME",
+              "blendMode": "PASS_THROUGH",
+              "rotation": 90,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "530:12268",
+          "type": "COMPONENT_SET",
+          "blendMode": "PASS_THROUGH",
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#8A38F5",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 5
+        },
+        {
+          "id": "542:7439",
+          "type": "COMPONENT_SET",
           "blendMode": "PASS_THROUGH",
           "layoutMode": "VERTICAL",
-          "paddingLeft": 100,
-          "paddingRight": 100,
-          "paddingTop": 211,
-          "paddingBottom": 60,
-          "itemSpacing": 30,
-          "layoutSizingHorizontal": "HUG",
-          "fills": [
+          "paddingLeft": 8,
+          "paddingRight": 8,
+          "paddingTop": 8,
+          "paddingBottom": 8,
+          "itemSpacing": 8,
+          "layoutSizingVertical": "HUG",
+          "strokes": [
             {
               "type": "SOLID",
-              "color": "#232D42"
+              "color": "#8A38F5",
+              "weight": 1
             }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:3109",
-      "type": "FRAME",
-      "width": 569,
-      "height": 1044,
-      "x": 8165,
-      "y": 1,
-      "name": "Typography",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "layoutSizingHorizontal": "HUG",
-      "layoutSizingVertical": "HUG",
-      "children": [
+          ],
+          "cornerRadius": 5
+        },
         {
-          "id": "30:3110",
-          "type": "FRAME",
+          "id": "542:7585",
+          "type": "COMPONENT_SET",
           "blendMode": "PASS_THROUGH",
-          "fills": [
+          "strokes": [
             {
               "type": "SOLID",
-              "color": "#F6F6F9"
+              "color": "#8A38F5",
+              "weight": 1
             }
-          ]
+          ],
+          "cornerRadius": 5
+        },
+        {
+          "id": "542:8919",
+          "type": "COMPONENT_SET",
+          "blendMode": "PASS_THROUGH",
+          "layoutMode": "VERTICAL",
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 24,
+          "paddingBottom": 24,
+          "itemSpacing": 8,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#8A38F5",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 5
         }
       ]
     },
     {
-      "id": "30:3118",
-      "type": "FRAME",
-      "width": 764,
-      "height": 1044,
-      "x": 8734,
-      "y": 1,
-      "name": "Typography",
+      "id": "579:9475",
+      "type": "INSTANCE",
+      "width": 140,
+      "height": 258,
+      "x": 2106,
+      "y": -223,
+      "name": "Menu/Action Item - Single",
       "blendMode": "PASS_THROUGH",
       "layoutMode": "VERTICAL",
-      "paddingLeft": 64,
-      "paddingRight": 64,
-      "paddingTop": 64,
-      "paddingBottom": 64,
-      "itemSpacing": 64,
-      "layoutSizingVertical": "HUG",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:3119",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3126",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3133",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3140",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3147",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3154",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3161",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3168",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3175",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:3182",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "HORIZONTAL",
-          "counterAxisAlignItems": "CENTER",
-          "itemSpacing": 48,
-          "layoutSizingHorizontal": "FILL",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:3375",
-      "type": "FRAME",
-      "width": 2166,
-      "height": 798,
-      "x": 10096,
-      "y": 1,
-      "name": "Search bar",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
+      "primaryAxisAlignItems": "CENTER",
       "counterAxisAlignItems": "CENTER",
       "layoutSizingHorizontal": "HUG",
       "layoutSizingVertical": "HUG",
+      "mainComponentId": "579:8755",
       "children": [
         {
-          "id": "30:3376",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        },
-        {
-          "id": "30:3383",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#EDEDED"
-            }
-          ]
-        },
-        {
-          "id": "30:3415",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#232D42"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:4362",
-      "type": "FRAME",
-      "width": 618,
-      "height": 3992,
-      "x": 13106,
-      "y": 1,
-      "name": "Alerts",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:4363",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:4371",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 13724,
-      "y": 22,
-      "name": "Master table",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:4372",
+          "id": "I579:9475;18362:213007",
           "type": "FRAME",
           "blendMode": "PASS_THROUGH",
           "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:4482",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Default",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:4483",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Resize columns",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:4484",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Reorder",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:4485",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:4595",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH"
-        },
-        {
-          "id": "30:4601",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:4712",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH"
-        }
-      ]
-    },
-    {
-      "id": "30:4718",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 27014,
-      "y": 22,
-      "name": "Filters",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:4719",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH"
-        },
-        {
-          "id": "30:4768",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingRight": 5,
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.25,
-              "offset": {
-                "x": 0,
-                "y": 4
-              },
-              "radius": 4
-            }
-          ],
-          "cornerRadius": 4
-        },
-        {
-          "id": "30:4798",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingRight": 5,
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.25,
-              "offset": {
-                "x": 0,
-                "y": 4
-              },
-              "radius": 4
-            }
-          ],
-          "cornerRadius": 4
-        }
-      ]
-    },
-    {
-      "id": "30:4817",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 24356,
-      "y": 22,
-      "name": "Table Settings",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:4818",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Default view",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:4819",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Compact view",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:4820",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:4930",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:5040",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "paddingTop": 20,
-          "paddingBottom": 20,
-          "itemSpacing": 20,
-          "layoutSizingHorizontal": "HUG",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.22,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 1
-            }
-          ],
-          "cornerRadius": 4
-        },
-        {
-          "id": "30:5154",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "paddingTop": 20,
-          "paddingBottom": 20,
-          "itemSpacing": 20,
-          "layoutSizingHorizontal": "HUG",
-          "layoutSizingVertical": "HUG",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.22,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 1
-            }
-          ],
-          "cornerRadius": 4
-        },
-        {
-          "id": "30:5268",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "id": "30:5270",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "paddingTop": 20,
-          "paddingBottom": 20,
-          "itemSpacing": 20,
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.22,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 1
-            }
-          ],
-          "cornerRadius": 4
-        },
-        {
-          "id": "30:5385",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "paddingLeft": 20,
-          "paddingRight": 20,
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 10,
+          "paddingRight": 10,
           "paddingTop": 10,
-          "paddingBottom": 20,
-          "itemSpacing": 20,
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#000000",
-              "opacity": 0.22,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 1
-            }
-          ],
-          "cornerRadius": 4
-        }
-      ]
-    },
-    {
-      "id": "30:5488",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 16382,
-      "y": 22,
-      "name": "Selected",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:5489",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
+          "paddingBottom": 10,
+          "itemSpacing": 8,
+          "layoutSizingHorizontal": "HUG",
           "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:5601",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "itemSpacing": 1,
-          "layoutSizingVertical": "HUG"
-        },
-        {
-          "id": "30:5713",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
           "fills": [
             {
               "type": "SOLID",
-              "color": "#0E92CB"
+              "color": "#EFEFEF"
             }
           ],
-          "characters": "Selected",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:5714",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Select all",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
+          "cornerRadius": 8
         }
       ]
     },
     {
-      "id": "30:5715",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 19040,
-      "y": 22,
-      "name": "Expanded tab",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:5716",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG"
-        },
-        {
-          "id": "30:5834",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Expanded",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        }
-      ]
-    },
-    {
-      "id": "30:5835",
-      "type": "SECTION",
-      "width": 2658,
-      "height": 2652,
-      "x": 21698,
-      "y": 22,
-      "name": "Sorting",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#FFFFFF"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:5836",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:5946",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:6056",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#FFFFFF"
-            }
-          ],
-          "cornerRadius": 4
-        },
-        {
-          "id": "30:6113",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Sorting 1st click",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:6114",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "Sorting without hover",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:6115",
-          "type": "TEXT",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ],
-          "characters": "GUIDELINES",
-          "fontSize": 64,
-          "fontFamily": "Inter",
-          "fontWeight": 600
-        },
-        {
-          "id": "30:6116",
-          "type": "VECTOR",
-          "blendMode": "PASS_THROUGH",
-          "rotation": 0,
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#0E92CB"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "30:6117",
-      "type": "SECTION",
-      "width": 2165,
-      "height": 1230,
-      "x": 13724,
-      "y": 2749,
-      "name": "Table for Figma work",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#EDEDED"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:6118",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#000000",
-              "opacity": 0.12,
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:6229",
-          "type": "COMPONENT_SET",
-          "blendMode": "PASS_THROUGH",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#8B4ED6",
-              "weight": 1
-            }
-          ],
-          "cornerRadius": 5
-        }
-      ]
-    },
-    {
-      "id": "30:6270",
-      "type": "SECTION",
-      "width": 2165,
-      "height": 1230,
-      "x": 15913,
-      "y": 2749,
-      "name": "Table for Figma work",
-      "fills": [
-        {
-          "type": "SOLID",
-          "color": "#232D42"
-        }
-      ],
-      "children": [
-        {
-          "id": "30:6271",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "layoutMode": "VERTICAL",
-          "layoutSizingVertical": "HUG",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#7A7A7A",
-              "weight": 1
-            }
-          ],
-          "effects": [
-            {
-              "type": "DROP_SHADOW",
-              "color": "#101828",
-              "opacity": 0.05,
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "radius": 2
-            }
-          ],
-          "cornerRadius": 5
-        },
-        {
-          "id": "30:6382",
-          "type": "COMPONENT_SET",
-          "blendMode": "PASS_THROUGH",
-          "strokes": [
-            {
-              "type": "SOLID",
-              "color": "#8B4ED6",
-              "weight": 1
-            }
-          ],
-          "cornerRadius": 5
-        }
-      ]
-    },
-    {
-      "id": "30:10022",
+      "id": "579:9564",
       "type": "FRAME",
-      "width": 1690,
-      "height": 370,
-      "x": 30309,
-      "y": 22,
-      "name": "Chips",
+      "width": 335,
+      "height": 320,
+      "x": 2095,
+      "y": 134,
+      "name": "Frame 2147225523",
       "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
+      "layoutMode": "VERTICAL",
+      "itemSpacing": 10,
       "layoutSizingVertical": "HUG",
       "children": [
         {
-          "id": "30:10023",
+          "id": "579:9565",
           "type": "FRAME",
           "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "itemSpacing": 12,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
           "fills": [
             {
               "type": "SOLID",
-              "color": "#F6F6F9"
+              "color": "#8B4ED6",
+              "opacity": 0.2
             }
-          ]
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 12
         },
         {
-          "id": "30:10031",
+          "id": "579:9568",
           "type": "FRAME",
           "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "itemSpacing": 12,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
           "fills": [
             {
               "type": "SOLID",
-              "color": "#EDEDED"
+              "color": "#1B293A"
             }
-          ]
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 12
         },
         {
-          "id": "30:10039",
+          "id": "579:9571",
           "type": "FRAME",
           "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "itemSpacing": 12,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
           "fills": [
             {
               "type": "SOLID",
-              "color": "#232D42"
+              "color": "#1B293A"
             }
-          ]
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 12
+        },
+        {
+          "id": "579:9574",
+          "type": "FRAME",
+          "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "itemSpacing": 12,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#1B293A"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 12
+        },
+        {
+          "id": "579:9578",
+          "type": "FRAME",
+          "blendMode": "PASS_THROUGH",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "itemSpacing": 12,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#1B293A"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#2A4051",
+              "weight": 1
+            }
+          ],
+          "cornerRadius": 12
         }
       ]
     },
     {
-      "id": "30:11175",
-      "type": "FRAME",
-      "width": 2798,
-      "height": 653,
-      "x": 32438,
-      "y": 22,
-      "name": "Slider",
-      "blendMode": "PASS_THROUGH",
-      "layoutMode": "HORIZONTAL",
-      "counterAxisAlignItems": "CENTER",
-      "layoutSizingHorizontal": "HUG",
-      "layoutSizingVertical": "HUG",
-      "children": [
-        {
-          "id": "30:11176",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#F6F6F9"
-            }
-          ]
-        },
-        {
-          "id": "30:11184",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#EDEDED"
-            }
-          ]
-        },
-        {
-          "id": "30:11206",
-          "type": "FRAME",
-          "blendMode": "PASS_THROUGH",
-          "fills": [
-            {
-              "type": "SOLID",
-              "color": "#232D42"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "278:5523",
+      "id": "54628:8312",
       "type": "FRAME",
       "width": 618,
       "height": 805,
-      "x": 35887,
-      "y": 23,
+      "x": -412,
+      "y": 1323,
       "name": "Buttons",
       "blendMode": "PASS_THROUGH",
       "layoutMode": "HORIZONTAL",
@@ -2816,7 +1627,7 @@ export const tokens = {
       "layoutSizingHorizontal": "HUG",
       "children": [
         {
-          "id": "278:5524",
+          "id": "54628:8313",
           "type": "FRAME",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2829,12 +1640,12 @@ export const tokens = {
       ]
     },
     {
-      "id": "278:5532",
+      "id": "54628:8321",
       "type": "FRAME",
       "width": 1450,
       "height": 806,
-      "x": 36505,
-      "y": 22,
+      "x": 206,
+      "y": 1322,
       "name": "New buttons",
       "blendMode": "PASS_THROUGH",
       "fills": [
@@ -2845,7 +1656,7 @@ export const tokens = {
       ],
       "children": [
         {
-          "id": "278:5533",
+          "id": "54628:8322",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2860,7 +1671,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5534",
+          "id": "54628:8323",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2875,7 +1686,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5535",
+          "id": "54628:8324",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2890,7 +1701,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5536",
+          "id": "54628:8325",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2905,7 +1716,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5537",
+          "id": "54628:8326",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2920,7 +1731,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5538",
+          "id": "54628:8327",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2935,7 +1746,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5539",
+          "id": "54628:8328",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2950,7 +1761,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5540",
+          "id": "54628:8329",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2965,7 +1776,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5541",
+          "id": "54628:8330",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2980,7 +1791,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5542",
+          "id": "54628:8331",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -2997,12 +1808,12 @@ export const tokens = {
       ]
     },
     {
-      "id": "278:5667",
+      "id": "54628:8456",
       "type": "FRAME",
       "width": 1450,
       "height": 806,
-      "x": 37955,
-      "y": 23,
+      "x": 1656,
+      "y": 1323,
       "name": "New buttons",
       "blendMode": "PASS_THROUGH",
       "fills": [
@@ -3013,7 +1824,7 @@ export const tokens = {
       ],
       "children": [
         {
-          "id": "278:5668",
+          "id": "54628:8457",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3028,7 +1839,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5669",
+          "id": "54628:8458",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3043,7 +1854,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5670",
+          "id": "54628:8459",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3058,7 +1869,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5671",
+          "id": "54628:8460",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3073,7 +1884,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5672",
+          "id": "54628:8461",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3088,7 +1899,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5673",
+          "id": "54628:8462",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3103,7 +1914,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5674",
+          "id": "54628:8463",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3118,7 +1929,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5675",
+          "id": "54628:8464",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3133,7 +1944,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5676",
+          "id": "54628:8465",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3148,7 +1959,7 @@ export const tokens = {
           "fontWeight": 600
         },
         {
-          "id": "278:5677",
+          "id": "54628:8466",
           "type": "TEXT",
           "blendMode": "PASS_THROUGH",
           "fills": [
@@ -3163,103 +1974,97 @@ export const tokens = {
           "fontWeight": 600
         }
       ]
+    },
+    {
+      "id": "54639:10213",
+      "type": "RECTANGLE",
+      "width": 100,
+      "height": 100,
+      "x": 3518,
+      "y": 1223,
+      "name": "Rectangle 22",
+      "blendMode": "PASS_THROUGH",
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#D9D9D9"
+        }
+      ]
     }
   ]
 } as any;
 
 export const designTokens = {
   colors: {
-    /** #000000 */
-    divider: "#000000",
-    /** #F6F6F9 */
-    dialogSections: "#F6F6F9",
-    /** #F5F5F5 */
-    buttonsInput: "#F5F5F5",
-    /** #1B293A */
-    buttonsTextField: "#1B293A",
-    /** #191836 */
-    buttonsSecondaryButton: "#191836",
-    /** #D7E3EC */
-    icons1: "#D7E3EC",
-    /** #7C88A6 */
-    iconsTableCell: "#7C88A6",
-    /** #1D1D1D */
-    bodyText: "#1D1D1D",
     /** #295365 */
-    text: "#295365",
+    bodyTextFrame2147225184Default: "#295365",
+    /** #1D1D1D */
+    bodyTextButtons: "#1D1D1D",
+    /** #D7E3EC */
+    icons: "#D7E3EC",
+    /** #191836 */
+    buttons: "#191836",
     /** #091C2A */
-    dialogLayout: "#091C2A",
+    greyPage1: "#091C2A",
+    /** #051321 */
+    greyPage2: "#051321",
     /** #505D6F */
     disabled: "#505D6F",
     /** #6C7683 */
     disabledText: "#6C7683",
-    /** #7A7A7A */
-    dividerStroke: "#7A7A7A",
-    /** #F05656 */
-    error: "#F05656",
     /** #232D42 */
-    section: "#232D42",
-    /** #25A96B */
-    greenSuccess: "#25A96B",
+    figmaSection: "#232D42",
+    /** #EFEFEF */
+    grey100: "#EFEFEF",
+    /** #7C7C7C */
+    grey500: "#7C7C7C",
+    /** #656565 */
+    grey600Text: "#656565",
     /** #8E8EA9 */
     headerIcons: "#8E8EA9",
-    /** #2F3545 */
-    hover: "#2F3545",
-    /** #BA7714 */
-    orangeWarning: "#BA7714",
     /** #8A5ADB */
-    primaryButtons: "#8A5ADB",
-    /** #0C98B0 */
-    primaryTextField: "#0C98B0",
-    /** #2196F3 */
-    primary3: "#2196F3",
+    primary: "#8A5ADB",
     /** #9B5DFF */
-    primaryPrimaryButton: "#9B5DFF",
-    /** #8B4ED6 */
-    purple: "#8B4ED6",
-    /** #C84747 */
-    redErrorTextField: "#C84747",
+    purplePurple: "#9B5DFF",
     /** #EF355D */
-    redErrorIcons: "#EF355D",
-    /** #E7F4FD */
-    select: "#E7F4FD",
-    /** #223B4E */
-    selected1: "#223B4E",
+    redError: "#EF355D",
     /** #F0F0F0 */
     selectedSecondaryButton: "#F0F0F0",
     /** #192557 */
     selectedMenuList: "#192557",
-    /** #2F3649 */
-    textFieldTextField: "#2F3649",
+    /** #44DB95 */
+    tagGreen44DB95: "#44DB95",
     /** #2B344D */
-    textFieldMenu: "#2B344D",
+    textField: "#2B344D",
     /** #FFFFFF */
     whiteWhite: "#FFFFFF",
-    /** #ACBFCB */
-    textFieldHeader: "#ACBFCB",
-    /** #1A99CD */
-    blueInfo: "#1A99CD",
+    /** #3074F3 */
+    blueBlue: "#3074F3",
+    /** #25A96B */
+    greenGreen: "#25A96B",
+    /** #1B293A */
+    greyButtonsBg: "#1B293A",
+    /** #ADB4CA */
+    greyDrawerHandle: "#ADB4CA",
+    /** #C9CFDC */
+    greyGrey: "#C9CFDC",
+    /** #90A3B1 */
+    greySecondaryBodyText: "#90A3B1",
+    /** #2A4051 */
+    greyStroke: "#2A4051",
+    /** #2F3649 */
+    greyTextField: "#2F3649",
+    /** #FFA000 */
+    orangeOrangeWarning: "#FFA000",
+    /** #C84747 */
+    redRedError: "#C84747",
+    /** #FF4B4B */
+    redRedWarning: "#FF4B4B",
+    /** #00FFFF */
+    turquoiseTurquoise: "#00FFFF",
   },
   typography: {
-    interSmiBold: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 700,
-      lineHeight: "normal",
-    },
-    interRegular: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 400,
-      lineHeight: "normal",
-    },
-    interMedium: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 500,
-      lineHeight: "normal",
-    },
-    element302914: {
+    primary: {
       fontFamily: "Inter",
       fontSize: 64,
       fontWeight: 600,
@@ -3271,54 +2076,116 @@ export const designTokens = {
       fontWeight: 500,
       lineHeight: 1.25,
     },
-    textBody: {
-      fontFamily: "Inter",
-      fontSize: 18,
-      fontWeight: 500,
+    whiteWhiteStatusBar: {
+      fontFamily: "SF Pro",
+      fontSize: 15,
+      fontWeight: 600,
+      lineHeight: "normal",
+      letterSpacing: -0.17,
+    },
+    whiteWhiteContainer: {
+      fontFamily: "SF Pro Text",
+      fontSize: 17,
+      fontWeight: 400,
       lineHeight: "normal",
     },
-    largeHeader: {
+    whiteWhiteContainer2: {
+      fontFamily: "SF Pro Text",
+      fontSize: 14,
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+    grey600Text: {
+      fontFamily: "Segoe UI",
+      fontSize: 12,
+      fontWeight: 400,
+      lineHeight: 13,
+    },
+    token16Reg: {
+      fontFamily: "Inter",
+      fontSize: 16,
+      fontWeight: 400,
+      lineHeight: 24,
+    },
+    greyTextIcons: {
+      fontFamily: "Heebo",
+      fontSize: 14,
+      fontWeight: 500,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    labelSml: {
+      fontFamily: "Inter",
+      fontSize: 12,
+      fontWeight: 400,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    lableSami12: {
+      fontFamily: "Inter",
+      fontSize: 12,
+      fontWeight: 600,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    inter20SemiBold: {
       fontFamily: "Inter",
       fontSize: 20,
       fontWeight: 600,
       lineHeight: 1.25,
     },
-    subheader: {
-      fontFamily: "Inter",
-      fontSize: 17,
-      fontWeight: 600,
-      lineHeight: 1.25,
-    },
-    headerSection: {
-      fontFamily: "Inter",
-      fontSize: 17,
-      fontWeight: 600,
-      lineHeight: 1.25,
-      letterSpacing: 0.5,
-    },
-    headerTextField: {
-      fontFamily: "Inter",
-      fontSize: 32,
-      fontWeight: 600,
-      lineHeight: 1.25,
-    },
-    headerTextField2: {
-      fontFamily: "Inter",
-      fontSize: 32,
-      fontWeight: 600,
-      lineHeight: 1.25,
-      textTransform: "uppercase",
-    },
-    headerTextField3: {
-      fontFamily: "Inter",
-      fontSize: 24,
-      fontWeight: 600,
-      lineHeight: 1.25,
-    },
-    tableHeader: {
+    buttonText: {
       fontFamily: "Inter",
       fontSize: 14,
-      fontWeight: 600,
+      fontWeight: 500,
+      lineHeight: 1.25,
+      letterSpacing: 1,
+    },
+    labelLarge14Med: {
+      fontFamily: "Inter",
+      fontSize: 14,
+      fontWeight: 500,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    labelReg14Reg: {
+      fontFamily: "Inter",
+      fontSize: 14,
+      fontWeight: 400,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    headlineReg16Med: {
+      fontFamily: "Inter",
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    token14Regular: {
+      fontFamily: "Inter",
+      fontSize: 14,
+      fontWeight: 400,
+      lineHeight: 20,
+    },
+    headlineMed18Med: {
+      fontFamily: "Inter",
+      fontSize: 18,
+      fontWeight: 500,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    headlineReg16Reg: {
+      fontFamily: "Inter",
+      fontSize: 16,
+      fontWeight: 400,
+      lineHeight: "normal",
+      textTransform: "capitalize",
+    },
+    body: {
+      fontFamily: "Inter",
+      fontSize: 14,
+      fontWeight: 400,
       lineHeight: 1.25,
     },
     bodyBold: {
@@ -3327,152 +2194,107 @@ export const designTokens = {
       fontWeight: 500,
       lineHeight: 1.25,
     },
-    body: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 400,
-      lineHeight: 1.25,
-    },
-    inter14MedButton: {
-      fontFamily: "Inter",
-      fontSize: 14,
-      fontWeight: 500,
-      lineHeight: 1.25,
-      letterSpacing: 1,
-    },
-    boldSmallText: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 600,
-      lineHeight: 1.25,
-    },
-    inter12Regular: {
-      fontFamily: "Inter",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 1.25,
-    },
-    hebrew: {
-      fontFamily: "Open Sans",
-      fontSize: 12,
-      fontWeight: 400,
-      lineHeight: 0.9,
-      letterSpacing: 0.5,
-    },
-    primary: {
-      fontFamily: "Inter",
-      fontSize: 64,
-      fontWeight: 600,
-      lineHeight: "normal",
-      textTransform: "uppercase",
-    },
-    textDefault: {
-      fontFamily: "Inter",
-      fontSize: 64,
-      fontWeight: 600,
-      lineHeight: 1.25,
-    },
-    error: {
-      fontFamily: "Inter",
-      fontSize: 10,
-      fontWeight: 500,
-      lineHeight: 1.25,
-    },
-    inter17Regular: {
-      fontFamily: "Inter",
-      fontSize: 17,
-      fontWeight: 400,
-      lineHeight: 1.25,
-    },
-    subtitle2: {
-      fontFamily: "Roboto",
-      fontSize: 14,
-      fontWeight: 500,
-      lineHeight: 1.57,
-      letterSpacing: 0.1,
-    },
   },
   radius: {
-    tableCell: { topLeft: 5, topRight: 5, bottomRight: 5, bottomLeft: 5 },
-    buttonsNewButtons: { topLeft: 12, topRight: 12, bottomRight: 12, bottomLeft: 12 },
-    buttonsTextField: { topLeft: 0, topRight: 4, bottomRight: 4, bottomLeft: 0 },
-    menuNewButtons: { topLeft: 8, topRight: 8, bottomRight: 8, bottomLeft: 8 },
-    menuFiltersOpen: { topLeft: 0, topRight: 0, bottomRight: 4, bottomLeft: 4 },
-    icons: { topLeft: 11, topRight: 11, bottomRight: 11, bottomLeft: 11 },
-    search: { topLeft: 2, topRight: 2, bottomRight: 2, bottomLeft: 2 },
-    frame627217: { topLeft: 20, topRight: 0, bottomRight: 0, bottomLeft: 20 },
-    primarySlider: { topLeft: 100, topRight: 100, bottomRight: 100, bottomLeft: 100 },
-    primaryStateDefaultIconFalse: { topLeft: 156.69219970703125, topRight: 156.69219970703125, bottomRight: 156.69219970703125, bottomLeft: 156.69219970703125 },
-    primarySliderThumb: { topLeft: 20, topRight: 20, bottomRight: 20, bottomLeft: 20 },
-    textField: { topLeft: 4, topRight: 4, bottomRight: 0, bottomLeft: 0 },
-    dialogSectionsNewButtons: { topLeft: 6, topRight: 6, bottomRight: 6, bottomLeft: 6 },
-    dialogSectionsMasterTable: { topLeft: 0, topRight: 0, bottomRight: 5, bottomLeft: 5 },
-    dialogSectionsMasterTable2: { topLeft: 0, topRight: 5, bottomRight: 0, bottomLeft: 0 },
-    matInputSelectionControls: { topLeft: 32, topRight: 32, bottomRight: 32, bottomLeft: 32 },
-    frame627157: { topLeft: 3.708608865737915, topRight: 3.708608865737915, bottomRight: 0, bottomLeft: 0 },
-    frame627159: { topLeft: 0, topRight: 0, bottomRight: 3.6848485469818115, bottomLeft: 3.6848485469818115 },
-    white: { topLeft: 0, topRight: 0, bottomRight: 3.708608865737915, bottomLeft: 3.708608865737915 },
-    divider: { topLeft: 50, topRight: 50, bottomRight: 50, bottomLeft: 50 },
+    radiusXXS: { topLeft: 2, topRight: 2, bottomRight: 2, bottomLeft: 2 },
+    radiusXS: { topLeft: 4, topRight: 4, bottomRight: 4, bottomLeft: 4 },
+    radiusS: { topLeft: 8, topRight: 8, bottomRight: 8, bottomLeft: 8 },
+    radiusM: { topLeft: 12, topRight: 12, bottomRight: 12, bottomLeft: 12 },
+    radiusL: { topLeft: 16, topRight: 16, bottomRight: 16, bottomLeft: 16 },
+    radiusXL: { topLeft: 20, topRight: 20, bottomRight: 20, bottomLeft: 20 },
+    radiusFull: { topLeft: 99, topRight: 99, bottomRight: 99, bottomLeft: 99 },
+    menu: { topLeft: 5, topRight: 5, bottomRight: 5, bottomLeft: 5 },
+    icons: { topLeft: 1133.3333740234375, topRight: 1133.3333740234375, bottomRight: 1133.3333740234375, bottomLeft: 1133.3333740234375 },
+    rectangle20: { topLeft: 10, topRight: 10, bottomRight: 10, bottomLeft: 10 },
+    iconDone: { topLeft: 30, topRight: 30, bottomRight: 30, bottomLeft: 30 },
+    primary: { topLeft: 156.69219970703125, topRight: 156.69219970703125, bottomRight: 156.69219970703125, bottomLeft: 156.69219970703125 },
+    rectangle: { topLeft: 1.2000000476837158, topRight: 1.2000000476837158, bottomRight: 1.2000000476837158, bottomLeft: 1.2000000476837158 },
+    greyButtonsBg: { topLeft: 1400, topRight: 1400, bottomRight: 1400, bottomLeft: 1400 },
+    rectangle9: { topLeft: 200, topRight: 200, bottomRight: 200, bottomLeft: 200 },
+    greyPage: { topLeft: 24, topRight: 24, bottomRight: 24, bottomLeft: 24 },
+    frame1973342108: { topLeft: 44.4444465637207, topRight: 44.4444465637207, bottomRight: 44.4444465637207, bottomLeft: 44.4444465637207 },
+    tertiary: { topLeft: 58, topRight: 58, bottomRight: 58, bottomLeft: 58 },
   },
   shadows: {
-    masterTable: [{"type":"drop","color":"#101828","opacity":0.05,"offsetX":0,"offsetY":1,"blur":2,"spread":0}],
-    image11: [{"type":"drop","color":"#000000","opacity":0.1,"offsetX":-3,"offsetY":5,"blur":4,"spread":3}],
-    backgroundPageDialog: [{"type":"drop","color":"#000000","opacity":0.25,"offsetX":0,"offsetY":4,"blur":4,"spread":0}],
-    shadowLightSystem: [{"type":"drop","color":"#000000","opacity":0.22,"offsetX":0,"offsetY":1,"blur":1,"spread":0}],
+    vector: [{"type":"drop","color":"#000000","opacity":0.25,"offsetX":0,"offsetY":4,"blur":4,"spread":0}],
     designSystemButtonShadow: [{"type":"drop","color":"#160532","opacity":0.2,"offsetX":0,"offsetY":1.5,"blur":3,"spread":0}],
   },
   borders: {
-    textField: { color: "#0C98B0", weight: 1, strokeAlign: "INSIDE" },
-    whiteNewButtons: { color: "#000000", weight: 1, strokeAlign: "INSIDE" },
-    whiteTableSettingsDefaultDefault1stPage: { color: "#295365", weight: 0.7155872583389282, strokeAlign: "INSIDE" },
-    masterTableMasterTable: { color: "#000000", weight: 1, strokeAlign: "OUTSIDE" },
-    masterTableTableForFigmaWork: { color: "#7A7A7A", weight: 1, strokeAlign: "OUTSIDE" },
-    tableCell: { color: "#8B4ED6", weight: 1, strokeAlign: "INSIDE" },
+    greyPageMeetingListItem: { color: "#2A4051", weight: 1, strokeAlign: "INSIDE" },
+    greyPageProperty1Home: { color: "#2A4051", weight: 1, strokeAlign: "OUTSIDE" },
+    menu: { color: "#8A38F5", weight: 1, strokeAlign: "INSIDE" },
+    vectorIcons: { color: "#90A3B1", weight: 1.5, strokeAlign: "CENTER" },
+    vectorFrame: { color: "#FFFFFF", weight: 1.25, strokeAlign: "CENTER" },
+    vectorNavigation: { color: "#FFFFFF", weight: 1.5833332538604736, strokeAlign: "CENTER" },
+    vectorNavigation2: { color: "#FFFFFF", weight: 1.5, strokeAlign: "INSIDE" },
+    vectorFrame2: { color: "#FFFFFF", weight: 1, strokeAlign: "CENTER" },
+    vectorFrame3: { color: "#D7E3EC", weight: 1.5, strokeAlign: "CENTER" },
+    vectorFrame4: { color: "#D7E3EC", weight: 1.25, strokeAlign: "CENTER" },
+    vectorFrame5: { color: "#FFFFFF", weight: 1.5, strokeAlign: "CENTER" },
+    vectorFrame6: { color: "#C84747", weight: 1, strokeAlign: "CENTER" },
+    vectorFrame7: { color: "#FFFFFF", weight: 1.0416666269302368, strokeAlign: "CENTER" },
+    vectorFrame8: { color: "#D7E3EC", weight: 1.0416666269302368, strokeAlign: "CENTER" },
+    vectorFrame9: { color: "#FF4B4B", weight: 1.25, strokeAlign: "CENTER" },
+    vectorAiSearch02: { color: "#D7E3EC", weight: 1.125, strokeAlign: "CENTER" },
+    iconDone: { color: "#7C7C7C", weight: 2, strokeAlign: "INSIDE" },
+    line10: { color: "#525C6D", weight: 1, strokeAlign: "CENTER" },
     confirm: { color: "#9B5DFF", weight: 1, strokeAlign: "INSIDE" },
-    inputStateDefaultAssistiveTextFalse: { color: "#295365", weight: 1, strokeAlign: "INSIDE" },
-    inputStateDisabledAssistiveTextFalse: { color: "#505D6F", weight: 1, strokeAlign: "INSIDE" },
-    inputStateErrorAssistiveTextFalse: { color: "#F05656", weight: 1, strokeAlign: "INSIDE" },
-    border304739: { color: "#0E92CB", weight: 1, strokeAlign: "INSIDE" },
-    buttonsPagination: { color: "#7A7A7A", weight: 1, strokeAlign: "INSIDE" },
-    buttonsButtons: { color: "#0C98B0", weight: 1, strokeAlign: "INSIDE" },
-    textField: { color: "#C84747", weight: 1, strokeAlign: "INSIDE" },
-    disabled: { color: "#505D6F", weight: 0.02083333395421505, strokeAlign: "INSIDE" },
-    icons: { color: "#D7E3EC", weight: 0.30000001192092896, strokeAlign: "OUTSIDE" },
-    border304597: { color: "#0E92CB", weight: 2, strokeAlign: "CENTER" },
-    border304598: { color: "#0E92CB", weight: 3, strokeAlign: "CENTER" },
-    frame627149: { color: "#0E92CB", weight: 1, strokeAlign: "INSIDE" },
+    greyButtonsBg: { color: "#2A4051", weight: 1.1333333253860474, strokeAlign: "INSIDE" },
+    line1: { color: "#90A3B1", weight: 1, strokeAlign: "CENTER" },
+    grey500Done: { color: "#7C7C7C", weight: 2, strokeAlign: "CENTER" },
+    grey500Group: { color: "#7C7C7C", weight: 0.5, strokeAlign: "CENTER" },
+    white: { color: "#000000", weight: 1, strokeAlign: "INSIDE" },
     vector1: { color: "#D7E3EC", weight: 2, strokeAlign: "CENTER" },
-    dialogLayout: { color: "#2A4051", weight: 1, strokeAlign: "INSIDE" },
-    line04: { color: "#7A7A7A", weight: 1, strokeAlign: "CENTER" },
-    divider: { color: "#000000", weight: 1, strokeAlign: "CENTER" },
-    backgroundPageDialogCheckbox: { color: "#000000", weight: 1.5, strokeAlign: "INSIDE" },
-    backgroundPageDialogTableSettingsCompactZebra1stPage: { color: "#000000", weight: 0.7155872583389282, strokeAlign: "INSIDE" },
-    select: { color: "#0E92CB", weight: 1.5, strokeAlign: "INSIDE" },
+    disabled: { color: "#505D6F", weight: 1, strokeAlign: "INSIDE" },
+    greyTextIconsFrame: { color: "#D7E3EC", weight: 1.1773462295532227, strokeAlign: "INSIDE" },
+    greyTextIconsFrame2: { color: "#FFFFFF", weight: 1.1852092742919922, strokeAlign: "INSIDE" },
+    greyTextIconsAiSearch02: { color: "#D7E3EC", weight: 0.7499999403953552, strokeAlign: "CENTER" },
   },
   opacity: {
-    rectangle10: 0.25,
-    rectangle9: 0.2,
-    rectangle11: 0.4,
-    white: 1,
-    masterTable: 1,
-    sorting: 1,
-    tableCell: 1,
-    primarySlider: 0.38,
-    primarySliderThumb: 0.16,
-    primaryStateDefaultIconFalse: 0.06,
-    backgroundPaperElevation0: 0.8,
-    bodyText: 0.6,
-    icons: 1,
+    frame: 1,
+    rectangle20: 0.7,
+    line1: 1,
+    emailIcon: 1,
+    copy2: 1,
+    rectangle10StateDefaultIconFalse: 0.25,
+    rectangle10NewRecordingVariant2: 0.2,
+    rectangle9StateDefaultIconFalse: 0.2,
+    rectangle9NewRecordingVariant2: 0.1,
+    rectangle11StateDefaultIconFalse: 0.4,
+    rectangle11NewRecordingVariant2: 0.4,
+    primary: 0.06,
   },
   gradients: {
-    buttons: {"type":"linear","stops":[{"position":0,"color":"#005DB1","opacity":1},{"position":0.806,"color":"#00AAC6","opacity":1}]},
+    vector: {"type":"linear","stops":[{"position":0,"color":"#34AD9E","opacity":1},{"position":0.04,"color":"#22B7B8","opacity":1},{"position":0.12,"color":"#09C6DE","opacity":1},{"position":0.16,"color":"#00CCED","opacity":1},{"position":0.37,"color":"#04C6E9","opacity":1},{"position":0.63,"color":"#11B8E0","opacity":1},{"position":0.9,"color":"#27A0D1","opacity":1},{"position":1,"color":"#3096CB","opacity":1}]},
+    rectangle19: {"type":"linear","stops":[{"position":0.317,"color":"#051321","opacity":1},{"position":1,"color":"#051321","opacity":0}]},
     primaryButton: {"type":"linear","stops":[{"position":0,"color":"#3A3E7B","opacity":1},{"position":0.565,"color":"#614AB0","opacity":1},{"position":1,"color":"#9B5DFF","opacity":1}]},
+    whiteWhite: {"type":"radial","stops":[{"position":0,"color":"#3074F3","opacity":1},{"position":1,"color":"#002152","opacity":1}]},
+    rectangle9: {"type":"radial","stops":[{"position":0,"color":"#150B46","opacity":1},{"position":1,"color":"#8E65EB","opacity":1}]},
+    ellipse3569: {"type":"linear","stops":[{"position":0,"color":"#A268FF","opacity":0.8},{"position":1,"color":"#3E95D6","opacity":1}]},
+    frame1973342108: {"type":"linear","stops":[{"position":0,"color":"#9B5DFF","opacity":1},{"position":1,"color":"#30335D","opacity":1}]},
+    primary: {"type":"linear","stops":[{"position":0,"color":"#6E3EBB","opacity":1},{"position":1,"color":"#30335D","opacity":1}]},
   },
-  layoutGrids: {
+  blurs: {
+    rectangle20: { type: "layer", radius: 42.599998474121094 },
+    ellipse3569: { type: "layer", radius: 69.80000305175781 },
   },
   elevations: {
     elevation8: [{"type":"drop","color":"#000000","opacity":0.2,"offsetX":0,"offsetY":5,"blur":5,"spread":-3},{"type":"drop","color":"#000000","opacity":0.14,"offsetX":0,"offsetY":8,"blur":10,"spread":1},{"type":"drop","color":"#000000","opacity":0.12,"offsetX":0,"offsetY":3,"blur":14,"spread":2}],
-    elevation2: [{"type":"drop","color":"#000000","opacity":0.2,"offsetX":0,"offsetY":3,"blur":1,"spread":-2},{"type":"drop","color":"#000000","opacity":0.14,"offsetX":0,"offsetY":2,"blur":2,"spread":0},{"type":"drop","color":"#000000","opacity":0.12,"offsetX":0,"offsetY":1,"blur":5,"spread":0}],
+  },
+  sizes: {
+    spaceXXS: 4,
+    spaceXS: 8,
+    spaceS: 12,
+    spaceM: 16,
+    spaceL: 20,
+    spaceXL: 24,
+    spaceXXL: 32,
+    spaceXXXL: 40,
+    borderWidthXXS: 1,
+    borderWidthXS: 1.25,
+    borderWidthS: 1.5,
+    borderWidthM: 1.75,
+    borderWidthL: 2,
   },
 } as const;
 

@@ -1,34 +1,7 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-14T00:22:20.480Z",
+  "version": "0.0.4",
+  "generatedAt": "2026-03-14T14:29:09.818Z",
   "components": [
-    {
-      "name": "TextField",
-      "path": "src/components/TextField/TextField.tsx",
-      "description": "TextField component",
-      "props": {
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the text field"
-        },
-        "variant": {
-          "type": "'outlined' | 'filled' | 'standard'",
-          "required": false,
-          "description": "The variant of the text field"
-        },
-        "state": {
-          "type": "'default' | 'error' | 'disabled'",
-          "required": false,
-          "description": "The state of the text field"
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling"
-        }
-      }
-    },
     {
       "name": "Button",
       "path": "src/components/Button/Button.tsx",
@@ -55,21 +28,91 @@
           "description": "Additional class name for custom styling."
         }
       }
+    },
+    {
+      "name": "IconText",
+      "path": "src/components/IconText/IconText.tsx",
+      "description": "IconText component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Optional size variant"
+        },
+        "variant": {
+          "type": "'default' | 'primary' | 'secondary'",
+          "required": false,
+          "description": "Optional variant type"
+        },
+        "state": {
+          "type": "'normal' | 'disabled'",
+          "required": false,
+          "description": "Optional state"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Optional custom class name"
+        },
+        "style": {
+          "type": "React.CSSProperties",
+          "required": false,
+          "description": "Custom inline styles"
+        }
+      }
+    },
+    {
+      "name": "InputsControls",
+      "path": "src/components/InputsControls/InputsControls.tsx",
+      "description": "InputsControls component",
+      "props": {}
+    },
+    {
+      "name": "MenuActionItemSingle",
+      "path": "src/components/MenuActionItemSingle/MenuActionItemSingle.tsx",
+      "description": "MenuActionItemSingle component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Optional size variant"
+        },
+        "variant": {
+          "type": "'default' | 'selected'",
+          "required": false,
+          "description": "Optional variant type"
+        },
+        "state": {
+          "type": "'enabled' | 'disabled'",
+          "required": false,
+          "description": "Optional state"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Optional custom class name"
+        },
+        "style": {
+          "type": "React.CSSProperties",
+          "required": false,
+          "description": "Custom inline styles"
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 36,
-    "typography": 24,
-    "radius": 21,
-    "shadows": 5,
-    "elevations": 2,
-    "borders": 26,
+    "colors": 33,
+    "typography": 20,
+    "radius": 18,
+    "shadows": 2,
+    "elevations": 1,
+    "borders": 29,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 13,
-    "gradients": 2,
-    "blurs": 0,
-    "layoutGrids": 1,
+    "sizes": 13,
+    "opacity": 12,
+    "gradients": 8,
+    "blurs": 2,
+    "layoutGrids": 0,
     "icons": 0
   }
 }

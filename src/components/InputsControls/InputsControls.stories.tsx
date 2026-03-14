@@ -1,0 +1,1 @@
+// full .stories.tsx file content based on the template
