@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
   /**
    * The variant of the button.
    */
@@ -33,38 +33,38 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({
       borderRadius: '4px',
       cursor: disabled ? 'not-allowed' : 'pointer',
       transition: 'background-color 0.3s',
-      fontFamily: 'var(--font-inter-medium-*)',
+      fontFamily: 'var(--font-button-text-*)',
       fontSize: '14px',
       fontWeight: 500,
     },
     variants: {
       default: {
-        backgroundColor: 'var(--color-primary-buttons)',
+        backgroundColor: 'var(--color-primary)',
         color: 'var(--color-white-white)',
       },
       flat: {
         backgroundColor: 'transparent',
-        color: 'var(--color-primary-buttons)',
+        color: 'var(--color-primary)',
       },
       stroked: {
         backgroundColor: 'transparent',
-        border: '1px solid var(--color-primary-buttons)',
-        color: 'var(--color-primary-buttons)',
+        border: '1px solid var(--color-primary)',
+        color: 'var(--color-primary)',
       },
       basic: {
-        backgroundColor: 'var(--color-buttons-secondary-button)',
+        backgroundColor: 'var(--color-buttons)',
         color: 'var(--color-white-white)',
       },
       toggle: {
         backgroundColor: 'var(--color-selected-secondary-button)',
-        color: 'var(--color-body-text)',
+        color: 'var(--color-body-text-frame-2147225184-default)',
       },
       multi: {
-        backgroundColor: 'var(--color-primary-primary-button)',
+        backgroundColor: 'var(--color-primary)',
         color: 'var(--color-white-white)',
       },
       pressed: {
-        backgroundColor: 'var(--color-hover)',
+        backgroundColor: 'var(--color-grey-page-1)',
         color: 'var(--color-white-white)',
       },
       disabled: {
@@ -73,7 +73,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({
       },
       icon: {
         backgroundColor: 'transparent',
-        color: 'var(--color-icons-1)',
+        color: 'var(--color-icons)',
       },
     },
     sizes: {

@@ -1,34 +1,7 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-14T00:22:20.480Z",
+  "version": "0.0.4",
+  "generatedAt": "2026-03-14T13:44:47.769Z",
   "components": [
-    {
-      "name": "TextField",
-      "path": "src/components/TextField/TextField.tsx",
-      "description": "TextField component",
-      "props": {
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the text field"
-        },
-        "variant": {
-          "type": "'outlined' | 'filled' | 'standard'",
-          "required": false,
-          "description": "The variant of the text field"
-        },
-        "state": {
-          "type": "'default' | 'error' | 'disabled'",
-          "required": false,
-          "description": "The state of the text field"
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling"
-        }
-      }
-    },
     {
       "name": "Button",
       "path": "src/components/Button/Button.tsx",
@@ -55,21 +28,115 @@
           "description": "Additional class name for custom styling."
         }
       }
+    },
+    {
+      "name": "IconText",
+      "path": "src/components/IconText/IconText.tsx",
+      "description": "IconText component",
+      "props": {
+        "text": {
+          "type": "string",
+          "required": true,
+          "description": "The text to display next to the icon."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The icon component to display."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the component."
+        },
+        "variant": {
+          "type": "'default' | 'primary'",
+          "required": false,
+          "description": "The variant of the component."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the component will be disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class name for styling."
+        }
+      }
+    },
+    {
+      "name": "InputsControls",
+      "path": "src/components/InputsControls/InputsControls.tsx",
+      "description": "InputsControls component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "default": "'medium'",
+          "description": "Size of the input control"
+        },
+        "variant": {
+          "type": "'default' | 'outlined' | 'filled'",
+          "required": false,
+          "default": "'default'",
+          "description": "Variant of the input control"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "description": "If true, the input control will be disabled"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class name for styling"
+        }
+      }
+    },
+    {
+      "name": "MenuActionItemSingle",
+      "path": "src/components/MenuActionItemSingle/MenuActionItemSingle.tsx",
+      "description": "MenuActionItemSingle component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the menu item"
+        },
+        "variant": {
+          "type": "'default' | 'selected'",
+          "required": false,
+          "description": "The variant of the menu item"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the menu item is disabled"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling"
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 36,
-    "typography": 24,
-    "radius": 21,
-    "shadows": 5,
-    "elevations": 2,
-    "borders": 26,
+    "colors": 33,
+    "typography": 20,
+    "radius": 18,
+    "shadows": 2,
+    "elevations": 1,
+    "borders": 29,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 13,
-    "gradients": 2,
-    "blurs": 0,
-    "layoutGrids": 1,
+    "sizes": 13,
+    "opacity": 12,
+    "gradients": 8,
+    "blurs": 2,
+    "layoutGrids": 0,
     "icons": 0
   }
 }

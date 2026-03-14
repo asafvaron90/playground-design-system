@@ -1,8 +1,7 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import Button, { ButtonProps } from './Button';
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
@@ -21,70 +20,86 @@ export default {
     disabled: {
       control: 'boolean',
     },
+    className: {
+      control: 'text',
+    },
   },
-} as Meta;
-
-const Template: Story<ButtonProps> = (args) => <Button {...args}>Button</Button>;
-
-export const Default = Template.bind({});
-Default.args = {
-  variant: 'default',
-  size: 'medium',
-  disabled: false,
 };
 
-export const Flat = Template.bind({});
-Flat.args = {
-  variant: 'flat',
-  size: 'medium',
-  disabled: false,
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    variant: 'default',
+    size: 'medium',
+    disabled: false,
+    children: 'Button',
+  },
 };
 
-export const Stroked = Template.bind({});
-Stroked.args = {
-  variant: 'stroked',
-  size: 'medium',
-  disabled: false,
+export const Flat: Story = {
+  args: {
+    variant: 'flat',
+    size: 'medium',
+    children: 'Flat Button',
+  },
 };
 
-export const Basic = Template.bind({});
-Basic.args = {
-  variant: 'basic',
-  size: 'medium',
-  disabled: false,
+export const Stroked: Story = {
+  args: {
+    variant: 'stroked',
+    size: 'medium',
+    children: 'Stroked Button',
+  },
 };
 
-export const Toggle = Template.bind({});
-Toggle.args = {
-  variant: 'toggle',
-  size: 'medium',
-  disabled: false,
+export const Basic: Story = {
+  args: {
+    variant: 'basic',
+    size: 'medium',
+    children: 'Basic Button',
+  },
 };
 
-export const Multi = Template.bind({});
-Multi.args = {
-  variant: 'multi',
-  size: 'medium',
-  disabled: false,
+export const Toggle: Story = {
+  args: {
+    variant: 'toggle',
+    size: 'medium',
+    children: 'Toggle Button',
+  },
 };
 
-export const Pressed = Template.bind({});
-Pressed.args = {
-  variant: 'pressed',
-  size: 'medium',
-  disabled: false,
+export const Multi: Story = {
+  args: {
+    variant: 'multi',
+    size: 'medium',
+    children: 'Multi Button',
+  },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  variant: 'disabled',
-  size: 'medium',
-  disabled: true,
+export const Pressed: Story = {
+  args: {
+    variant: 'pressed',
+    size: 'medium',
+    children: 'Pressed Button',
+  },
 };
 
-export const Icon = Template.bind({});
-Icon.args = {
-  variant: 'icon',
-  size: 'medium',
-  disabled: false,
+export const Disabled: Story = {
+  args: {
+    variant: 'disabled',
+    size: 'medium',
+    disabled: true,
+    children: 'Disabled Button',
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    variant: 'icon',
+    size: 'medium',
+    children: 'Icon Button',
+  },
 };
