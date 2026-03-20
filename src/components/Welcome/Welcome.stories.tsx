@@ -7,7 +7,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Welcome>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

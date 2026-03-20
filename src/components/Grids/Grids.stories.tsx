@@ -5,7 +5,7 @@ const meta = {
   title: 'System/Tokens/Grids',
   component: Grids,
   parameters: { layout: 'fullscreen' },
-} satisfies Meta<typeof Grids>;
+};
 
 export default meta;
 export const Default: StoryObj<typeof Grids> = {};

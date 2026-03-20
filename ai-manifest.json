@@ -1,75 +1,20 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-14T00:22:20.480Z",
-  "components": [
-    {
-      "name": "TextField",
-      "path": "src/components/TextField/TextField.tsx",
-      "description": "TextField component",
-      "props": {
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the text field"
-        },
-        "variant": {
-          "type": "'outlined' | 'filled' | 'standard'",
-          "required": false,
-          "description": "The variant of the text field"
-        },
-        "state": {
-          "type": "'default' | 'error' | 'disabled'",
-          "required": false,
-          "description": "The state of the text field"
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling"
-        }
-      }
-    },
-    {
-      "name": "Button",
-      "path": "src/components/Button/Button.tsx",
-      "description": "Button component",
-      "props": {
-        "variant": {
-          "type": "'default' | 'flat' | 'stroked' | 'basic' | 'toggle' | 'multi' | 'pressed' | 'disabled' | 'icon'",
-          "required": false,
-          "description": "The variant of the button."
-        },
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the button."
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the button will be disabled."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class name for custom styling."
-        }
-      }
-    }
-  ],
+  "version": "0.0.4",
+  "generatedAt": "2026-03-20T11:10:00.188Z",
+  "components": [],
   "tokens": {
-    "colors": 36,
-    "typography": 24,
-    "radius": 21,
-    "shadows": 5,
-    "elevations": 2,
-    "borders": 26,
+    "colors": 31,
+    "typography": 67,
+    "radius": 36,
+    "shadows": 7,
+    "elevations": 0,
+    "borders": 48,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 13,
-    "gradients": 2,
-    "blurs": 0,
-    "layoutGrids": 1,
+    "sizes": 13,
+    "opacity": 21,
+    "gradients": 17,
+    "blurs": 7,
+    "layoutGrids": 2,
     "icons": 0
   }
 }

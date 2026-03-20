@@ -5,7 +5,7 @@ const meta = {
   title: 'System/Tokens/Blurs',
   component: Blurs,
   parameters: { layout: 'fullscreen' },
-} satisfies Meta<typeof Blurs>;
+};
 
 export default meta;
 export const Default: StoryObj<typeof Blurs> = {};

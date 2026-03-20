@@ -5,7 +5,7 @@ const meta = {
   title: 'System/Tokens/Opacity',
   component: Opacity,
   parameters: { layout: 'fullscreen' },
-} satisfies Meta<typeof Opacity>;
+};
 
 export default meta;
 export const Default: StoryObj<typeof Opacity> = {};
