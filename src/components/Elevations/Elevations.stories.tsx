@@ -5,7 +5,7 @@ const meta = {
   title: 'System/Tokens/Elevations',
   component: Elevations,
   parameters: { layout: 'fullscreen' },
-} satisfies Meta<typeof Elevations>;
+};
 
 export default meta;
 export const Default: StoryObj<typeof Elevations> = {};

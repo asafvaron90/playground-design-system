@@ -7,7 +7,7 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Colors>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
