@@ -1,20 +1,20 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-03-22T12:23:29.963Z",
+  "version": "0.0.1",
+  "generatedAt": "2026-03-22T12:33:26.682Z",
   "components": [],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
-    "shadows": 0,
+    "colors": 31,
+    "typography": 67,
+    "radius": 36,
+    "shadows": 7,
     "elevations": 0,
-    "borders": 0,
+    "borders": 48,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 0,
-    "blurs": 0,
-    "layoutGrids": 0,
+    "sizes": 13,
+    "opacity": 21,
+    "gradients": 17,
+    "blurs": 7,
+    "layoutGrids": 2,
     "icons": 0
   }
 }
