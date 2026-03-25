@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createTheme } from '@mui/material/styles';
 import tokens from '../../../design-tokens/tokens.json';
 

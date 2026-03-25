@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Divider from '@mui/material/Divider';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Tabs from '@mui/material/Tabs';

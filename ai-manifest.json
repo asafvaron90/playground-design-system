@@ -1,6 +1,6 @@
 {
-  "version": "0.0.7",
-  "generatedAt": "2026-03-25T22:35:56.459Z",
+  "version": "0.0.8",
+  "generatedAt": "2026-03-25T22:58:08.482Z",
   "components": [
     {
       "name": "Blurs",
@@ -112,6 +112,23 @@
       "props": {}
     },
     {
+      "name": "StatusBar",
+      "path": "src/components/StatusBar/StatusBar.tsx",
+      "description": "StatusBar component displays the current time and connectivity icons.",
+      "props": {
+        "time": {
+          "type": "string",
+          "required": true,
+          "description": "The current time to display on the status bar."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the status bar."
+        }
+      }
+    },
+    {
       "name": "SortButton",
       "path": "src/components/SortButton/SortButton.tsx",
       "description": "SortButton component",
@@ -119,12 +136,12 @@
         "size": {
           "type": "'sm' | 'md' | 'lg'",
           "required": false,
-          "description": "The size of the button.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
+          "description": "The size of the button.\n'sm' for small, 'md' for medium, 'lg' for large."
         },
         "variant": {
           "type": "'primary' | 'secondary'",
           "required": false,
-          "description": "The variant of the button.\n- 'primary': Primary style\n- 'secondary': Secondary style"
+          "description": "The variant of the button.\n'primary' for primary style, 'secondary' for secondary style."
         },
         "disabled": {
           "type": "boolean",
@@ -134,75 +151,43 @@
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional className for custom styling."
+          "description": "Optional class name for styling overrides."
         }
       }
     },
     {
-      "name": "Header",
-      "path": "src/components/Header/Header.tsx",
-      "description": "Header component",
+      "name": "NavigationBar",
+      "path": "src/components/NavigationBar/NavigationBar.tsx",
+      "description": "NavigationBar component",
       "props": {
         "title": {
           "type": "string",
           "required": true,
-          "description": "The title to display in the header."
+          "description": "The title to display in the navigation bar."
         },
-        "onBack": {
-          "type": "() => void",
-          "required": false,
-          "description": "Optional back button click handler."
-        },
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "Optional size of the header."
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "Optional variant of the header."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional className for custom styling."
-        }
-      }
-    },
-    {
-      "name": "StatusBar",
-      "path": "src/components/StatusBar/StatusBar.tsx",
-      "description": "StatusBar component",
-      "props": {
         "size": {
           "type": "'sm' | 'md' | 'lg'",
           "required": false,
-          "description": "The size of the status bar.\n'sm' for small, 'md' for medium, 'lg' for large."
+          "description": "The size of the navigation bar.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
         },
         "variant": {
-          "type": "'light' | 'dark'",
+          "type": "'default' | 'primary'",
           "required": false,
-          "description": "The variant of the status bar.\n'light' for light theme, 'dark' for dark theme."
+          "description": "The variant of the navigation bar.\n- 'default': Default styling\n- 'primary': Primary styling"
         },
-        "time": {
-          "type": "string",
+        "state": {
+          "type": "'active' | 'disabled'",
           "required": false,
-          "description": "The current time to display."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional className for custom styling."
+          "description": "The state of the navigation bar.\n- 'active': Active state\n- 'disabled': Disabled state"
         }
       }
     }
   ],
   "tokens": {
-    "colors": 44,
+    "colors": 45,
     "typography": 71,
     "radius": 40,
-    "shadows": 7,
+    "shadows": 10,
     "elevations": 0,
     "borders": 48,
     "gaps": 0,
