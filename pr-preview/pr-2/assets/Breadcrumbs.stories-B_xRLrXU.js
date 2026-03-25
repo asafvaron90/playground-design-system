@@ -1,7 +1,0 @@
-import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{w as m}from"./decorator-C5r3h4kd.js";import{B as s,L as o}from"./Link-OjYWoESj.js";import{T as a}from"./Typography-trg0Fhwy.js";import"./tokens-BBwr5Oev.js";import"./index-JhL3uwfD.js";import"./createSvgIcon-zWr5T6Oy.js";import"./ButtonBase-DRQU-LGZ.js";import"./useTimeout-C3DxH1iD.js";import"./useForkRef-C3n9QMso.js";import"./useEventCallback-C8vzuC9y.js";import"./isFocusVisible-B8k4qzLc.js";import"./useSlotProps-DCBEa5y3.js";import"./mergeSlotProps-uSSkIX6Y.js";import"./useTheme-DTwCcBs8.js";import"./createSimplePaletteValueFilter-bm0fmN_7.js";const D={title:"System/Library Components (MUI)/Breadcrumbs",component:s,decorators:[m],parameters:{layout:"centered"}},e={render:()=>r.jsxs(s,{children:[r.jsx(o,{underline:"hover",color:"inherit",href:"#",children:"Design System"}),r.jsx(o,{underline:"hover",color:"inherit",href:"#",children:"Tokens"}),r.jsx(a,{color:"text.primary",children:"Colors"})]})};var t,i,n;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
-  render: () => <Breadcrumbs>
-      <Link underline="hover" color="inherit" href="#">Design System</Link>
-      <Link underline="hover" color="inherit" href="#">Tokens</Link>
-      <Typography color="text.primary">Colors</Typography>
-    </Breadcrumbs>
-}`,...(n=(i=e.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};const S=["Default"];export{e as Default,S as __namedExportsOrder,D as default};
