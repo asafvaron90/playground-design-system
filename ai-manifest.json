@@ -1,20 +1,216 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-03-22T12:23:29.963Z",
-  "components": [],
+  "version": "0.0.2",
+  "generatedAt": "2026-03-25T14:09:06.790Z",
+  "components": [
+    {
+      "name": "Blurs",
+      "path": "src/components/Blurs/Blurs.tsx",
+      "description": "Blurs component",
+      "props": {}
+    },
+    {
+      "name": "Borders",
+      "path": "src/components/Borders/Borders.tsx",
+      "description": "Borders component",
+      "props": {}
+    },
+    {
+      "name": "Colors",
+      "path": "src/components/Colors/Colors.tsx",
+      "description": "Colors component",
+      "props": {}
+    },
+    {
+      "name": "Elevations",
+      "path": "src/components/Elevations/Elevations.tsx",
+      "description": "Elevations component",
+      "props": {}
+    },
+    {
+      "name": "Gaps",
+      "path": "src/components/Gaps/Gaps.tsx",
+      "description": "Gaps component",
+      "props": {}
+    },
+    {
+      "name": "Grids",
+      "path": "src/components/Grids/Grids.tsx",
+      "description": "Grids component",
+      "props": {}
+    },
+    {
+      "name": "Icons",
+      "path": "src/components/Icons/Icons.tsx",
+      "description": "Icons component",
+      "props": {}
+    },
+    {
+      "name": "InjectionView",
+      "path": "src/components/InjectionView.tsx",
+      "description": "InjectionView component",
+      "props": {
+        "libraryName": {
+          "type": "string",
+          "required": true
+        },
+        "approach": {
+          "type": "string",
+          "required": true
+        },
+        "bindings": {
+          "type": "TokenBinding[]",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "ModelMap",
+      "path": "src/components/ModelMap/ModelMap.tsx",
+      "description": "ModelMap component",
+      "props": {}
+    },
+    {
+      "name": "Opacity",
+      "path": "src/components/Opacity/Opacity.tsx",
+      "description": "Opacity component",
+      "props": {}
+    },
+    {
+      "name": "Radius",
+      "path": "src/components/Radius/Radius.tsx",
+      "description": "Radius component",
+      "props": {}
+    },
+    {
+      "name": "Shadows",
+      "path": "src/components/Shadows/Shadows.tsx",
+      "description": "Shadows component",
+      "props": {}
+    },
+    {
+      "name": "Sizes",
+      "path": "src/components/Sizes/Sizes.tsx",
+      "description": "Sizes component",
+      "props": {}
+    },
+    {
+      "name": "TokenMapView",
+      "path": "src/components/TokenMapView.tsx",
+      "description": "TokenMapView component",
+      "props": {}
+    },
+    {
+      "name": "Typography",
+      "path": "src/components/Typography/Typography.tsx",
+      "description": "Typography component",
+      "props": {}
+    },
+    {
+      "name": "Welcome",
+      "path": "src/components/Welcome/Welcome.tsx",
+      "description": "Welcome component",
+      "props": {}
+    },
+    {
+      "name": "StatusBar",
+      "path": "src/components/StatusBar/StatusBar.tsx",
+      "description": "StatusBar component",
+      "props": {
+        "time": {
+          "type": "string",
+          "required": true,
+          "description": "The current time to display."
+        },
+        "batteryLevel": {
+          "type": "number",
+          "required": true,
+          "description": "The battery level as a percentage (0-100)."
+        },
+        "isWifiConnected": {
+          "type": "boolean",
+          "required": true,
+          "description": "Whether the Wi-Fi is connected."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names for custom styling."
+        }
+      }
+    },
+    {
+      "name": "NavigationBar",
+      "path": "src/components/NavigationBar/NavigationBar.tsx",
+      "description": "NavigationBar component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "The title to display in the navigation bar."
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the navigation bar.\n'sm' for small, 'md' for medium, 'lg' for large."
+        },
+        "variant": {
+          "type": "'default' | 'primary'",
+          "required": false,
+          "description": "The variant of the navigation bar.\n'default' for standard, 'primary' for primary styling."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the navigation bar is in a loading state."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names to apply to the navigation bar."
+        }
+      }
+    },
+    {
+      "name": "SortButton",
+      "path": "src/components/SortButton/SortButton.tsx",
+      "description": "SortButton component",
+      "props": {
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the button."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the button."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will be disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Custom class name for styling overrides."
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
-    "shadows": 0,
+    "colors": 44,
+    "typography": 71,
+    "radius": 40,
+    "shadows": 7,
     "elevations": 0,
-    "borders": 0,
+    "borders": 48,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 0,
-    "blurs": 0,
-    "layoutGrids": 0,
+    "sizes": 13,
+    "opacity": 21,
+    "gradients": 17,
+    "blurs": 7,
+    "layoutGrids": 2,
     "icons": 0
   }
 }

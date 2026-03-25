@@ -51,9 +51,9 @@ module.exports = {
       },
       fontFamily: {
     "inter": ["Inter", "sans-serif"],
-    "roboto": ["Roboto", "sans-serif"],
     "sf-pro": ["SF Pro", "sans-serif"],
     "sf-pro-text": ["SF Pro Text", "sans-serif"],
+    "roboto": ["Roboto", "sans-serif"],
     "dm-sans": ["DM Sans", "sans-serif"],
     "heebo": ["Heebo", "sans-serif"],
     "segoe-ui": ["Segoe UI", "sans-serif"],
@@ -108,9 +108,6 @@ module.exports = {
     "frame-2147224824": "var(--shadow-frame-2147224824)",
     "grey-text-icons": "var(--shadow-grey-text-icons)",
     "grey-buttons-bg": "var(--shadow-grey-buttons-bg)",
-    "small": "var(--shadow-small)",
-    "medium": "var(--shadow-medium)",
-    "large": "var(--shadow-large)",
       },
       opacity: {
     "ellipse-3569": "var(--opacity-ellipse-3569)",
