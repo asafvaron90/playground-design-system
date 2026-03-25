@@ -4,81 +4,62 @@ import { forwardRef } from 'react';
 
 export interface SortButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
   /**
-   * The size of the button.
+   * The size of the button
    * @default 'md'
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * The variant of the button.
+   * The variant of the button
    * @default 'primary'
    */
   variant?: 'primary' | 'secondary';
   /**
-   * If true, the button will be disabled.
+   * Whether the button is in a loading state
    * @default false
    */
-  disabled?: boolean;
+  loading?: boolean;
   /**
-   * Additional class name for custom styling.
+   * Optional class name for styling overrides
    */
   className?: string;
 }
 
-const styles: Record<NonNullable<SortButtonProps['variant']>, React.CSSProperties> = {
-  primary: {
-    backgroundColor: 'var(--color-home)',
-    color: 'var(--color-white-white)',
-  },
-  secondary: {
-    backgroundColor: 'var(--color-grey-2)',
-    color: 'var(--color-grey-600-text)',
-  },
-};
-
-const sizeStyles: Record<NonNullable<SortButtonProps['size']>, React.CSSProperties> = {
-  sm: {
-    fontSize: 'var(--font-label-sml)',
-    padding: '4px 8px',
-  },
-  md: {
-    fontSize: 'var(--font-label-large-14-med)',
-    padding: '8px 16px',
-  },
-  lg: {
-    fontSize: 'var(--font-headline-med-18-med)',
-    padding: '12px 24px',
-  },
-};
-
 const SortButton = forwardRef<HTMLButtonElement, SortButtonProps>(({
   size = 'md',
   variant = 'primary',
-  disabled = false,
+  loading = false,
   className,
   children,
   ...props
 }, ref) => {
-  const variantStyle = styles[variant];
-  const sizeStyle = sizeStyles[size];
+  const sizeStyles: Record<NonNullable<SortButtonProps['size']>, React.CSSProperties> = {
+    sm: { fontSize: 'var(--font-label-sml)', padding: '4px 8px' },
+    md: { fontSize: 'var(--font-label-large-14-med)', padding: '8px 16px' },
+    lg: { fontSize: 'var(--font-headline-med-18-med)', padding: '12px 24px' },
+  };
+
+  const variantStyles: Record<NonNullable<SortButtonProps['variant']>, React.CSSProperties> = {
+    primary: { backgroundColor: 'var(--color-home)', color: 'var(--color-white-white)' },
+    secondary: { backgroundColor: 'var(--color-grey-100)', color: 'var(--color-grey-600-text)' },
+  };
+
+  const loadingStyles: React.CSSProperties = loading ? { opacity: 0.5, cursor: 'not-allowed' } : {};
+
+  const styles: React.CSSProperties = {
+    ...sizeStyles[size],
+    ...variantStyles[variant],
+    ...loadingStyles,
+    border: 'none',
+    borderRadius: '4px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'background-color 0.3s',
+    ...props.style,
+  };
 
   return (
-    <button
-      ref={ref}
-      style={{
-        ...variantStyle,
-        ...sizeStyle,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: disabled ? 'not-allowed' : 'pointer',
-        opacity: disabled ? 0.6 : 1,
-      }}
-      className={className}
-      disabled={disabled}
-      {...props}
-    >
+    <button ref={ref} className={className} style={styles} disabled={loading} {...props}>
       {children}
     </button>
   );

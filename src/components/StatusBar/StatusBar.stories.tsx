@@ -6,29 +6,37 @@ const meta = {
   title: 'Components/StatusBar',
   component: StatusBar,
   args: {
-    size: 'medium',
-    variant: 'default',
-    loading: false,
+    time: '9:41',
   },
 } satisfies Meta<typeof StatusBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-
-export const Small: Story = {
-  args: { size: 'small' },
-};
-
-export const Large: Story = {
-  args: { size: 'large' },
+export const Default: Story = {
+  args: {
+    size: 'medium',
+    variant: 'default',
+  },
 };
 
 export const Inverted: Story = {
-  args: { variant: 'inverted' },
+  args: {
+    size: 'medium',
+    variant: 'inverted',
+  },
 };
 
-export const Loading: Story = {
-  args: { loading: true },
+export const Small: Story = {
+  args: {
+    size: 'small',
+    variant: 'default',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+    variant: 'default',
+  },
 };

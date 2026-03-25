@@ -1,6 +1,6 @@
 {
-  "version": "0.0.4",
-  "generatedAt": "2026-03-25T18:57:40.534Z",
+  "version": "0.0.5",
+  "generatedAt": "2026-03-25T21:47:30.469Z",
   "components": [
     {
       "name": "Blurs",
@@ -112,6 +112,38 @@
       "props": {}
     },
     {
+      "name": "Header",
+      "path": "src/components/Header/Header.tsx",
+      "description": "Header component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "The title text to display in the header."
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the header.\n'sm' for small, 'md' for medium, 'lg' for large."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the header.\n'primary' for main headers, 'secondary' for sub-headers."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the header is in a loading state."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    },
+    {
       "name": "StatusBar",
       "path": "src/components/StatusBar/StatusBar.tsx",
       "description": "StatusBar component",
@@ -128,11 +160,15 @@
           "default": "'default'",
           "description": "The variant of the status bar"
         },
-        "loading": {
-          "type": "boolean",
+        "time": {
+          "type": "string",
+          "required": true,
+          "description": "The current time to display"
+        },
+        "className": {
+          "type": "string",
           "required": false,
-          "default": "false",
-          "description": "Whether the status bar is in a loading state"
+          "description": "Custom class name for styling overrides"
         }
       }
     },
@@ -145,51 +181,24 @@
           "type": "'sm' | 'md' | 'lg'",
           "required": false,
           "default": "'md'",
-          "description": "The size of the button."
+          "description": "The size of the button"
         },
         "variant": {
           "type": "'primary' | 'secondary'",
           "required": false,
           "default": "'primary'",
-          "description": "The variant of the button."
+          "description": "The variant of the button"
         },
-        "disabled": {
+        "loading": {
           "type": "boolean",
           "required": false,
           "default": "false",
-          "description": "If true, the button will be disabled."
+          "description": "Whether the button is in a loading state"
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class name for custom styling."
-        }
-      }
-    },
-    {
-      "name": "Header",
-      "path": "src/components/Header/Header.tsx",
-      "description": "Header component",
-      "props": {
-        "title": {
-          "type": "string",
-          "required": true,
-          "description": "The title to display in the header."
-        },
-        "size": {
-          "type": "'sm' | 'md' | 'lg'",
-          "required": false,
-          "description": "The size of the header.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "The variant of the header.\n- 'primary': Primary variant\n- 'secondary': Secondary variant"
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "Whether the back button is disabled."
+          "description": "Optional class name for styling overrides"
         }
       }
     }
@@ -208,5 +217,10 @@
     "blurs": 7,
     "layoutGrids": 2,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }

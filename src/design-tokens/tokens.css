@@ -71,8 +71,8 @@
   --color-brand-500-rgb: 48, 116, 243;
   --color-action-primary: #3074F3;
   --color-action-primary-rgb: 48, 116, 243;
-  --color-action-secondary: #00A7A7;
-  --color-action-secondary-rgb: 0, 167, 167;
+  --color-action-secondary: #A268FF;
+  --color-action-secondary-rgb: 162, 104, 255;
   --color-success-500: #25A96B;
   --color-success-500-rgb: 37, 169, 107;
   --color-warning-500: #F54712;
@@ -395,9 +395,10 @@
   --font-heading-3-line-height: normal;
   --font-heading-3-text-transform: capitalize;
   --font-body-large-family: Inter;
-  --font-body-large-size: var(--size-space-m);
-  --font-body-large-weight: 600;
-  --font-body-large-line-height: normal;
+  --font-body-large-size: 18px;
+  --font-body-large-weight: 700;
+  --font-body-large-line-height: 24.000001907348633px;
+  --font-body-large-text-transform: capitalize;
   --font-body-regular-family: Inter;
   --font-body-regular-size: 14px;
   --font-body-regular-weight: 400;

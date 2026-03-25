@@ -14,49 +14,49 @@ export interface StatusBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'co
    */
   variant?: 'default' | 'inverted';
   /**
-   * Whether the status bar is in a loading state
-   * @default false
+   * The current time to display
    */
-  loading?: boolean;
+  time: string;
+  /**
+   * Custom class name for styling overrides
+   */
+  className?: string;
 }
 
 const StatusBar = forwardRef<HTMLDivElement, StatusBarProps>(({
   size = 'medium',
   variant = 'default',
-  loading = false,
+  time,
   className,
   ...props
 }, ref) => {
-  const styles: Record<NonNullable<StatusBarProps['size']>, React.CSSProperties> = {
-    small: { height: '24px', fontSize: '12px' },
+  const sizeStyles: Record<NonNullable<StatusBarProps['size']>, React.CSSProperties> = {
+    small: { height: '30px', fontSize: '12px' },
     medium: { height: '42px', fontSize: '15px' },
-    large: { height: '60px', fontSize: '18px' },
+    large: { height: '54px', fontSize: '18px' },
   };
 
   const variantStyles: Record<NonNullable<StatusBarProps['variant']>, React.CSSProperties> = {
-    default: { backgroundColor: 'var(--color-white-white)', color: 'var(--color-grey-600-text)' },
+    default: { backgroundColor: 'var(--color-grey-100)', color: 'var(--color-grey-600-text)' },
     inverted: { backgroundColor: 'var(--color-grey-page-1)', color: 'var(--color-white-white)' },
   };
 
+  const styles: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '12px 20px',
+    boxSizing: 'border-box',
+    ...sizeStyles[size],
+    ...variantStyles[variant],
+  };
+
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '12px 20px',
-        ...styles[size],
-        ...variantStyles[variant],
-        opacity: loading ? 0.5 : 1,
-      }}
-      {...props}
-    >
-      <span style={{ fontFamily: 'var(--font-white-white-status-bar)', fontWeight: 590 }}>9:41</span>
+    <div ref={ref} className={className} style={styles} {...props}>
+      <span>{time}</span>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ fontFamily: 'var(--font-white-white-container)', marginRight: '10px' }}>􀙇</span>
-        <span style={{ fontFamily: 'var(--font-white-white-container)' }}>􀛨</span>
+        <span style={{ marginRight: '8px' }}>􀙇</span> {/* Wi-Fi Icon */}
+        <span>􀛨</span> {/* Battery Icon */}
       </div>
     </div>
   );
