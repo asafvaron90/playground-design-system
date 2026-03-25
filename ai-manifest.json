@@ -1,6 +1,6 @@
 {
-  "version": "0.0.6",
-  "generatedAt": "2026-03-25T22:16:39.279Z",
+  "version": "0.0.7",
+  "generatedAt": "2026-03-25T22:35:56.459Z",
   "components": [
     {
       "name": "Blurs",
@@ -112,89 +112,88 @@
       "props": {}
     },
     {
+      "name": "SortButton",
+      "path": "src/components/SortButton/SortButton.tsx",
+      "description": "SortButton component",
+      "props": {
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the button.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the button.\n- 'primary': Primary style\n- 'secondary': Secondary style"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will be disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    },
+    {
+      "name": "Header",
+      "path": "src/components/Header/Header.tsx",
+      "description": "Header component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "The title to display in the header."
+        },
+        "onBack": {
+          "type": "() => void",
+          "required": false,
+          "description": "Optional back button click handler."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "Optional size of the header."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "Optional variant of the header."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    },
+    {
       "name": "StatusBar",
       "path": "src/components/StatusBar/StatusBar.tsx",
-      "description": "A horizontal layout component for displaying time and connectivity icons at the top of the screen.",
+      "description": "StatusBar component",
       "props": {
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the status bar.\n'sm' for small, 'md' for medium, 'lg' for large."
+        },
+        "variant": {
+          "type": "'light' | 'dark'",
+          "required": false,
+          "description": "The variant of the status bar.\n'light' for light theme, 'dark' for dark theme."
+        },
         "time": {
           "type": "string",
           "required": false,
-          "default": "'9:41'",
           "description": "The current time to display."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class names to apply to the component."
-        }
-      }
-    },
-    {
-      "name": "NavigationBar",
-      "path": "src/components/NavigationBar/NavigationBar.tsx",
-      "description": "NavigationBar component",
-      "props": {
-        "title": {
-          "type": "string",
-          "required": true,
-          "description": "The title to display in the navigation bar."
-        },
-        "size": {
-          "type": "'sm' | 'md' | 'lg'",
-          "required": false,
-          "description": "The size of the navigation bar.\n'sm' for small, 'md' for medium, 'lg' for large."
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "The variant of the navigation bar.\n'primary' for main navigation, 'secondary' for sub-navigation."
-        },
-        "children": {
-          "type": "ReactNode",
-          "required": false,
-          "description": "Additional icons or elements to display in the navigation bar."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class names to apply to the navigation bar."
-        }
-      }
-    },
-    {
-      "name": "SortButton",
-      "path": "src/components/SortButton/SortButton.tsx",
-      "description": "SortButton component",
-      "props": {
-        "label": {
-          "type": "string",
-          "required": true,
-          "description": "The label for the button"
-        },
-        "icon": {
-          "type": "ReactNode",
-          "required": true,
-          "description": "The icon to display alongside the label"
-        },
-        "size": {
-          "type": "'small' | 'medium' | 'large'",
-          "required": false,
-          "description": "The size of the button"
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "The variant of the button"
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the button will be disabled"
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class names for styling"
+          "description": "Additional className for custom styling."
         }
       }
     }
