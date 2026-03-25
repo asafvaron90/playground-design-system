@@ -7,8 +7,8 @@ const meta = {
   component: StatusBar,
   args: {
     time: '9:41',
-    batteryLevel: 75,
-    isWifiConnected: true,
+    size: 'medium',
+    variant: 'default',
   },
 } satisfies Meta<typeof StatusBar>;
 
@@ -17,14 +17,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const LowBattery: Story = {
+export const Inverted: Story = {
   args: {
-    batteryLevel: 15,
+    variant: 'inverted',
   },
 };
 
-export const NoWifi: Story = {
+export const Small: Story = {
   args: {
-    isWifiConnected: false,
+    size: 'small',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
   },
 };

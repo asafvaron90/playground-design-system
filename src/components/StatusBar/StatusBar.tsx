@@ -3,74 +3,75 @@ import React from 'react';
 
 export interface StatusBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * The current time to display.
+   * The time to display on the status bar.
+   * @default '9:41'
    */
-  time: string;
+  time?: string;
   /**
-   * The battery level as a percentage (0-100).
+   * The size of the status bar.
+   * @default 'medium'
    */
-  batteryLevel: number;
+  size?: 'small' | 'medium' | 'large';
   /**
-   * Whether the Wi-Fi is connected.
+   * The variant of the status bar.
+   * @default 'default'
    */
-  isWifiConnected: boolean;
+  variant?: 'default' | 'inverted';
   /**
-   * Additional class names for custom styling.
+   * Additional className for custom styling.
    */
   className?: string;
 }
 
 const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(({
-  time,
-  batteryLevel,
-  isWifiConnected,
+  time = '9:41',
+  size = 'medium',
+  variant = 'default',
   className,
-  ...rest
+  ...props
 }, ref) => {
-  const styles: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '12px 20px',
-    backgroundColor: 'var(--color-grey-100)',
-    color: 'var(--color-grey-600-text)',
-    fontFamily: 'var(--font-white-white-status-bar)',
-    fontSize: '15px',
-    fontWeight: 600,
+  const styles: Record<'default' | 'inverted', React.CSSProperties> = {
+    default: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '12px 20px',
+      backgroundColor: 'var(--color-white-white)',
+      color: 'var(--color-grey-600-text)',
+      fontFamily: 'var(--font-white-white-status-bar)',
+      fontSize: '15px',
+      fontWeight: 600,
+    },
+    inverted: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '12px 20px',
+      backgroundColor: 'var(--color-grey-page-1)',
+      color: 'var(--color-white-white)',
+      fontFamily: 'var(--font-white-white-status-bar)',
+      fontSize: '15px',
+      fontWeight: 600,
+    },
+  };
+
+  const sizeStyles: Record<'small' | 'medium' | 'large', React.CSSProperties> = {
+    small: { height: '32px' },
+    medium: { height: '42px' },
+    large: { height: '52px' },
   };
 
   return (
-    <div ref={ref} className={className} style={styles} {...rest}>
+    <div
+      ref={ref}
+      className={className}
+      style={{ ...styles[variant], ...sizeStyles[size] }}
+      {...props}
+    >
       <span>{time}</span>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ marginRight: '10px' }}>{isWifiConnected ? '􀙇' : '􀙈'}</span>
-        <span>{'􀛨'}</span>
-        <div style={{ marginLeft: '10px', display: 'flex', alignItems: 'center' }}>
-          <div
-            style={{
-              width: '20px',
-              height: '10px',
-              border: '1px solid var(--color-grey-600-text)',
-              position: 'relative',
-              marginRight: '3px',
-            }}
-          >
-            <div
-              style={{
-                width: `${batteryLevel}%`,
-                height: '100%',
-                backgroundColor: batteryLevel > 20 ? 'var(--color-green-green)' : 'var(--color-red-red-error)',
-              }}
-            />
-          </div>
-          <div
-            style={{
-              width: '3px',
-              height: '5px',
-              backgroundColor: 'var(--color-grey-600-text)',
-            }}
-          />
-        </div>
+        <span style={{ marginRight: '8px' }}>􀙇</span> {/* Wi-Fi icon */}
+        <span>􀛨</span> {/* Battery icon */}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 {
-  "version": "0.0.2",
-  "generatedAt": "2026-03-25T14:09:06.790Z",
+  "version": "0.0.3",
+  "generatedAt": "2026-03-25T14:45:22.988Z",
   "components": [
     {
       "name": "Blurs",
@@ -112,88 +112,99 @@
       "props": {}
     },
     {
+      "name": "Header",
+      "path": "src/components/Header/Header.tsx",
+      "description": "Header component",
+      "props": {
+        "title": {
+          "type": "ReactNode",
+          "required": true,
+          "description": "The title displayed in the header."
+        },
+        "onBack": {
+          "type": "() => void",
+          "required": false,
+          "description": "Optional callback for the back button."
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "Size variant of the header."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "Visual variant of the header."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Whether the header is in a disabled state."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional class names for styling."
+        }
+      }
+    },
+    {
       "name": "StatusBar",
       "path": "src/components/StatusBar/StatusBar.tsx",
       "description": "StatusBar component",
       "props": {
         "time": {
           "type": "string",
-          "required": true,
-          "description": "The current time to display."
-        },
-        "batteryLevel": {
-          "type": "number",
-          "required": true,
-          "description": "The battery level as a percentage (0-100)."
-        },
-        "isWifiConnected": {
-          "type": "boolean",
-          "required": true,
-          "description": "Whether the Wi-Fi is connected."
-        },
-        "className": {
-          "type": "string",
           "required": false,
-          "description": "Additional class names for custom styling."
-        }
-      }
-    },
-    {
-      "name": "NavigationBar",
-      "path": "src/components/NavigationBar/NavigationBar.tsx",
-      "description": "NavigationBar component",
-      "props": {
-        "title": {
-          "type": "string",
-          "required": true,
-          "description": "The title to display in the navigation bar."
+          "default": "'9:41'",
+          "description": "The time to display on the status bar."
         },
         "size": {
-          "type": "'sm' | 'md' | 'lg'",
+          "type": "'small' | 'medium' | 'large'",
           "required": false,
-          "description": "The size of the navigation bar.\n'sm' for small, 'md' for medium, 'lg' for large."
+          "default": "'medium'",
+          "description": "The size of the status bar."
         },
         "variant": {
-          "type": "'default' | 'primary'",
+          "type": "'default' | 'inverted'",
           "required": false,
-          "description": "The variant of the navigation bar.\n'default' for standard, 'primary' for primary styling."
-        },
-        "isLoading": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the navigation bar is in a loading state."
+          "default": "'default'",
+          "description": "The variant of the status bar."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class names to apply to the navigation bar."
+          "description": "Additional className for custom styling."
         }
       }
     },
     {
       "name": "SortButton",
       "path": "src/components/SortButton/SortButton.tsx",
-      "description": "SortButton component",
+      "description": "A button component with text and an icon, used for sorting options.",
       "props": {
         "size": {
-          "type": "'small' | 'medium' | 'large'",
+          "type": "'sm' | 'md' | 'lg'",
           "required": false,
+          "default": "'md'",
           "description": "The size of the button."
         },
         "variant": {
           "type": "'primary' | 'secondary'",
           "required": false,
+          "default": "'primary'",
           "description": "The variant of the button."
         },
         "disabled": {
           "type": "boolean",
           "required": false,
+          "default": "false",
           "description": "If true, the button will be disabled."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Custom class name for styling overrides."
+          "description": "Additional class names to apply to the button."
         }
       }
     }
