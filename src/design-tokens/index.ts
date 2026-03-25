@@ -151,7 +151,7 @@ export const tokens = {
     },
     {
       "name": "red-red-warning",
-      "value": "#FF4B4B",
+      "value": "#FF4B4A",
       "category": "Colors"
     },
     {
@@ -741,7 +741,7 @@ export const tokens = {
       "fontWeight": 400,
       "lineHeight": "normal",
       "category": "MIA Mobile - production cycle 2 / Search meetings / 1 / Card",
-      "color": "#FF4B4B",
+      "color": "#FF4B4A",
       "textTransform": "capitalize"
     },
     {
@@ -1608,7 +1608,7 @@ export const tokens = {
     },
     {
       "name": "Vector-Frame-4",
-      "color": "#FF4B4B",
+      "color": "#FF4B4A",
       "weight": 1.3333333730697632,
       "strokeAlign": "CENTER",
       "category": "MIA Mobile - production cycle 2 / Search meetings / 1 / Card / Frame",
@@ -1714,7 +1714,7 @@ export const tokens = {
     },
     {
       "name": "Vector-Frame-13",
-      "color": "#FF4B4B",
+      "color": "#FF4B4A",
       "weight": 1.25,
       "strokeAlign": "CENTER",
       "category": "MIA Mobile - production cycle 1 / Main / Actions / Collections Drawer / Button Menu / Frame",
@@ -3039,8 +3039,8 @@ export const designTokens = {
     purplePurple: "#9B5DFF",
     /** #C84747 */
     redRedError: "#C84747",
-    /** #FF4B4B */
-    redRedWarning: "#FF4B4B",
+    /** #FF4B4A */
+    redRedWarning: "#FF4B4A",
     /** #707070 */
     space: "#707070",
     /** #CCFF00 */
@@ -3622,7 +3622,7 @@ export const designTokens = {
     vectorIcons2: { color: "#90A3B1", weight: 1.5, strokeAlign: "CENTER" }, /* grey-secondary-body-text */ /* Border-width-S */
     vectorAiSearch02: { color: "#D7E3EC", weight: 1.25, strokeAlign: "CENTER" }, /* White */ /* Border-width-XS */
     vectorIcons3: { color: "#D7E3EC", weight: 1.8000000715255737, strokeAlign: "CENTER" }, /* White */
-    vectorFrame4: { color: "#FF4B4B", weight: 1.3333333730697632, strokeAlign: "CENTER" }, /* red-red-warning */
+    vectorFrame4: { color: "#FF4B4A", weight: 1.3333333730697632, strokeAlign: "CENTER" }, /* red-red-warning */
     vectorFrame5: { color: "#D7E3EC", weight: 1.9199999570846558, strokeAlign: "CENTER" }, /* White */
     vectorFrame6: { color: "#FFFFFF", weight: 1.5, strokeAlign: "CENTER" }, /* white-white */ /* Border-width-S */
     vectorTablerIconRewindBackward15: { color: "#FFFFFF", weight: 1.4999998807907104, strokeAlign: "CENTER" }, /* white-white */
@@ -3634,7 +3634,7 @@ export const designTokens = {
     vectorFrame12: { color: "#FFFFFF", weight: 1.25, strokeAlign: "CENTER" }, /* white-white */ /* Border-width-XS */
     vectorIcons4: { color: "#D7E3EC", weight: 1.131142497062683, strokeAlign: "INSIDE" }, /* White */
     vectorExclude: { color: "#D7E3EC", weight: 1.6666667461395264, strokeAlign: "CENTER" }, /* White */
-    vectorFrame13: { color: "#FF4B4B", weight: 1.25, strokeAlign: "CENTER" }, /* red-red-warning */ /* Border-width-XS */
+    vectorFrame13: { color: "#FF4B4A", weight: 1.25, strokeAlign: "CENTER" }, /* red-red-warning */ /* Border-width-XS */
     greyStroke: { color: "#9B5DFF", weight: 1, strokeAlign: "INSIDE" }, /* purple-purple */ /* Border-width-XXS */
     line8: { color: "#90A3B1", weight: 0.5, strokeAlign: "CENTER" }, /* grey-secondary-body-text */
     greyTextIconsIcons: { color: "#D7E3EC", weight: 1.5, strokeAlign: "CENTER" }, /* White */ /* Border-width-S */

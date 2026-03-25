@@ -1,20 +1,48 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-03-22T12:23:29.963Z",
-  "components": [],
+  "version": "0.0.2",
+  "generatedAt": "2026-03-25T13:51:25.356Z",
+  "components": [
+    {
+      "name": "Card",
+      "path": "src/components/Card/Card.tsx",
+      "description": "Card component",
+      "props": {
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the card.\n'sm' for small, 'md' for medium, 'lg' for large."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the card.\n'primary' for primary, 'secondary' for secondary."
+        },
+        "state": {
+          "type": "'default' | 'disabled'",
+          "required": false,
+          "description": "The state of the card.\n'default' for default, 'disabled' for disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
-    "shadows": 0,
+    "colors": 44,
+    "typography": 74,
+    "radius": 40,
+    "shadows": 10,
     "elevations": 0,
-    "borders": 0,
+    "borders": 48,
     "gaps": 0,
-    "sizes": 0,
-    "opacity": 0,
-    "blurs": 0,
-    "layoutGrids": 0,
+    "sizes": 13,
+    "opacity": 21,
+    "gradients": 17,
+    "blurs": 7,
+    "layoutGrids": 2,
     "icons": 0
   }
 }
