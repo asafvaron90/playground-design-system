@@ -1,6 +1,6 @@
 {
-  "version": "0.0.3",
-  "generatedAt": "2026-03-25T14:45:22.988Z",
+  "version": "0.0.4",
+  "generatedAt": "2026-03-25T18:57:40.534Z",
   "components": [
     {
       "name": "Blurs",
@@ -112,76 +112,34 @@
       "props": {}
     },
     {
-      "name": "Header",
-      "path": "src/components/Header/Header.tsx",
-      "description": "Header component",
-      "props": {
-        "title": {
-          "type": "ReactNode",
-          "required": true,
-          "description": "The title displayed in the header."
-        },
-        "onBack": {
-          "type": "() => void",
-          "required": false,
-          "description": "Optional callback for the back button."
-        },
-        "size": {
-          "type": "'sm' | 'md' | 'lg'",
-          "required": false,
-          "description": "Size variant of the header."
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "Visual variant of the header."
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "Whether the header is in a disabled state."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Additional class names for styling."
-        }
-      }
-    },
-    {
       "name": "StatusBar",
       "path": "src/components/StatusBar/StatusBar.tsx",
       "description": "StatusBar component",
       "props": {
-        "time": {
-          "type": "string",
-          "required": false,
-          "default": "'9:41'",
-          "description": "The time to display on the status bar."
-        },
         "size": {
           "type": "'small' | 'medium' | 'large'",
           "required": false,
           "default": "'medium'",
-          "description": "The size of the status bar."
+          "description": "The size of the status bar"
         },
         "variant": {
           "type": "'default' | 'inverted'",
           "required": false,
           "default": "'default'",
-          "description": "The variant of the status bar."
+          "description": "The variant of the status bar"
         },
-        "className": {
-          "type": "string",
+        "loading": {
+          "type": "boolean",
           "required": false,
-          "description": "Additional className for custom styling."
+          "default": "false",
+          "description": "Whether the status bar is in a loading state"
         }
       }
     },
     {
       "name": "SortButton",
       "path": "src/components/SortButton/SortButton.tsx",
-      "description": "A button component with text and an icon, used for sorting options.",
+      "description": "SortButton component",
       "props": {
         "size": {
           "type": "'sm' | 'md' | 'lg'",
@@ -204,7 +162,34 @@
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class names to apply to the button."
+          "description": "Additional class name for custom styling."
+        }
+      }
+    },
+    {
+      "name": "Header",
+      "path": "src/components/Header/Header.tsx",
+      "description": "Header component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "The title to display in the header."
+        },
+        "size": {
+          "type": "'sm' | 'md' | 'lg'",
+          "required": false,
+          "description": "The size of the header.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the header.\n- 'primary': Primary variant\n- 'secondary': Secondary variant"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Whether the back button is disabled."
         }
       }
     }

@@ -7,7 +7,6 @@ const meta = {
   component: Header,
   args: {
     title: 'Page Title',
-    onBack: () => alert('Back button clicked'),
   },
 } satisfies Meta<typeof Header>;
 
@@ -18,6 +17,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
     size: 'md',
+    disabled: false,
   },
 };
 
@@ -25,18 +25,19 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     size: 'md',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'lg',
+    disabled: false,
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'sm',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'lg',
   },
 };
 
