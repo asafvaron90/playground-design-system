@@ -22,9 +22,9 @@ export * from './components/Typography/Typography';
 export * from './components/Welcome/Welcome';
 
 // AI-Generated Components
-export * from './components/StatusBar/StatusBar';
-export * from './components/NavigationBar/NavigationBar';
 export * from './components/SortButton/SortButton';
+export * from './components/Header/Header';
+export * from './components/StatusBar/StatusBar';
 
 // Library Adapter
 export * from './components/adapters/mui';
