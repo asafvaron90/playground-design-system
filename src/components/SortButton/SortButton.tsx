@@ -1,66 +1,89 @@
 // SortButton.tsx
 import React from 'react';
-import { forwardRef } from 'react';
+import { ReactNode } from 'react';
 
-export interface SortButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
+export interface SortButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * The label for the button
+   */
+  label: string;
+  /**
+   * The icon to display alongside the label
+   */
+  icon: ReactNode;
   /**
    * The size of the button
-   * @default 'md'
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'small' | 'medium' | 'large';
   /**
    * The variant of the button
-   * @default 'primary'
    */
   variant?: 'primary' | 'secondary';
   /**
-   * Whether the button is in a loading state
-   * @default false
+   * If true, the button will be disabled
    */
-  loading?: boolean;
+  disabled?: boolean;
   /**
-   * Optional class name for styling overrides
+   * Additional class names for styling
    */
   className?: string;
 }
 
-const SortButton = forwardRef<HTMLButtonElement, SortButtonProps>(({
-  size = 'md',
+const SortButton = React.forwardRef<HTMLButtonElement, SortButtonProps>(({
+  label,
+  icon,
+  size = 'medium',
   variant = 'primary',
-  loading = false,
+  disabled = false,
   className,
-  children,
   ...props
 }, ref) => {
-  const sizeStyles: Record<NonNullable<SortButtonProps['size']>, React.CSSProperties> = {
-    sm: { fontSize: 'var(--font-label-sml)', padding: '4px 8px' },
-    md: { fontSize: 'var(--font-label-large-14-med)', padding: '8px 16px' },
-    lg: { fontSize: 'var(--font-headline-med-18-med)', padding: '12px 24px' },
+  const styles: Record<NonNullable<SortButtonProps['size']>, React.CSSProperties> = {
+    small: {
+      fontSize: 'var(--font-label-sml)',
+      padding: '4px 8px',
+    },
+    medium: {
+      fontSize: 'var(--font-label-large-14-med)',
+      padding: '8px 16px',
+    },
+    large: {
+      fontSize: 'var(--font-headline-med-18-med)',
+      padding: '12px 24px',
+    },
   };
 
   const variantStyles: Record<NonNullable<SortButtonProps['variant']>, React.CSSProperties> = {
-    primary: { backgroundColor: 'var(--color-home)', color: 'var(--color-white-white)' },
-    secondary: { backgroundColor: 'var(--color-grey-100)', color: 'var(--color-grey-600-text)' },
-  };
-
-  const loadingStyles: React.CSSProperties = loading ? { opacity: 0.5, cursor: 'not-allowed' } : {};
-
-  const styles: React.CSSProperties = {
-    ...sizeStyles[size],
-    ...variantStyles[variant],
-    ...loadingStyles,
-    border: 'none',
-    borderRadius: '4px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'background-color 0.3s',
-    ...props.style,
+    primary: {
+      backgroundColor: 'var(--color-liam-harris)',
+      color: 'var(--color-white-white)',
+    },
+    secondary: {
+      backgroundColor: 'var(--color-grey-2)',
+      color: 'var(--color-grey-600-text)',
+    },
   };
 
   return (
-    <button ref={ref} className={className} style={styles} disabled={loading} {...props}>
-      {children}
+    <button
+      ref={ref}
+      className={className}
+      style={{
+        ...styles[size],
+        ...variantStyles[variant],
+        border: 'none',
+        borderRadius: '4px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        opacity: disabled ? 0.5 : 1,
+      }}
+      disabled={disabled}
+      {...props}
+    >
+      {icon}
+      <span style={{ marginLeft: '8px' }}>{label}</span>
     </button>
   );
 });

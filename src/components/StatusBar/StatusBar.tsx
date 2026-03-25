@@ -1,68 +1,46 @@
 // StatusBar.tsx
-import React, { forwardRef } from 'react';
-import type { HTMLAttributes } from 'react';
+import React from 'react';
 
-export interface StatusBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'> {
+export interface StatusBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * The size of the status bar
-   * @default 'medium'
+   * The current time to display.
+   * @default '9:41'
    */
-  size?: 'small' | 'medium' | 'large';
+  time?: string;
   /**
-   * The variant of the status bar
-   * @default 'default'
-   */
-  variant?: 'default' | 'inverted';
-  /**
-   * The current time to display
-   */
-  time: string;
-  /**
-   * Custom class name for styling overrides
+   * Additional class names to apply to the component.
    */
   className?: string;
 }
 
-const StatusBar = forwardRef<HTMLDivElement, StatusBarProps>(({
-  size = 'medium',
-  variant = 'default',
-  time,
-  className,
-  ...props
-}, ref) => {
-  const sizeStyles: Record<NonNullable<StatusBarProps['size']>, React.CSSProperties> = {
-    small: { height: '30px', fontSize: '12px' },
-    medium: { height: '42px', fontSize: '15px' },
-    large: { height: '54px', fontSize: '18px' },
-  };
+/**
+ * A horizontal layout component for displaying time and connectivity icons at the top of the screen.
+ */
+export const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(
+  ({ time = '9:41', className, ...props }, ref) => {
+    const styles: React.CSSProperties = {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '12px 20px',
+      backgroundColor: 'var(--color-white-white)',
+      fontFamily: 'var(--font-white-white-status-bar)',
+      fontSize: '15px',
+      fontWeight: 600,
+    };
 
-  const variantStyles: Record<NonNullable<StatusBarProps['variant']>, React.CSSProperties> = {
-    default: { backgroundColor: 'var(--color-grey-100)', color: 'var(--color-grey-600-text)' },
-    inverted: { backgroundColor: 'var(--color-grey-page-1)', color: 'var(--color-white-white)' },
-  };
-
-  const styles: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '12px 20px',
-    boxSizing: 'border-box',
-    ...sizeStyles[size],
-    ...variantStyles[variant],
-  };
-
-  return (
-    <div ref={ref} className={className} style={styles} {...props}>
-      <span>{time}</span>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ marginRight: '8px' }}>􀙇</span> {/* Wi-Fi Icon */}
-        <span>􀛨</span> {/* Battery Icon */}
+    return (
+      <div ref={ref} className={className} style={styles} {...props}>
+        <span>{time}</span>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <span style={{ fontSize: '14px', marginRight: '10px' }}>􀙇</span>
+          <span style={{ fontSize: '17px' }}>􀛨</span>
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 StatusBar.displayName = 'StatusBar';
 
-export { StatusBar };
 export default StatusBar;

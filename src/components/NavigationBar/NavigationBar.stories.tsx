@@ -6,17 +6,26 @@ const meta = {
   title: 'Components/NavigationBar',
   component: NavigationBar,
   args: {
-    title: 'Page Title',
-    size: 'md',
-    variant: 'default',
-    isLoading: false,
+    title: 'Home',
   },
 } satisfies Meta<typeof NavigationBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Primary: Story = {
+  args: {
+    variant: 'primary',
+    size: 'md',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    size: 'md',
+  },
+};
 
 export const Small: Story = {
   args: {
@@ -27,17 +36,5 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     size: 'lg',
-  },
-};
-
-export const Primary: Story = {
-  args: {
-    variant: 'primary',
-  },
-};
-
-export const Loading: Story = {
-  args: {
-    isLoading: true,
   },
 };

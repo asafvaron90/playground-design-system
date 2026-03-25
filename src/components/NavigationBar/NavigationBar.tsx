@@ -1,5 +1,6 @@
 // NavigationBar.tsx
-import React from 'react';
+import React, { forwardRef } from 'react';
+import type { ReactNode } from 'react';
 
 export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -13,54 +14,66 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement>
   size?: 'sm' | 'md' | 'lg';
   /**
    * The variant of the navigation bar.
-   * 'default' for standard, 'primary' for primary styling.
+   * 'primary' for main navigation, 'secondary' for sub-navigation.
    */
-  variant?: 'default' | 'primary';
+  variant?: 'primary' | 'secondary';
   /**
-   * If true, the navigation bar is in a loading state.
+   * Additional icons or elements to display in the navigation bar.
    */
-  isLoading?: boolean;
+  children?: ReactNode;
   /**
    * Additional class names to apply to the navigation bar.
    */
   className?: string;
 }
 
-const NavigationBar = React.forwardRef<HTMLDivElement, NavigationBarProps>(({
+const NavigationBar = forwardRef<HTMLDivElement, NavigationBarProps>(({
   title,
   size = 'md',
-  variant = 'default',
-  isLoading = false,
+  variant = 'primary',
+  children,
   className,
-  ...props
+  ...rest
 }, ref) => {
-  const sizeStyles: Record<NonNullable<NavigationBarProps['size']>, React.CSSProperties> = {
-    sm: { height: '40px', fontSize: '14px' },
-    md: { height: '50px', fontSize: '16px' },
-    lg: { height: '60px', fontSize: '18px' },
+  const styles: Record<'primary' | 'secondary', React.CSSProperties> = {
+    primary: {
+      backgroundColor: 'var(--color-home)',
+      color: 'var(--color-white-white)',
+    },
+    secondary: {
+      backgroundColor: 'var(--color-grey-buttons-bg)',
+      color: 'var(--color-grey-secondary-body-text)',
+    },
   };
 
-  const variantStyles: Record<NonNullable<NavigationBarProps['variant']>, React.CSSProperties> = {
-    default: { backgroundColor: 'var(--color-grey-100)', color: 'var(--color-grey-600-text)' },
-    primary: { backgroundColor: 'var(--color-home)', color: 'var(--color-white-white)' },
+  const sizeStyles: Record<'sm' | 'md' | 'lg', React.CSSProperties> = {
+    sm: {
+      height: '40px',
+      fontSize: 'var(--font-label-sml)',
+    },
+    md: {
+      height: '56px',
+      fontSize: 'var(--font-headline-reg-16-reg)',
+    },
+    lg: {
+      height: '72px',
+      fontSize: 'var(--font-headline-med-18-med)',
+    },
   };
 
-  const styles: React.CSSProperties = {
+  const combinedStyles: React.CSSProperties = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0 16px',
-    boxSizing: 'border-box',
+    ...styles[variant],
     ...sizeStyles[size],
-    ...variantStyles[variant],
   };
 
   return (
-    <div ref={ref} style={styles} className={className} {...props}>
-      <button style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-        ← Back
-      </button>
-      <div>{isLoading ? 'Loading...' : title}</div>
+    <div ref={ref} className={className} style={combinedStyles} {...rest}>
+      <span>{title}</span>
+      <div>{children}</div>
     </div>
   );
 });

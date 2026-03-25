@@ -5,38 +5,16 @@ import { StatusBar } from './StatusBar';
 const meta = {
   title: 'Components/StatusBar',
   component: StatusBar,
-  args: {
-    time: '9:41',
-  },
+  args: { time: '9:41' },
 } satisfies Meta<typeof StatusBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    size: 'medium',
-    variant: 'default',
-  },
+  args: {},
 };
 
-export const Inverted: Story = {
-  args: {
-    size: 'medium',
-    variant: 'inverted',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    variant: 'default',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    variant: 'default',
-  },
+export const CustomTime: Story = {
+  args: { time: '10:30' },
 };

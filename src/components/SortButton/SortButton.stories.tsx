@@ -1,12 +1,14 @@
 // SortButton.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { SortButton } from './SortButton';
+import { FaSort } from 'react-icons/fa';
 
 const meta = {
   title: 'Components/SortButton',
   component: SortButton,
   args: {
-    children: 'Sort',
+    label: 'Sort',
+    icon: <FaSort />,
   },
 } satisfies Meta<typeof SortButton>;
 
@@ -16,31 +18,35 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     variant: 'primary',
-    size: 'md',
   },
 };
 
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
-    size: 'md',
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'sm',
+    size: 'small',
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    size: 'medium',
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'lg',
+    size: 'large',
   },
 };
 
-export const Loading: Story = {
+export const Disabled: Story = {
   args: {
-    loading: true,
+    disabled: true,
   },
 };
