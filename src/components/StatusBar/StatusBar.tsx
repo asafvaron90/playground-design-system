@@ -1,77 +1,62 @@
 // StatusBar.tsx
-import React from 'react';
+import React, { forwardRef } from 'react';
+import type { HTMLAttributes } from 'react';
 
-export interface StatusBarProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface StatusBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'color'> {
   /**
-   * The time to display on the status bar.
-   * @default '9:41'
-   */
-  time?: string;
-  /**
-   * The size of the status bar.
+   * The size of the status bar
    * @default 'medium'
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * The variant of the status bar.
+   * The variant of the status bar
    * @default 'default'
    */
   variant?: 'default' | 'inverted';
   /**
-   * Additional className for custom styling.
+   * Whether the status bar is in a loading state
+   * @default false
    */
-  className?: string;
+  loading?: boolean;
 }
 
-const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(({
-  time = '9:41',
+const StatusBar = forwardRef<HTMLDivElement, StatusBarProps>(({
   size = 'medium',
   variant = 'default',
+  loading = false,
   className,
   ...props
 }, ref) => {
-  const styles: Record<'default' | 'inverted', React.CSSProperties> = {
-    default: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '12px 20px',
-      backgroundColor: 'var(--color-white-white)',
-      color: 'var(--color-grey-600-text)',
-      fontFamily: 'var(--font-white-white-status-bar)',
-      fontSize: '15px',
-      fontWeight: 600,
-    },
-    inverted: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '12px 20px',
-      backgroundColor: 'var(--color-grey-page-1)',
-      color: 'var(--color-white-white)',
-      fontFamily: 'var(--font-white-white-status-bar)',
-      fontSize: '15px',
-      fontWeight: 600,
-    },
+  const styles: Record<NonNullable<StatusBarProps['size']>, React.CSSProperties> = {
+    small: { height: '24px', fontSize: '12px' },
+    medium: { height: '42px', fontSize: '15px' },
+    large: { height: '60px', fontSize: '18px' },
   };
 
-  const sizeStyles: Record<'small' | 'medium' | 'large', React.CSSProperties> = {
-    small: { height: '32px' },
-    medium: { height: '42px' },
-    large: { height: '52px' },
+  const variantStyles: Record<NonNullable<StatusBarProps['variant']>, React.CSSProperties> = {
+    default: { backgroundColor: 'var(--color-white-white)', color: 'var(--color-grey-600-text)' },
+    inverted: { backgroundColor: 'var(--color-grey-page-1)', color: 'var(--color-white-white)' },
   };
 
   return (
     <div
       ref={ref}
       className={className}
-      style={{ ...styles[variant], ...sizeStyles[size] }}
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '12px 20px',
+        ...styles[size],
+        ...variantStyles[variant],
+        opacity: loading ? 0.5 : 1,
+      }}
       {...props}
     >
-      <span>{time}</span>
+      <span style={{ fontFamily: 'var(--font-white-white-status-bar)', fontWeight: 590 }}>9:41</span>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ marginRight: '8px' }}>􀙇</span> {/* Wi-Fi icon */}
-        <span>􀛨</span> {/* Battery icon */}
+        <span style={{ fontFamily: 'var(--font-white-white-container)', marginRight: '10px' }}>􀙇</span>
+        <span style={{ fontFamily: 'var(--font-white-white-container)' }}>􀛨</span>
       </div>
     </div>
   );
