@@ -39,8 +39,8 @@ export const Large: Story = {
   },
 };
 
-export const Disabled: Story = {
+export const Loading: Story = {
   args: {
-    disabled: true,
+    loading: true,
   },
 };
