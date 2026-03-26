@@ -1,6 +1,6 @@
 {
-  "version": "0.0.8",
-  "generatedAt": "2026-03-25T22:58:08.482Z",
+  "version": "0.0.9",
+  "generatedAt": "2026-03-26T11:08:28.508Z",
   "components": [
     {
       "name": "Blurs",
@@ -114,44 +114,27 @@
     {
       "name": "StatusBar",
       "path": "src/components/StatusBar/StatusBar.tsx",
-      "description": "StatusBar component displays the current time and connectivity icons.",
+      "description": "StatusBar component",
       "props": {
         "time": {
           "type": "string",
           "required": true,
-          "description": "The current time to display on the status bar."
+          "description": "The current time to display."
+        },
+        "batteryIcon": {
+          "type": "string",
+          "required": true,
+          "description": "The battery icon to display."
+        },
+        "wifiIcon": {
+          "type": "string",
+          "required": true,
+          "description": "The Wi-Fi icon to display."
         },
         "className": {
           "type": "string",
           "required": false,
-          "description": "Additional class names to apply to the status bar."
-        }
-      }
-    },
-    {
-      "name": "SortButton",
-      "path": "src/components/SortButton/SortButton.tsx",
-      "description": "SortButton component",
-      "props": {
-        "size": {
-          "type": "'sm' | 'md' | 'lg'",
-          "required": false,
-          "description": "The size of the button.\n'sm' for small, 'md' for medium, 'lg' for large."
-        },
-        "variant": {
-          "type": "'primary' | 'secondary'",
-          "required": false,
-          "description": "The variant of the button.\n'primary' for primary style, 'secondary' for secondary style."
-        },
-        "disabled": {
-          "type": "boolean",
-          "required": false,
-          "description": "If true, the button will be disabled."
-        },
-        "className": {
-          "type": "string",
-          "required": false,
-          "description": "Optional class name for styling overrides."
+          "description": "Additional class names to apply to the component."
         }
       }
     },
@@ -168,17 +151,64 @@
         "size": {
           "type": "'sm' | 'md' | 'lg'",
           "required": false,
-          "description": "The size of the navigation bar.\n- 'sm': Small\n- 'md': Medium\n- 'lg': Large"
+          "description": "The size of the navigation bar.\n'sm' for small, 'md' for medium, 'lg' for large."
         },
         "variant": {
-          "type": "'default' | 'primary'",
+          "type": "'primary' | 'secondary'",
           "required": false,
-          "description": "The variant of the navigation bar.\n- 'default': Default styling\n- 'primary': Primary styling"
+          "description": "The variant of the navigation bar.\n'primary' or 'secondary'."
         },
         "state": {
-          "type": "'active' | 'disabled'",
+          "type": "'default' | 'disabled'",
           "required": false,
-          "description": "The state of the navigation bar.\n- 'active': Active state\n- 'disabled': Disabled state"
+          "description": "The state of the navigation bar.\n'default' or 'disabled'."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
+        },
+        "backButtonContent": {
+          "type": "ReactNode",
+          "required": false,
+          "description": "The back button content, typically an icon or text."
+        }
+      }
+    },
+    {
+      "name": "SortButton",
+      "path": "src/components/SortButton/SortButton.tsx",
+      "description": "SortButton component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": true,
+          "description": "The label text of the button."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The icon to be displayed alongside the label."
+        },
+        "size": {
+          "type": "'small' | 'medium' | 'large'",
+          "required": false,
+          "description": "The size of the button."
+        },
+        "variant": {
+          "type": "'primary' | 'secondary'",
+          "required": false,
+          "description": "The variant of the button."
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "If true, the button will be disabled."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Additional className for custom styling."
         }
       }
     }
@@ -187,7 +217,7 @@
     "colors": 45,
     "typography": 71,
     "radius": 40,
-    "shadows": 10,
+    "shadows": 7,
     "elevations": 0,
     "borders": 48,
     "gaps": 0,

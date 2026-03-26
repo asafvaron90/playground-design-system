@@ -1,5 +1,6 @@
 // NavigationBar.tsx
-import React from 'react';
+import React, { forwardRef } from 'react';
+import type { ReactNode } from 'react';
 
 export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -8,46 +9,51 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement>
   title: string;
   /**
    * The size of the navigation bar.
-   * - 'sm': Small
-   * - 'md': Medium
-   * - 'lg': Large
+   * 'sm' for small, 'md' for medium, 'lg' for large.
    */
   size?: 'sm' | 'md' | 'lg';
   /**
    * The variant of the navigation bar.
-   * - 'default': Default styling
-   * - 'primary': Primary styling
+   * 'primary' or 'secondary'.
    */
-  variant?: 'default' | 'primary';
+  variant?: 'primary' | 'secondary';
   /**
    * The state of the navigation bar.
-   * - 'active': Active state
-   * - 'disabled': Disabled state
+   * 'default' or 'disabled'.
    */
-  state?: 'active' | 'disabled';
+  state?: 'default' | 'disabled';
+  /**
+   * Additional className for custom styling.
+   */
+  className?: string;
+  /**
+   * The back button content, typically an icon or text.
+   */
+  backButtonContent?: ReactNode;
 }
 
-const NavigationBar = React.forwardRef<HTMLDivElement, NavigationBarProps>(({
+const NavigationBar = forwardRef<HTMLDivElement, NavigationBarProps>(({
   title,
   size = 'md',
-  variant = 'default',
-  state = 'active',
+  variant = 'primary',
+  state = 'default',
   className,
+  backButtonContent = 'Back',
   ...props
 }, ref) => {
   const styles: Record<NonNullable<NavigationBarProps['size']>, React.CSSProperties> = {
-    sm: { height: '40px', fontSize: 'var(--font-label-sml-*)' },
-    md: { height: '50px', fontSize: 'var(--font-headline-reg-16-reg-*)' },
-    lg: { height: '60px', fontSize: 'var(--font-headline-med-18-med-*)' },
+    sm: { height: '40px', fontSize: '14px' },
+    md: { height: '50px', fontSize: '16px' },
+    lg: { height: '60px', fontSize: '18px' },
   };
 
   const variantStyles: Record<NonNullable<NavigationBarProps['variant']>, React.CSSProperties> = {
-    default: { backgroundColor: 'var(--color-grey-100)' },
-    primary: { backgroundColor: 'var(--color-home)' },
+    primary: { backgroundColor: 'var(--color-home)', color: 'var(--color-white-white)' },
+    secondary: { backgroundColor: 'var(--color-grey-page-1)', color: 'var(--color-grey-600-text)' },
   };
 
   const stateStyles: Record<NonNullable<NavigationBarProps['state']>, React.CSSProperties> = {
-    active: { opacity: 1 },
+    default: {},
     disabled: { opacity: 0.5, pointerEvents: 'none' },
   };
 
@@ -63,13 +69,13 @@ const NavigationBar = React.forwardRef<HTMLDivElement, NavigationBarProps>(({
 
   return (
     <div ref={ref} style={combinedStyles} className={className} {...props}>
-      <button style={{ background: 'none', border: 'none', cursor: 'pointer' }}>←</button>
+      <button style={{ border: 'none', background: 'none', color: 'inherit', cursor: 'pointer' }}>
+        {backButtonContent}
+      </button>
       <span>{title}</span>
     </div>
   );
 });
-
-NavigationBar.displayName = 'NavigationBar';
 
 export { NavigationBar };
 export default NavigationBar;
