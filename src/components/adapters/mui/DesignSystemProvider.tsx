@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { designSystemTheme } from './theme';

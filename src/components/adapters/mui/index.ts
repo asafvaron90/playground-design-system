@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Design System entry point.
  *

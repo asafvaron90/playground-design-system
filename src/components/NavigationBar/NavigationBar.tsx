@@ -1,6 +1,5 @@
 // NavigationBar.tsx
-import React, { forwardRef } from 'react';
-import type { ReactNode } from 'react';
+import React from 'react';
 
 export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -9,56 +8,47 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLDivElement>
   title: string;
   /**
    * The size of the navigation bar.
-   * 'sm' for small, 'md' for medium, 'lg' for large.
+   * - 'sm': Small
+   * - 'md': Medium
+   * - 'lg': Large
    */
   size?: 'sm' | 'md' | 'lg';
   /**
    * The variant of the navigation bar.
-   * 'primary' for main navigation, 'secondary' for sub-navigation.
+   * - 'default': Default styling
+   * - 'primary': Primary styling
    */
-  variant?: 'primary' | 'secondary';
+  variant?: 'default' | 'primary';
   /**
-   * Additional icons or elements to display in the navigation bar.
+   * The state of the navigation bar.
+   * - 'active': Active state
+   * - 'disabled': Disabled state
    */
-  children?: ReactNode;
-  /**
-   * Additional class names to apply to the navigation bar.
-   */
-  className?: string;
+  state?: 'active' | 'disabled';
 }
 
-const NavigationBar = forwardRef<HTMLDivElement, NavigationBarProps>(({
+const NavigationBar = React.forwardRef<HTMLDivElement, NavigationBarProps>(({
   title,
   size = 'md',
-  variant = 'primary',
-  children,
+  variant = 'default',
+  state = 'active',
   className,
-  ...rest
+  ...props
 }, ref) => {
-  const styles: Record<'primary' | 'secondary', React.CSSProperties> = {
-    primary: {
-      backgroundColor: 'var(--color-home)',
-      color: 'var(--color-white-white)',
-    },
-    secondary: {
-      backgroundColor: 'var(--color-grey-buttons-bg)',
-      color: 'var(--color-grey-secondary-body-text)',
-    },
+  const styles: Record<NonNullable<NavigationBarProps['size']>, React.CSSProperties> = {
+    sm: { height: '40px', fontSize: 'var(--font-label-sml-*)' },
+    md: { height: '50px', fontSize: 'var(--font-headline-reg-16-reg-*)' },
+    lg: { height: '60px', fontSize: 'var(--font-headline-med-18-med-*)' },
   };
 
-  const sizeStyles: Record<'sm' | 'md' | 'lg', React.CSSProperties> = {
-    sm: {
-      height: '40px',
-      fontSize: 'var(--font-label-sml)',
-    },
-    md: {
-      height: '56px',
-      fontSize: 'var(--font-headline-reg-16-reg)',
-    },
-    lg: {
-      height: '72px',
-      fontSize: 'var(--font-headline-med-18-med)',
-    },
+  const variantStyles: Record<NonNullable<NavigationBarProps['variant']>, React.CSSProperties> = {
+    default: { backgroundColor: 'var(--color-grey-100)' },
+    primary: { backgroundColor: 'var(--color-home)' },
+  };
+
+  const stateStyles: Record<NonNullable<NavigationBarProps['state']>, React.CSSProperties> = {
+    active: { opacity: 1 },
+    disabled: { opacity: 0.5, pointerEvents: 'none' },
   };
 
   const combinedStyles: React.CSSProperties = {
@@ -66,14 +56,15 @@ const NavigationBar = forwardRef<HTMLDivElement, NavigationBarProps>(({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0 16px',
-    ...styles[variant],
-    ...sizeStyles[size],
+    ...styles[size],
+    ...variantStyles[variant],
+    ...stateStyles[state],
   };
 
   return (
-    <div ref={ref} className={className} style={combinedStyles} {...rest}>
+    <div ref={ref} style={combinedStyles} className={className} {...props}>
+      <button style={{ background: 'none', border: 'none', cursor: 'pointer' }}>←</button>
       <span>{title}</span>
-      <div>{children}</div>
     </div>
   );
 });
