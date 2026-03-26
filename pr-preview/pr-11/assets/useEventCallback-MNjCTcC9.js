@@ -1,1 +1,0 @@
-import{r as t}from"./index-JhL3uwfD.js";import{a as c}from"./decorator-CftTkqsE.js";function a(r){const e=t.useRef(r);return c(()=>{e.current=r}),t.useRef((...u)=>(0,e.current)(...u)).current}export{a as u};
