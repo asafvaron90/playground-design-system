@@ -6,7 +6,8 @@ const meta = {
   title: 'Components/SortButton',
   component: SortButton,
   args: {
-    children: 'Sort',
+    label: 'Sort',
+    icon: <span>⇅</span>,
   },
 } satisfies Meta<typeof SortButton>;
 
@@ -22,15 +23,15 @@ export const Secondary: Story = {
 };
 
 export const Small: Story = {
-  args: { size: 'sm' },
+  args: { size: 'small' },
 };
 
 export const Medium: Story = {
-  args: { size: 'md' },
+  args: { size: 'medium' },
 };
 
 export const Large: Story = {
-  args: { size: 'lg' },
+  args: { size: 'large' },
 };
 
 export const Disabled: Story = {

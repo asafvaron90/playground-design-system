@@ -7,42 +7,49 @@ const meta = {
   component: NavigationBar,
   args: {
     title: 'Page Title',
+    backButtonContent: 'Back',
   },
 } satisfies Meta<typeof NavigationBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    variant: 'default',
-    size: 'md',
-    state: 'active',
-  },
-};
-
 export const Primary: Story = {
   args: {
     variant: 'primary',
     size: 'md',
-    state: 'active',
+    state: 'default',
   },
 };
 
-export const Small: Story = {
+export const Secondary: Story = {
   args: {
-    size: 'sm',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'lg',
+    variant: 'secondary',
+    size: 'md',
+    state: 'default',
   },
 };
 
 export const Disabled: Story = {
   args: {
+    variant: 'primary',
+    size: 'md',
     state: 'disabled',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    variant: 'primary',
+    size: 'lg',
+    state: 'default',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    variant: 'primary',
+    size: 'sm',
+    state: 'default',
   },
 };

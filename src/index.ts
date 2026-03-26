@@ -11,20 +11,20 @@ export * from './components/Elevations/Elevations';
 export * from './components/Gaps/Gaps';
 export * from './components/Grids/Grids';
 export * from './components/Icons/Icons';
-export * from './components/components/InjectionView';
+export * from './components/InjectionView';
 export * from './components/ModelMap/ModelMap';
 export * from './components/Opacity/Opacity';
 export * from './components/Radius/Radius';
 export * from './components/Shadows/Shadows';
 export * from './components/Sizes/Sizes';
-export * from './components/components/TokenMapView';
+export * from './components/TokenMapView';
 export * from './components/Typography/Typography';
 export * from './components/Welcome/Welcome';
 
 // AI-Generated Components
 export * from './components/StatusBar/StatusBar';
-export * from './components/SortButton/SortButton';
 export * from './components/NavigationBar/NavigationBar';
+export * from './components/SortButton/SortButton';
 
 // Library Adapter
 export * from './components/adapters/mui';

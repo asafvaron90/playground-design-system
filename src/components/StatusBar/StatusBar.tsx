@@ -3,37 +3,47 @@ import React from 'react';
 
 export interface StatusBarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * The current time to display on the status bar.
+   * The current time to display.
    */
   time: string;
   /**
-   * Additional class names to apply to the status bar.
+   * The battery icon to display.
+   */
+  batteryIcon: string;
+  /**
+   * The Wi-Fi icon to display.
+   */
+  wifiIcon: string;
+  /**
+   * Additional class names to apply to the component.
    */
   className?: string;
 }
 
-/**
- * StatusBar component displays the current time and connectivity icons.
- */
-export const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(({ time, className, ...props }, ref) => {
+const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(({
+  time,
+  batteryIcon,
+  wifiIcon,
+  className,
+  ...rest
+}, ref) => {
   const styles: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '12px 20px',
-    backgroundColor: 'var(--color-grey-page-1)',
-    color: 'var(--color-white-white)',
     fontFamily: 'var(--font-white-white-status-bar)',
     fontSize: '15px',
     fontWeight: 600,
+    color: 'var(--color-white-white)',
   };
 
   return (
-    <div ref={ref} className={className} style={styles} {...props}>
+    <div ref={ref} className={className} style={styles} {...rest}>
       <span>{time}</span>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ fontFamily: 'var(--font-white-white-container)', fontSize: '17px' }}>􀛨</span>
-        <span style={{ fontFamily: 'var(--font-white-white-container-2)', fontSize: '14px', marginLeft: '10px' }}>􀙇</span>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <span style={{ fontFamily: 'var(--font-white-white-container)' }}>{wifiIcon}</span>
+        <span style={{ fontFamily: 'var(--font-white-white-container)' }}>{batteryIcon}</span>
       </div>
     </div>
   );
@@ -41,4 +51,5 @@ export const StatusBar = React.forwardRef<HTMLDivElement, StatusBarProps>(({ tim
 
 StatusBar.displayName = 'StatusBar';
 
+export { StatusBar };
 export default StatusBar;
