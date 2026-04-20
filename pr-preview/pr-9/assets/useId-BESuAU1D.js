@@ -1,0 +1,1 @@
+import{r as s,o as a}from"./index-DCXu2c-y.js";const r=typeof window<"u"?s.useLayoutEffect:s.useEffect;let n=0;function c(t){const[e,f]=s.useState(t),o=t||e;return s.useEffect(()=>{e==null&&(n+=1,f(`mui-${n}`))},[e]),o}const d={...a},u=d.useId;function I(t){if(u!==void 0){const e=u();return t??e}return c(t)}export{I as a,r as u};
