@@ -1,0 +1,243 @@
+import React from 'react';
+import { MuiMenu, MuiMenuItem, MuiDivider, MuiTypography, MuiBox } from '../adapters/mui/internal';
+
+export interface MenuItemConfig {
+  id: string;
+  label: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  destructive?: boolean;
+  showDividerAfter?: boolean;
+}
+
+export interface MenuProps {
+  items?: MenuItemConfig[];
+  label?: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  showDivider?: boolean;
+  destructive?: boolean;
+  variant?: 'default' | 'destructive' | 'disabled' | 'withIcon' | 'withDivider';
+  anchorEl?: HTMLElement | null;
+  open?: boolean;
+  onItemClick?: (id: string) => void;
+  onClose?: () => void;
+  onSelect?: (id: string) => void;
+  onClick?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+// Done icon — muted monochrome circle-check
+const DoneIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="8.5" stroke="#90A3B1" strokeWidth="1.5"/>
+    <path d="M6.5 10L9 12.5L13.5 8" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+// Microsoft Planner icon — green branded
+const PlannerIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="20" rx="3" fill="#31752F"/>
+    <rect x="3" y="3" width="6" height="6" rx="1" fill="#white" opacity="0.9" fill-opacity="0.9"/>
+    <rect x="3" y="3" width="6" height="6" rx="1" fill="#FFFFFF" fillOpacity="0.9"/>
+    <rect x="11" y="3" width="6" height="3" rx="1" fill="#FFFFFF" fillOpacity="0.6"/>
+    <rect x="3" y="11" width="14" height="2.5" rx="1" fill="#FFFFFF" fillOpacity="0.6"/>
+    <rect x="3" y="15" width="10" height="2.5" rx="1" fill="#FFFFFF" fillOpacity="0.6"/>
+  </svg>
+);
+
+// Monday.com icon — multicolour branded
+const MondayIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="20" rx="4" fill="#000000"/>
+    <ellipse cx="5" cy="13" rx="2.5" ry="2.5" fill="#F62B54"/>
+    <ellipse cx="10" cy="13" rx="2.5" ry="2.5" fill="#FFCB00"/>
+    <ellipse cx="15" cy="13" rx="2.5" ry="2.5" fill="#00CA72"/>
+  </svg>
+);
+
+// Zoho icon — multicolour branded
+const ZohoIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="20" rx="4" fill="#FFFFFF"/>
+    <path d="M3 14L8 7H3V6H9.5L4.5 13H9.5V14H3Z" fill="#E42527"/>
+    <circle cx="14" cy="10" r="3.5" stroke="#E42527" strokeWidth="1.5" fill="none"/>
+    <path d="M11.5 10C11.5 8.62 12.62 7.5 14 7.5C15.38 7.5 16.5 8.62 16.5 10C16.5 11.38 15.38 12.5 14 12.5" stroke="#F9A825" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+  </svg>
+);
+
+// Edit icon — muted monochrome pencil
+const EditIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14.5 3.5L16.5 5.5L7.5 14.5L4.5 15.5L5.5 12.5L14.5 3.5Z" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+// Copy icon — muted monochrome duplicate
+const CopyIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="7" y="7" width="9" height="9" rx="1.5" stroke="#90A3B1" strokeWidth="1.5"/>
+    <path d="M13 7V5C13 4.17 12.33 3.5 11.5 3.5H4.5C3.67 3.5 3 4.17 3 5V12C3 12.83 3.67 13.5 4.5 13.5H7" stroke="#90A3B1" strokeWidth="1.5"/>
+  </svg>
+);
+
+// Delete icon — muted monochrome trash
+const DeleteIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.5 6H16.5" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M8 6V4H12V6" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M5 6L5.8 16H14.2L15 6" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8.5 9V13" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M11.5 9V13" stroke="#90A3B1" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>
+);
+
+const DEFAULT_ITEMS: MenuItemConfig[] = [
+  { id: 'done', label: 'Done', icon: <DoneIcon /> },
+  { id: 'planner', label: 'Send to Planner', icon: <PlannerIcon /> },
+  { id: 'monday', label: 'Send to Monday', icon: <MondayIcon /> },
+  { id: 'zoho', label: 'Send to Zoho', icon: <ZohoIcon />, showDividerAfter: true },
+  { id: 'edit', label: 'Edit', icon: <EditIcon /> },
+  { id: 'copy', label: 'Copy', icon: <CopyIcon /> },
+  { id: 'delete', label: 'Delete', icon: <DeleteIcon />, destructive: true },
+];
+
+const Menu = React.forwardRef<HTMLDivElement, MenuProps>((
+  {
+    items = DEFAULT_ITEMS,
+    label,
+    icon,
+    disabled = false,
+    showDivider = true,
+    destructive = false,
+    variant = 'default',
+    anchorEl,
+    open = true,
+    onItemClick,
+    onClose,
+    onSelect,
+    onClick,
+    onHover,
+    isDisabled = false,
+    isLoading = false,
+    children,
+    sx,
+    className,
+  },
+  ref
+) => {
+  const isItemDisabled = isDisabled || disabled || variant === 'disabled';
+  const isDestructive = destructive || variant === 'destructive';
+
+  const handleItemClick = (itemId: string) => {
+    onItemClick?.(itemId);
+    onSelect?.(itemId);
+    onClose?.();
+  };
+
+  return (
+    <MuiBox
+      ref={ref}
+      data-figma-component="Menu"
+      className={className}
+      onClick={onClick}
+      onMouseEnter={onHover}
+      sx={{
+        width: '140px',
+        minHeight: '258px',
+        backgroundColor: 'var(--color-white, #FFFFFF)',
+        borderRadius: '8px',
+        boxShadow: '0px 4px 16px rgba(0,0,0,0.12)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '8px 0',
+        color: 'var(--color-text-main, #D7E3EC)',
+        ...sx,
+      }}
+    >
+      {items.map((item, index) => {
+        const itemDisabled = isItemDisabled || item.disabled;
+        const itemDestructive = isDestructive || item.destructive;
+
+        return (
+          <React.Fragment key={item.id}>
+            <MuiBox
+              component="div"
+              onClick={() => !itemDisabled && handleItemClick(item.id)}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '10px',
+                padding: '8px 12px',
+                cursor: itemDisabled ? 'default' : 'pointer',
+                opacity: itemDisabled ? 0.4 : 1,
+                minHeight: '36px',
+                backgroundColor: 'transparent',
+                transition: 'background-color 0.15s ease',
+                '&:hover': {
+                  backgroundColor: itemDisabled
+                    ? 'transparent'
+                    : 'rgba(0,0,0,0.06)',
+                },
+              }}
+            >
+              {/* Icon slot */}
+              <MuiBox
+                sx={{
+                  width: '20px',
+                  height: '20px',
+                  flexShrink: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {item.icon ?? icon ?? null}
+              </MuiBox>
+
+              {/* Label */}
+              <MuiTypography
+                sx={{
+                  fontFamily: 'var(--font-body-regular-family, Inter)',
+                  fontSize: 'var(--font-body-regular-size, 14px)',
+                  fontWeight: 'var(--font-body-regular-weight, 400)',
+                  lineHeight: 1.25,
+                  color: itemDestructive
+                    ? 'var(--color-danger-500, #C84747)'
+                    : '#3D3D3D',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {item.label}
+              </MuiTypography>
+            </MuiBox>
+
+            {/* Divider after item if flagged and showDivider is true */}
+            {(showDivider || variant === 'withDivider') && item.showDividerAfter && index < items.length - 1 && (
+              <MuiDivider
+                sx={{
+                  borderColor: 'var(--color-border-divider, #2A4051)',
+                  opacity: 0.2,
+                  margin: '4px 0',
+                }}
+              />
+            )}
+          </React.Fragment>
+        );
+      })}
+      {children}
+    </MuiBox>
+  );
+});
+
+Menu.displayName = 'Menu';
+
+export { Menu };
