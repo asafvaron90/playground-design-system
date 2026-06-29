@@ -1,0 +1,234 @@
+import React from 'react';
+import { MuiMenu, MuiMenuItem, MuiDivider, MuiTypography, MuiBox } from '../adapters/mui/internal';
+
+export interface MenuItemConfig {
+  id: string;
+  label: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  destructive?: boolean;
+  showDividerAfter?: boolean;
+}
+
+export interface MenuProps {
+  anchorEl?: HTMLElement | null;
+  open?: boolean;
+  items?: MenuItemConfig[];
+  label?: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  showDivider?: boolean;
+  destructive?: boolean;
+  variant?: 'default' | 'destructive' | 'disabled' | 'withIcon' | 'withDivider';
+  onItemClick?: (item: MenuItemConfig) => void;
+  onClose?: () => void;
+  onSelect?: (item: MenuItemConfig) => void;
+  onClick?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: object;
+  className?: string;
+}
+
+const DoneIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="8.5" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+    <path d="M6.5 10L8.8 12.5L13.5 7.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const PlannerIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="16" height="16" rx="2" fill="#31752F" />
+    <rect x="5" y="5" width="4" height="4" rx="0.5" fill="white" />
+    <rect x="11" y="5" width="4" height="4" rx="0.5" fill="#96C353" />
+    <rect x="5" y="11" width="4" height="4" rx="0.5" fill="#96C353" />
+    <rect x="11" y="11" width="4" height="4" rx="0.5" fill="#96C353" />
+  </svg>
+);
+
+const MondayIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="5.5" cy="12.5" rx="3" ry="3" fill="#FF3D57" />
+    <ellipse cx="10" cy="12.5" rx="3" ry="3" fill="#FFCB00" />
+    <ellipse cx="14.5" cy="12.5" rx="3" ry="3" fill="#00CA72" />
+  </svg>
+);
+
+const ZohoIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="9" fill="white" />
+    <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z" fill="#E42527" />
+    <path d="M10 3.5C6.41 3.5 3.5 6.41 3.5 10S6.41 16.5 10 16.5 16.5 13.59 16.5 10 13.59 3.5 10 3.5z" fill="white" />
+    <path d="M6.5 7l-2 6h3l1-3 1 3h3l-2-6H9l-1 3-1-3H6.5z" fill="#E42527" />
+  </svg>
+);
+
+const EditIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.5 3.5L16.5 6.5L7.5 15.5L3.5 16.5L4.5 12.5L13.5 3.5Z" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <path d="M12 5L15 8" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const CopyIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="7" y="7" width="9" height="9" rx="1.5" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+    <path d="M4 13V4.5A1.5 1.5 0 015.5 3H13" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+  </svg>
+);
+
+const DeleteIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.5 5.5H16.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M8 5.5V4H12V5.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <rect x="5.5" y="5.5" width="9" height="11" rx="1" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+    <path d="M8 8.5V13.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M12 8.5V13.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const DEFAULT_ITEMS: MenuItemConfig[] = [
+  { id: 'done', label: 'Done', icon: <DoneIcon /> },
+  { id: 'planner', label: 'Send to Planner', icon: <PlannerIcon /> },
+  { id: 'monday', label: 'Send to Monday', icon: <MondayIcon /> },
+  { id: 'zoho', label: 'Send to Zoho', icon: <ZohoIcon />, showDividerAfter: true },
+  { id: 'edit', label: 'Edit', icon: <EditIcon /> },
+  { id: 'copy', label: 'Copy', icon: <CopyIcon /> },
+  { id: 'delete', label: 'Delete', icon: <DeleteIcon />, destructive: false },
+];
+
+const Menu = React.forwardRef<HTMLDivElement, MenuProps>((
+  {
+    anchorEl,
+    open = true,
+    items = DEFAULT_ITEMS,
+    label,
+    icon,
+    disabled = false,
+    showDivider = true,
+    destructive = false,
+    variant = 'default',
+    onItemClick,
+    onClose,
+    onSelect,
+    onClick,
+    onHover,
+    isDisabled = false,
+    isLoading = false,
+    children,
+    sx = {},
+    className,
+  },
+  ref
+) => {
+  const isMenuDisabled = disabled || isDisabled || variant === 'disabled';
+  const isDestructive = destructive || variant === 'destructive';
+  const hasShowDivider = showDivider || variant === 'withDivider';
+
+  const handleItemClick = (item: MenuItemConfig) => {
+    if (isMenuDisabled || item.disabled) return;
+    onItemClick?.(item);
+    onSelect?.(item);
+    onClose?.();
+  };
+
+  return (
+    <div
+      ref={ref}
+      data-figma-component="Menu"
+      className={className}
+      onClick={onClick}
+      onMouseEnter={onHover}
+      style={{
+        width: '140px',
+        minHeight: '258px',
+        backgroundColor: '#FFFFFF',
+        borderRadius: '8px',
+        boxShadow: '0px 4px 16px rgba(0,0,0,0.18)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        paddingTop: '8px',
+        paddingBottom: '8px',
+        opacity: isMenuDisabled ? 0.5 : 1,
+        pointerEvents: isMenuDisabled ? 'none' : 'auto',
+        color: 'var(--color-text-main, #D7E3EC)',
+        boxSizing: 'border-box',
+      }}
+    >
+      {items.map((item) => {
+        const isItemDestructive = isDestructive && item.id === 'delete';
+        const showItemDivider = hasShowDivider && item.showDividerAfter;
+
+        return (
+          <React.Fragment key={item.id}>
+            <MuiMenuItem
+              disabled={item.disabled || isMenuDisabled}
+              onClick={() => handleItemClick(item)}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '10px',
+                px: '12px',
+                py: '6px',
+                minHeight: '32px',
+                backgroundColor: 'transparent',
+                '&:hover': {
+                  backgroundColor: 'rgba(0,0,0,0.06)',
+                },
+                '&.Mui-disabled': {
+                  opacity: 0.4,
+                },
+              }}
+            >
+              <MuiBox
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '20px',
+                  height: '20px',
+                  flexShrink: 0,
+                }}
+              >
+                {item.icon ?? null}
+              </MuiBox>
+              <MuiTypography
+                sx={{
+                  fontFamily: 'var(--font-body-regular-family, Inter)',
+                  fontSize: 'var(--font-body-regular-size, 14px)',
+                  fontWeight: 'var(--font-body-regular-weight, 400)',
+                  lineHeight: '1.4',
+                  color: isItemDestructive
+                    ? 'var(--color-danger-500, #C84747)'
+                    : '#333333',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {item.label}
+              </MuiTypography>
+            </MuiMenuItem>
+            {showItemDivider && (
+              <MuiDivider
+                sx={{
+                  borderColor: 'rgba(0,0,0,0.12)',
+                  mx: '12px',
+                  my: '4px',
+                }}
+              />
+            )}
+          </React.Fragment>
+        );
+      })}
+      {children}
+    </div>
+  );
+});
+
+Menu.displayName = 'Menu';
+
+export { Menu };

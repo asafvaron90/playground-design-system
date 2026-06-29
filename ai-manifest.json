@@ -1,20 +1,342 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-18T15:51:48.145Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-06-29T15:54:33.663Z",
+  "components": [
+    {
+      "name": "Tab",
+      "path": "src/components/Tab/Tab.tsx",
+      "description": "Tab component",
+      "props": {
+        "activeTab": {
+          "type": "TabVariant",
+          "required": false
+        },
+        "tabs": {
+          "type": "TabItem[]",
+          "required": false
+        },
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "showLabel": {
+          "type": "boolean",
+          "required": false
+        },
+        "badgeCount": {
+          "type": "number",
+          "required": false
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "TabVariant",
+          "required": false
+        },
+        "onTabChange": {
+          "type": "(tab: TabVariant) => void",
+          "required": false
+        },
+        "onHomePress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onMeetingsPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onActionsPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onNotificationsPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "dialog",
+      "path": "src/components/Dialog/Dialog.tsx",
+      "description": "dialog component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": false
+        },
+        "message": {
+          "type": "string",
+          "required": false
+        },
+        "confirmLabel": {
+          "type": "string",
+          "required": false
+        },
+        "cancelLabel": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "open": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "'notice' | 'warning' | 'error' | 'info'",
+          "required": false
+        },
+        "onConfirm": {
+          "type": "() => void",
+          "required": false
+        },
+        "onCancel": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClose": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPrimary": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "object",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "ppp",
+      "path": "src/components/Ppp/Ppp.tsx",
+      "description": "ppp component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "iconPosition": {
+          "type": "'left' | 'right'",
+          "required": false
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "state": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "variant": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onRelease": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "menu",
+      "path": "src/components/Menu/Menu.tsx",
+      "description": "menu component",
+      "props": {
+        "anchorEl": {
+          "type": "HTMLElement | null",
+          "required": false
+        },
+        "open": {
+          "type": "boolean",
+          "required": false
+        },
+        "items": {
+          "type": "MenuItemConfig[]",
+          "required": false
+        },
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "showDivider": {
+          "type": "boolean",
+          "required": false
+        },
+        "destructive": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "'default' | 'destructive' | 'disabled' | 'withIcon' | 'withDivider'",
+          "required": false
+        },
+        "onItemClick": {
+          "type": "(item: MenuItemConfig) => void",
+          "required": false
+        },
+        "onClose": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSelect": {
+          "type": "(item: MenuItemConfig) => void",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "object",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 42,
+    "typography": 17,
+    "radius": 14,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 13,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 10,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
