@@ -1,0 +1,363 @@
+import React from 'react';
+import { MuiMenu, MuiMenuItem, MuiDivider, MuiTypography, MuiStack, MuiBox } from '../adapters/mui/internal';
+
+export interface MenuItemConfig {
+  id: string;
+  label: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  destructive?: boolean;
+  showDividerAfter?: boolean;
+}
+
+export interface MenuProps {
+  // Designer-confirmed API
+  items?: MenuItemConfig[];
+  label?: string;
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  showDivider?: boolean;
+  destructive?: boolean;
+  variant?: 'default' | 'destructive' | 'disabled' | 'withIcon' | 'withDivider';
+  // Events
+  onItemClick?: (id: string) => void;
+  onClose?: () => void;
+  onSelect?: (id: string) => void;
+  // Anchor for MuiMenu
+  anchorEl?: HTMLElement | null;
+  open?: boolean;
+  // Standard props
+  onClick?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+// Default items matching the reference PNG
+const DEFAULT_ITEMS: MenuItemConfig[] = [
+  {
+    id: 'done',
+    label: 'Done',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="10" r="9" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+        <path d="M6.5 10L9 12.5L13.5 8" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    id: 'send-to-planner',
+    label: 'Send to Planner',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="16" height="16" rx="2" fill="#107C10" />
+        <rect x="5" y="5" width="4" height="4" rx="0.5" fill="white" />
+        <rect x="11" y="5" width="4" height="4" rx="0.5" fill="white" opacity="0.6" />
+        <rect x="5" y="11" width="4" height="4" rx="0.5" fill="white" opacity="0.6" />
+        <rect x="11" y="11" width="4" height="4" rx="0.5" fill="white" opacity="0.3" />
+      </svg>
+    ),
+    showDividerAfter: false,
+  },
+  {
+    id: 'send-to-monday',
+    label: 'Send to Monday',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="5" cy="13" rx="3" ry="3" fill="#FF3D57" />
+        <ellipse cx="10" cy="13" rx="3" ry="3" fill="#FFCB00" />
+        <ellipse cx="15" cy="13" rx="3" ry="3" fill="#00CA72" />
+      </svg>
+    ),
+  },
+  {
+    id: 'send-to-zoho',
+    label: 'Send to Zoho',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z" fill="#E8E8E8" />
+        <path d="M10 2C7 2 4.5 3.8 3.2 6.4L10 10l6.8-3.6C15.5 3.8 13 2 10 2z" fill="#E61E28" />
+        <path d="M3.2 6.4C2.44 7.5 2 8.7 2 10h8L3.2 6.4z" fill="#F6A31B" />
+        <path d="M2 10c0 1.3.44 2.5 1.2 3.6L10 10H2z" fill="#27AAE1" />
+        <path d="M3.2 13.6C4.5 16.2 7 18 10 18v-8L3.2 13.6z" fill="#049A4C" />
+        <path d="M10 18c3 0 5.5-1.8 6.8-4.4L10 10v8z" fill="#5C2D91" />
+        <path d="M16.8 13.6C17.56 12.5 18 11.3 18 10h-8l6.8 3.6z" fill="#E61E28" />
+        <path d="M18 10c0-1.3-.44-2.5-1.2-3.6L10 10h8z" fill="#F6A31B" />
+      </svg>
+    ),
+    showDividerAfter: true,
+  },
+  {
+    id: 'edit',
+    label: 'Edit',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.5 3.5L16.5 6.5L7 16H4V13L13.5 3.5Z" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M11.5 5.5L14.5 8.5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      </svg>
+    ),
+  },
+  {
+    id: 'copy',
+    label: 'Copy',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="7" width="9" height="10" rx="1" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+        <path d="M5 13H4C3.45 13 3 12.55 3 12V4C3 3.45 3.45 3 4 3H12C12.55 3 13 3.45 13 4V5" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      </svg>
+    ),
+  },
+  {
+    id: 'delete',
+    label: 'Delete',
+    destructive: false,
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6H16" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M8 6V4H12V6" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <rect x="6" y="6" width="8" height="10" rx="1" stroke="#9E9E9E" strokeWidth="1.5" fill="none" />
+        <path d="M9 9V13" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M11 9V13" stroke="#9E9E9E" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+];
+
+const Menu = React.forwardRef<HTMLDivElement, MenuProps>((
+  {
+    items = DEFAULT_ITEMS,
+    label,
+    icon,
+    disabled,
+    showDivider = true,
+    destructive,
+    variant = 'default',
+    onItemClick,
+    onClose,
+    onSelect,
+    anchorEl,
+    open,
+    onClick,
+    onHover,
+    isDisabled,
+    isLoading,
+    children,
+    sx,
+    className,
+  },
+  ref
+) => {
+  const isActuallyDisabled = isDisabled || disabled || variant === 'disabled';
+  const showDividerLine = showDivider || variant === 'withDivider';
+
+  // Standalone rendering (no anchor) — render as a standalone surface
+  const renderStandalone = () => {
+    const dividerIndex = items.findIndex((item) => item.showDividerAfter);
+
+    return (
+      <MuiBox
+        ref={ref}
+        data-figma-component="Menu"
+        className={className}
+        onClick={onClick}
+        onMouseEnter={onHover}
+        sx={{
+          width: '140px',
+          minHeight: '258px',
+          backgroundColor: 'var(--color-white, #FFFFFF)',
+          borderRadius: '8px',
+          boxShadow: '0px 4px 16px rgba(0,0,0,0.12)',
+          border: '1px solid var(--color-neutral-300, #D1D5DB)',
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop: '8px',
+          paddingBottom: '8px',
+          overflow: 'hidden',
+          opacity: isActuallyDisabled ? 0.5 : 1,
+          pointerEvents: isActuallyDisabled ? 'none' : 'auto',
+          ...sx,
+        }}
+      >
+        {items.map((item, index) => {
+          const isDestructiveItem =
+            item.destructive || (variant === 'destructive' && item.id === 'delete') || destructive;
+          const itemDisabled = item.disabled || isActuallyDisabled;
+
+          return (
+            <React.Fragment key={item.id}>
+              <MuiBox
+                component="div"
+                onClick={() => {
+                  if (!itemDisabled) {
+                    onItemClick?.(item.id);
+                    onSelect?.(item.id);
+                    onClose?.();
+                  }
+                }}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: '8px',
+                  paddingX: '12px',
+                  paddingY: '9px',
+                  cursor: itemDisabled ? 'default' : 'pointer',
+                  opacity: itemDisabled ? 0.4 : 1,
+                  color: isDestructiveItem
+                    ? 'var(--color-danger-500, #C84747)'
+                    : 'var(--color-text-main, #D7E3EC)',
+                  userSelect: 'none',
+                  '&:hover': {
+                    backgroundColor: itemDisabled ? 'transparent' : 'rgba(0,0,0,0.06)',
+                  },
+                }}
+              >
+                <MuiBox
+                  sx={{
+                    width: '20px',
+                    height: '20px',
+                    flexShrink: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {variant === 'withIcon' && icon ? icon : item.icon}
+                </MuiBox>
+                <MuiTypography
+                  sx={{
+                    fontFamily: 'var(--font-body-regular-family, Inter)',
+                    fontSize: 'var(--font-body-regular-size, 14px)',
+                    fontWeight: 'var(--font-body-regular-weight, 400)',
+                    lineHeight: 1.25,
+                    color: isDestructiveItem
+                      ? 'var(--color-danger-500, #C84747)'
+                      : '#3C3C3C',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {item.label}
+                </MuiTypography>
+              </MuiBox>
+              {(item.showDividerAfter && showDividerLine) && (
+                <MuiBox
+                  sx={{
+                    height: '1px',
+                    backgroundColor: 'var(--color-border-divider, #2A4051)',
+                    opacity: 0.2,
+                    marginX: '8px',
+                    marginY: '4px',
+                  }}
+                />
+              )}
+            </React.Fragment>
+          );
+        })}
+        {children}
+      </MuiBox>
+    );
+  };
+
+  // If anchorEl is provided, render as a MuiMenu
+  if (anchorEl !== undefined) {
+    return (
+      <MuiMenu
+        anchorEl={anchorEl}
+        open={!!open}
+        onClose={onClose}
+        data-figma-component="Menu"
+        className={className}
+        sx={{
+          '& .MuiPaper-root': {
+            width: '140px',
+            minHeight: '258px',
+            backgroundColor: 'var(--color-white, #FFFFFF)',
+            borderRadius: '8px',
+            boxShadow: '0px 4px 16px rgba(0,0,0,0.12)',
+            border: '1px solid var(--color-neutral-300, #D1D5DB)',
+            paddingTop: '8px',
+            paddingBottom: '8px',
+          },
+          '& .MuiList-root': {
+            padding: 0,
+          },
+          ...sx,
+        }}
+      >
+        {items.map((item) => {
+          const isDestructiveItem =
+            item.destructive || (variant === 'destructive' && item.id === 'delete') || destructive;
+          const itemDisabled = item.disabled || isActuallyDisabled;
+
+          return (
+            <React.Fragment key={item.id}>
+              <MuiMenuItem
+                disabled={itemDisabled}
+                onClick={() => {
+                  onItemClick?.(item.id);
+                  onSelect?.(item.id);
+                  onClose?.();
+                }}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: '8px',
+                  paddingX: '12px',
+                  paddingY: '9px',
+                  color: isDestructiveItem
+                    ? 'var(--color-danger-500, #C84747)'
+                    : '#3C3C3C',
+                  fontFamily: 'var(--font-body-regular-family, Inter)',
+                  fontSize: 'var(--font-body-regular-size, 14px)',
+                  fontWeight: 'var(--font-body-regular-weight, 400)',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0,0,0,0.06)',
+                  },
+                }}
+              >
+                <MuiBox
+                  sx={{
+                    width: '20px',
+                    height: '20px',
+                    flexShrink: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {variant === 'withIcon' && icon ? icon : item.icon}
+                </MuiBox>
+                <MuiTypography
+                  sx={{
+                    fontFamily: 'var(--font-body-regular-family, Inter)',
+                    fontSize: 'var(--font-body-regular-size, 14px)',
+                    fontWeight: 'var(--font-body-regular-weight, 400)',
+                    lineHeight: 1.25,
+                    color: 'inherit',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {item.label}
+                </MuiTypography>
+              </MuiMenuItem>
+              {item.showDividerAfter && showDividerLine && (
+                <MuiDivider sx={{ marginX: '8px', marginY: '4px', borderColor: 'rgba(0,0,0,0.12)' }} />
+              )}
+            </React.Fragment>
+          );
+        })}
+        {children}
+      </MuiMenu>
+    );
+  }
+
+  return renderStandalone();
+});
+
+Menu.displayName = 'Menu';
+
+export { Menu };
