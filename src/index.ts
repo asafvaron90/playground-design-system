@@ -10,3 +10,6 @@ export * from './design-tokens/vars';
 
 // Token-driven typography bridge — every Figma typography token becomes <Typography.XxxYyy>
 export { Typography } from './components/Text/Text';
+
+// Figma-mapped components (override library defaults for same-named exports)
+export { Dialog } from './components/Dialog';
