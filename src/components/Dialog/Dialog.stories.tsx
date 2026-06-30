@@ -7,7 +7,7 @@ import { withFigmaReference } from '../../storybook/withFigmaReference';
 const meta = {
   title: 'Components/Dialog',
   component: Dialog,
-  decorators: [withFigmaReference(referencePng), (Story) => (<div style={{ width: 277, minHeight: 322 }}><Story /></div>)],
+  decorators: [withFigmaReference(referencePng), (Story) => (<div style={{ width: 277, minHeight: 319 }}><Story /></div>)],
   parameters: { layout: 'fullscreen' },
   args: {
     title: 'Notice',
@@ -17,8 +17,6 @@ const meta = {
     open: true,
     showIcon: true,
     variant: 'default',
-    isDisabled: false,
-    isLoading: false,
   },
 } satisfies Meta<typeof Dialog>;
 
@@ -31,17 +29,19 @@ export const Warning: Story = {
   args: {
     variant: 'warning',
     title: 'Warning',
-    message: 'This action may have unintended consequences. Please review before continuing.',
-    primaryLabel: 'Proceed',
+    message: 'This action may result in data loss. Are you sure you want to continue?',
+    primaryLabel: 'Continue',
+    cancelLabel: 'Cancel',
   },
 };
 
 export const Info: Story = {
   args: {
     variant: 'info',
-    title: 'Information',
-    message: 'Your settings have been updated and will take effect on next login.',
-    primaryLabel: 'Got It',
+    title: 'Info',
+    message: 'Your session will expire in 5 minutes. Please save your work.',
+    primaryLabel: 'OK',
+    cancelLabel: 'Dismiss',
   },
 };
 
@@ -49,8 +49,9 @@ export const Error: Story = {
   args: {
     variant: 'error',
     title: 'Error',
-    message: 'An error occurred while processing your request. Please try again.',
+    message: 'An unexpected error occurred. Please try again later.',
     primaryLabel: 'Retry',
+    cancelLabel: 'Cancel',
   },
 };
 
@@ -69,17 +70,11 @@ export const Disabled: Story = {
 export const NoIcon: Story = {
   args: {
     showIcon: false,
-    title: 'Notice',
-    message: 'Rerunning the System Bullets AI will overwrite the previous System Bullets AI insights.',
   },
 };
 
-export const CustomLabels: Story = {
+export const Closed: Story = {
   args: {
-    title: 'Confirm Action',
-    message: 'Are you sure you want to delete this item? This cannot be undone.',
-    primaryLabel: 'Delete',
-    cancelLabel: 'Keep It',
-    variant: 'error',
+    open: false,
   },
 };

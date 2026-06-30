@@ -26,7 +26,7 @@
         "value": "#1B293A",
         "category": "Variables",
         "modes": {
-          "Dark": "#409088",
+          "Dark": "#409057",
           "Light": "#1B293A"
         }
       },
@@ -770,7 +770,13 @@
       "layerId": "551:6557",
       "variants": 0,
       "path": "src/components/Dialog/Dialog.tsx",
-      "hash": "dc6d2df925e7"
+      "hash": "b44690a97d9d",
+      "facets": {
+        "structure": "7b0191e84bf3",
+        "tokens": "d6b6aee9cf00",
+        "variants": "",
+        "props": "44136fa355b3"
+      }
     }
   ]
 }
