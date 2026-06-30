@@ -1,0 +1,171 @@
+import React from 'react';
+import { MuiBox, MuiTypography } from '../adapters/mui/internal';
+
+export interface PppProps {
+  label?: string;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+  state?: 'default' | 'pressed' | 'disabled';
+  variant?: 'default' | 'pressed' | 'disabled';
+  onClick?: () => void;
+  onPress?: () => void;
+  onRelease?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+const Ppp = React.forwardRef<HTMLDivElement, PppProps>((
+  {
+    label = 'Confirm',
+    icon,
+    iconPosition = 'left',
+    disabled = false,
+    state = 'default',
+    variant = 'default',
+    onClick,
+    onPress,
+    onRelease,
+    onHover,
+    isDisabled = false,
+    isLoading = false,
+    children,
+    sx,
+    className,
+  },
+  ref
+) => {
+  const resolvedVariant = variant !== 'default' ? variant : state;
+  const isDisabledState =
+    disabled || isDisabled || resolvedVariant === 'disabled';
+  const isPressedState = resolvedVariant === 'pressed';
+
+  const getBackground = () => {
+    if (isDisabledState) return 'var(--color-grey-light-grey, #C9CFDC)';
+    if (isPressedState) return '#0a0614';
+    return 'linear-gradient(97deg, rgba(58,62,123,1) 0%, rgba(97,74,176,1) 56.5%, rgba(155,93,255,1) 100%)';
+  };
+
+  const getBoxShadow = () => {
+    if (isDisabledState || isPressedState) return 'none';
+    return '0px 1.5px 3px 0px rgba(22,5,50,0.2)';
+  };
+
+  const getLabelColor = () => {
+    if (isDisabledState) return 'var(--color-grey-secondary-body-text, #90A3B1)';
+    return 'var(--color-white-white, #FFFFFF)';
+  };
+
+  const handleClick = () => {
+    if (isDisabledState) return;
+    onClick?.();
+  };
+
+  const handleMouseDown = () => {
+    if (isDisabledState) return;
+    onPress?.();
+  };
+
+  const handleMouseUp = () => {
+    if (isDisabledState) return;
+    onRelease?.();
+  };
+
+  const handleMouseEnter = () => {
+    if (isDisabledState) return;
+    onHover?.();
+  };
+
+  return (
+    <MuiBox
+      ref={ref}
+      data-figma-component="Ppp"
+      className={className}
+      onClick={handleClick}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseEnter={handleMouseEnter}
+      sx={{
+        width: '108px',
+        height: '44px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '8px 24px',
+        borderRadius: '12px',
+        background: getBackground(),
+        boxShadow: getBoxShadow(),
+        cursor: isDisabledState ? 'not-allowed' : 'pointer',
+        pointerEvents: isDisabledState ? 'none' : 'auto',
+        userSelect: 'none',
+        transition: 'background 0.15s ease, box-shadow 0.15s ease',
+        boxSizing: 'border-box',
+        '&:hover': !isDisabledState && !isPressedState ? {
+          opacity: 0.92,
+        } : {},
+        '&:active': !isDisabledState ? {
+          background: '#0a0614',
+          boxShadow: 'none',
+        } : {},
+        ...sx,
+      }}
+    >
+      <MuiBox
+        sx={{
+          width: 'fit-content',
+          height: 'fit-content',
+          minHeight: 'fit-content',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 'var(--gap-space-xxs, 4px)',
+        }}
+      >
+        {icon && iconPosition === 'left' && (
+          <MuiBox
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: getLabelColor(),
+            }}
+          >
+            {icon}
+          </MuiBox>
+        )}
+        <MuiTypography
+          sx={{
+            fontSize: '14px',
+            fontWeight: 500,
+            fontFamily: 'Inter',
+            lineHeight: 'normal',
+            color: getLabelColor(),
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {children ?? label}
+        </MuiTypography>
+        {icon && iconPosition === 'right' && (
+          <MuiBox
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: getLabelColor(),
+            }}
+          >
+            {icon}
+          </MuiBox>
+        )}
+      </MuiBox>
+    </MuiBox>
+  );
+});
+
+Ppp.displayName = 'Ppp';
+
+export { Ppp };
