@@ -7,13 +7,7 @@ import { withFigmaReference } from '../../storybook/withFigmaReference';
 const meta = {
   title: 'Components/Dialog',
   component: Dialog,
-  decorators: [withFigmaReference(referencePng), 
-    (Story) => (
-      <div style={{ width: 277, minHeight: 322 }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [withFigmaReference(referencePng), (Story) => (<div style={{ width: 277, minHeight: 322 }}><Story /></div>)],
   parameters: { layout: 'fullscreen' },
   args: {
     title: 'Notice',
@@ -23,6 +17,8 @@ const meta = {
     open: true,
     showIcon: true,
     variant: 'default',
+    isDisabled: false,
+    isLoading: false,
   },
 } satisfies Meta<typeof Dialog>;
 
@@ -35,7 +31,7 @@ export const Warning: Story = {
   args: {
     variant: 'warning',
     title: 'Warning',
-    message: 'This action may have unintended consequences.',
+    message: 'This action may have unintended consequences. Please review before continuing.',
     primaryLabel: 'Proceed',
   },
 };
@@ -43,9 +39,9 @@ export const Warning: Story = {
 export const Info: Story = {
   args: {
     variant: 'info',
-    title: 'Info',
-    message: 'Here is some useful information for you to review before continuing.',
-    primaryLabel: 'Got it',
+    title: 'Information',
+    message: 'Your settings have been updated and will take effect on next login.',
+    primaryLabel: 'Got It',
   },
 };
 
@@ -53,7 +49,7 @@ export const Error: Story = {
   args: {
     variant: 'error',
     title: 'Error',
-    message: 'Something went wrong. Please try again later.',
+    message: 'An error occurred while processing your request. Please try again.',
     primaryLabel: 'Retry',
   },
 };
@@ -70,14 +66,20 @@ export const Disabled: Story = {
   },
 };
 
-export const WithoutIcon: Story = {
+export const NoIcon: Story = {
   args: {
     showIcon: false,
+    title: 'Notice',
+    message: 'Rerunning the System Bullets AI will overwrite the previous System Bullets AI insights.',
   },
 };
 
-export const Closed: Story = {
+export const CustomLabels: Story = {
   args: {
-    open: false,
+    title: 'Confirm Action',
+    message: 'Are you sure you want to delete this item? This cannot be undone.',
+    primaryLabel: 'Delete',
+    cancelLabel: 'Keep It',
+    variant: 'error',
   },
 };

@@ -55,10 +55,10 @@
   --color-grey-drawer-handle-rgb: 173, 180, 202;
   --color-grey-text-icons: #D7E3EC;
   --color-grey-text-icons-rgb: 215, 227, 236;
-  --color-orange-orange-warning: #FFA000;
-  --color-orange-orange-warning-rgb: 255, 160, 0;
   --color-grey-light-grey: #C9CFDC;
   --color-grey-light-grey-rgb: 201, 207, 220;
+  --color-orange-orange-warning: #FFA000;
+  --color-orange-orange-warning-rgb: 255, 160, 0;
   --color-turquoise-turquoise: #00FFFF;
   --color-turquoise-turquoise-rgb: 0, 255, 255;
   --color-grey-secondary-body-text: #90A3B1;
@@ -232,7 +232,7 @@
   --gap-space-10: 10px;
   --gap-space-48: 48px;
   --gap-space-166: 166px;
-  --gap-space-156: 156px;
+  --gap-space-156: 155px;
   /* Sizes */
   --size-border-width-xxs: 1px;
   --size-border-width-xs: 1.25px;
