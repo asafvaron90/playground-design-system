@@ -1,0 +1,412 @@
+import React from 'react';
+import { MuiBox, MuiTypography, MuiStack } from '../adapters/mui/internal';
+
+export type TabVariant = 'Home' | 'Meetings' | 'Actions' | 'Notifications';
+
+export interface TabProps {
+  activeTab?: TabVariant;
+  tabs?: TabVariant[];
+  label?: string;
+  icon?: React.ReactNode;
+  showLabel?: boolean;
+  badgeCount?: number;
+  disabled?: boolean;
+  variant?: TabVariant;
+  onTabChange?: (tab: TabVariant) => void;
+  onHomePress?: () => void;
+  onMeetingsPress?: () => void;
+  onActionsPress?: () => void;
+  onNotificationsPress?: () => void;
+  onClick?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+const HomeIcon = () => (
+  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.49586 1.63663C9.62966 1.50299 9.81105 1.42792 10.0002 1.42792C10.1893 1.42792 10.3707 1.50299 10.5045 1.63663L18.7731 9.9053C18.839 9.97343 18.9178 10.0278 19.0049 10.0651C19.0919 10.1025 19.1856 10.1221 19.2804 10.1229C19.3751 10.1237 19.4691 10.1056 19.5568 10.0697C19.6444 10.0337 19.7241 9.9807 19.7911 9.91367C19.858 9.84663 19.911 9.76693 19.9468 9.67921C19.9827 9.59149 20.0007 9.49751 19.9998 9.40275C19.999 9.308 19.9792 9.21436 19.9418 9.12731C19.9043 9.04027 19.8499 8.96154 19.7817 8.89575L11.514 0.627068C11.3152 0.428263 11.0792 0.270562 10.8195 0.16297C10.5597 0.0553772 10.2813 0 10.0002 0C9.71901 0 9.44061 0.0553772 9.18086 0.16297C8.92111 0.270562 8.6851 0.428263 8.4863 0.627068L0.21762 8.89575C0.149492 8.96161 0.0951633 9.04038 0.0578039 9.12747C0.0204445 9.21455 0.000802506 9.3082 2.40813e-05 9.40296C-0.000754343 9.49771 0.0173463 9.59168 0.05327 9.67936C0.0891936 9.76705 0.142221 9.8467 0.209258 9.91368C0.276294 9.98065 0.355998 10.0336 0.443718 10.0694C0.531438 10.1053 0.625417 10.1233 0.720172 10.1224C0.814928 10.1216 0.908562 10.1018 0.995611 10.0644C1.08266 10.0269 1.16138 9.97254 1.22718 9.90435L9.49586 1.63663Z" fill="#9B5DFF"/>
+    <path d="M10.0004 3.15039L17.7638 10.9138C17.7924 10.9424 17.8209 10.969 17.8504 10.9956V16.8931C17.8504 17.878 17.0511 18.6772 16.0663 18.6772H12.8549C12.6657 18.6772 12.4842 18.6021 12.3503 18.4682C12.2165 18.3344 12.1413 18.1529 12.1413 17.9636V13.6818C12.1413 13.4925 12.0661 13.311 11.9323 13.1772C11.7985 13.0433 11.6169 12.9681 11.4277 12.9681H8.57313C8.38386 12.9681 8.20234 13.0433 8.06851 13.1772C7.93468 13.311 7.85949 13.4925 7.85949 13.6818V17.9636C7.85949 18.1529 7.7843 18.3344 7.65047 18.4682C7.51664 18.6021 7.33512 18.6772 7.14585 18.6772H3.93448C3.46131 18.6772 3.00752 18.4893 2.67294 18.1547C2.33836 17.8201 2.15039 17.3663 2.15039 16.8931V10.9956C2.17999 10.9692 2.20887 10.9419 2.23698 10.9138L10.0004 3.15039Z" fill="#9B5DFF"/>
+  </svg>
+);
+
+const MeetingsIcon = ({ active }: { active: boolean }) => (
+  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.75002 0.791664V3.16666M15.8334 0.791664V3.16666M0.791687 17.4167V5.54166C0.791687 4.91178 1.04191 4.30768 1.48731 3.86229C1.93271 3.41689 2.5368 3.16666 3.16669 3.16666H17.4167C18.0466 3.16666 18.6507 3.41689 19.0961 3.86229C19.5415 4.30768 19.7917 4.91178 19.7917 5.54166V17.4167M19.7917 17.4167V9.5C19.7917 8.87011 19.5415 8.26602 19.0961 7.82062C18.6507 7.37522 18.0466 7.125 17.4167 7.125H3.16669C2.5368 7.125 1.93271 7.37522 1.48731 7.82062C1.04191 8.26602 0.791687 8.87011 0.791687 9.5V17.4167C0.791687 18.0466 1.04191 18.6506 1.48731 19.096C1.93271 19.5414 2.5368 19.7917 3.16669 19.7917H17.4167C18.0466 19.7917 18.6507 19.5414 19.0961 19.096C19.5415 18.6506 19.7917 18.0466 19.7917 17.4167Z" stroke={active ? '#FF4081' : 'white'} strokeWidth="1.58333" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ActionsIcon = ({ active }: { active: boolean }) => (
+  <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.9 1.4H11.0712C10.7814 0.5873 10.0114 0 9.1 0H4.9C3.9886 0 3.2186 0.5873 2.9288 1.4H2.1C0.9422 1.4 0 2.3422 0 3.5V17.5C0 18.6578 0.9422 19.6 2.1 19.6H11.9C13.0578 19.6 14 18.6578 14 17.5V3.5C14 2.3422 13.0578 1.4 11.9 1.4ZM4.9 1.4H9.1C9.4864 1.4 9.8 1.7143 9.8 2.1C9.8 2.4857 9.4864 2.8 9.1 2.8H4.9C4.5136 2.8 4.2 2.4857 4.2 2.1C4.2 1.7143 4.5136 1.4 4.9 1.4ZM12.6 17.5C12.6 17.8857 12.2864 18.2 11.9 18.2H2.1C1.7136 18.2 1.4 17.8857 1.4 17.5V3.5C1.4 3.1143 1.7136 2.8 2.1 2.8H2.9288C3.2186 3.6127 3.9886 4.2 4.9 4.2H9.1C10.0114 4.2 10.7814 3.6127 11.0712 2.8H11.9C12.2864 2.8 12.6 3.1143 12.6 3.5V17.5ZM10.5 7.7H6.3C5.9129 7.7 5.6 7.3864 5.6 7C5.6 6.6136 5.9129 6.3 6.3 6.3H10.5C10.8871 6.3 11.2 6.6136 11.2 7C11.2 7.3864 10.8871 7.7 10.5 7.7ZM11.2 9.8C11.2 9.4136 10.8871 9.1 10.5 9.1H6.3C5.9129 9.1 5.6 9.4136 5.6 9.8C5.6 10.1864 5.9129 10.5 6.3 10.5H10.5C10.8871 10.5 11.2 10.1864 11.2 9.8ZM11.2 12.6C11.2 12.2136 10.8871 11.9 10.5 11.9H6.3C5.9129 11.9 5.6 12.2136 5.6 12.6C5.6 12.9864 5.9129 13.3 6.3 13.3H10.5C10.8871 13.3 11.2 12.9864 11.2 12.6ZM11.2 15.4C11.2 15.0136 10.8871 14.7 10.5 14.7H6.3C5.9129 14.7 5.6 15.0136 5.6 15.4C5.6 15.7864 5.9129 16.1 6.3 16.1H10.5C10.8871 16.1 11.2 15.7864 11.2 15.4ZM4.9 7C4.9 6.6136 4.5871 6.3 4.2 6.3H3.5C3.1129 6.3 2.8 6.6136 2.8 7C2.8 7.3864 3.1129 7.7 3.5 7.7H4.2C4.5871 7.7 4.9 7.3864 4.9 7ZM4.9 9.8C4.9 9.4136 4.5871 9.1 4.2 9.1H3.5C3.1129 9.1 2.8 9.4136 2.8 9.8C2.8 10.1864 3.1129 10.5 3.5 10.5H4.2C4.5871 10.5 4.9 10.1864 4.9 9.8ZM4.9 12.6C4.9 12.2136 4.5871 11.9 4.2 11.9H3.5C3.1129 11.9 2.8 12.2136 2.8 12.6C2.8 12.9864 3.1129 13.3 3.5 13.3H4.2C4.5871 13.3 4.9 12.9864 4.9 12.6ZM4.9 15.4C4.9 15.0136 4.5871 14.7 4.2 14.7H3.5C3.1129 14.7 2.8 15.0136 2.8 15.4C2.8 15.7864 3.1129 16.1 3.5 16.1H4.2C4.5871 16.1 4.9 15.7864 4.9 15.4Z" fill={active ? '#AEEA00' : 'white'}/>
+  </svg>
+);
+
+const NotificationsIcon = ({ active }: { active: boolean }) => (
+  <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.5 0.00379459C7.99531 0.00379459 7.58929 0.409821 7.58929 0.914509V1.28259C4.50045 1.72277 2.125 4.38281 2.125 7.59308V8.1433C2.125 9.57388 1.74554 10.9779 1.02455 12.215L0.193527 13.6342C0.0683035 13.8542 0 14.1009 0 14.3551C0 15.1482 0.641295 15.7895 1.43438 15.7895H15.5656C16.3587 15.7895 17 15.1482 17 14.3551C17 14.1009 16.9317 13.8504 16.8065 13.6342L15.9754 12.2112C15.2545 10.9741 14.875 9.57009 14.875 8.13951V7.58929C14.875 4.37902 12.4996 1.71897 9.41071 1.27879V0.910714C9.41071 0.406027 9.00469 0 8.5 0V0.00379459ZM14.8902 13.9681H2.10603L2.59554 13.1295C3.47969 11.6154 3.94643 9.89263 3.94643 8.1433V7.59308C3.94643 5.07723 5.98415 3.03951 8.5 3.03951C11.0158 3.03951 13.0536 5.07723 13.0536 7.59308V8.1433C13.0536 9.89643 13.5203 11.6154 14.4007 13.1295L14.8902 13.9681ZM5.92344 17.6109C6.29911 18.6734 7.31228 19.4324 8.5 19.4324C9.68772 19.4324 10.7009 18.6734 11.0766 17.6109H5.92344Z" fill={active ? '#FF4B4B' : 'white'}/>
+  </svg>
+);
+
+const Tab = React.forwardRef<HTMLDivElement, TabProps>((
+  {
+    activeTab = 'Home',
+    variant = 'Home',
+    tabs,
+    label,
+    icon,
+    showLabel = true,
+    badgeCount,
+    disabled = false,
+    onTabChange,
+    onHomePress,
+    onMeetingsPress,
+    onActionsPress,
+    onNotificationsPress,
+    onClick,
+    onHover,
+    isDisabled = false,
+    isLoading = false,
+    children,
+    sx,
+    className,
+  },
+  ref
+) => {
+  const resolvedActive = activeTab ?? variant ?? 'Home';
+
+  const handleTabPress = (tab: TabVariant) => {
+    if (isDisabled || disabled) return;
+    onTabChange?.(tab);
+    if (tab === 'Home') onHomePress?.();
+    if (tab === 'Meetings') onMeetingsPress?.();
+    if (tab === 'Actions') onActionsPress?.();
+    if (tab === 'Notifications') onNotificationsPress?.();
+    onClick?.();
+  };
+
+  const isHome = resolvedActive === 'Home';
+  const isMeetings = resolvedActive === 'Meetings';
+  const isActions = resolvedActive === 'Actions';
+  const isNotifications = resolvedActive === 'Notifications';
+
+  const tabItems: { key: TabVariant; defaultLabel: string }[] = [
+    { key: 'Home', defaultLabel: 'Home' },
+    { key: 'Meetings', defaultLabel: 'Meetings' },
+    { key: 'Actions', defaultLabel: 'Actions' },
+    { key: 'Notifications', defaultLabel: 'Notifications' },
+  ];
+
+  return (
+    <MuiBox
+      ref={ref}
+      data-figma-component="Tab"
+      className={className}
+      sx={{
+        position: 'relative',
+        width: '375px',
+        height: '74px',
+        overflow: 'hidden',
+        color: 'var(--color-white-white, #FFFFFF)',
+        ...sx,
+      }}
+    >
+      {/* Background gradient rectangle */}
+      <MuiBox
+        sx={{
+          position: 'absolute',
+          top: '-49px',
+          left: '-2px',
+          width: '375px',
+          height: '79px',
+          background: 'linear-gradient(180deg, rgba(5,19,33,1) 31.7%, rgba(5,19,33,0) 100%)',
+          pointerEvents: 'none',
+          zIndex: 0,
+        }}
+      />
+
+      {/* Frame 2147225046 — Subtract SVG background layer */}
+      <MuiBox
+        sx={{
+          position: 'absolute',
+          top: '0px',
+          left: '-2px',
+          width: '377px',
+          height: '74px',
+          minHeight: '74px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 'var(--gap-space-s, 12px)',
+          padding: '0px 16px',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      >
+        {/* Subtract — the background surface */}
+        <MuiBox sx={{ position: 'absolute', top: 0, left: 0, width: '377px', height: '75px', overflow: 'hidden', pointerEvents: 'none' }}>
+          <svg width="375" height="74" viewBox="0 0 375 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="path-1-outside-1_542_7589" maskUnits="userSpaceOnUse" x="-3" y="-1" width="379" height="77" fill="black">
+              <rect fill="white" x="-3" y="-1" width="379" height="77"/>
+              <path d="M375 75H-2V0H375V75Z"/>
+            </mask>
+            <path d="M375 75H-2V0H375V75Z" fill="#091C2A"/>
+            <path d="M375 75V76H376V75H375ZM-2 75H-3V76H-2V75ZM-2 0V-1H-3V0H-2ZM375 0H376V-1H375V0ZM375 75V74H-2V75V76H375V75ZM-2 75H-1V0H-2H-3V75H-2ZM-2 0V1H375V0V-1H-2V0ZM375 0H374V75H375H376V0H375Z" fill="#2A4051" mask="url(#path-1-outside-1_542_7589)"/>
+          </svg>
+        </MuiBox>
+
+        {/* Frame 2147225044 — decorative colored rectangles */}
+        <MuiBox
+          sx={{
+            position: 'absolute',
+            top: '0px',
+            left: '13px',
+            width: 'fit-content',
+            height: 'fit-content',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            pointerEvents: 'none',
+          }}
+        >
+          {/* navigation/menu - left */}
+          <MuiBox
+            sx={{
+              width: '188px',
+              height: 'fit-content',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              gap: 'var(--gap-space-xs, 8px)',
+              padding: '0px 40px 0px 0px',
+            }}
+          >
+            <MuiBox
+              sx={{
+                width: '115px',
+                height: '67px',
+                borderRadius: '12px',
+                backgroundColor: isHome ? 'rgba(153, 89, 255, 0.18)' : 'transparent',
+                flexShrink: 0,
+              }}
+            />
+            <MuiBox
+              sx={{
+                width: '128px',
+                height: '70px',
+                borderRadius: '12px',
+                backgroundColor: isActions ? 'rgba(48, 116, 243, 0.18)' : 'transparent',
+                flexShrink: 0,
+                marginTop: '2px',
+              }}
+            />
+            <MuiBox
+              sx={{
+                width: '113px',
+                height: '71px',
+                borderRadius: '12px',
+                backgroundColor: isMeetings ? 'rgba(0, 255, 255, 0.18)' : 'transparent',
+                flexShrink: 0,
+                marginTop: '2px',
+              }}
+            />
+          </MuiBox>
+          {/* navigation/menu - right */}
+          <MuiBox
+            sx={{
+              width: '164px',
+              height: 'fit-content',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              gap: 'var(--gap-space-xs, 8px)',
+              padding: '0px 0px 0px 40px',
+            }}
+          >
+            <MuiBox
+              sx={{
+                width: '117px',
+                height: '71px',
+                borderRadius: '12px',
+                backgroundColor: isNotifications ? 'rgba(255, 152, 0, 0.18)' : 'transparent',
+                flexShrink: 0,
+                marginTop: '4px',
+              }}
+            />
+          </MuiBox>
+        </MuiBox>
+      </MuiBox>
+
+      {/* Frame 2147225558 — the actual tab navigation items */}
+      <MuiBox
+        sx={{
+          position: 'absolute',
+          top: '-1px',
+          left: '-2px',
+          width: '377px',
+          height: '75px',
+          minHeight: '75px',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 'var(--gap-space-l, 20px)',
+          zIndex: 2,
+        }}
+      >
+        {/* Home Tab */}
+        <MuiBox
+          onClick={() => handleTabPress('Home')}
+          sx={{
+            width: '72px',
+            height: '75px',
+            minHeight: '75px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'var(--size-shadow-blur-6, 6px)',
+            padding: '12px 0px',
+            cursor: isDisabled || disabled ? 'not-allowed' : 'pointer',
+            opacity: isDisabled || disabled ? 0.5 : 1,
+            flexShrink: 0,
+          }}
+        >
+          <MuiBox sx={{ width: '20px', height: '19px', minHeight: '19px', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexShrink: 0 }}>
+            <HomeIcon />
+          </MuiBox>
+          <MuiTypography
+            sx={{
+              fontSize: '12px',
+              fontWeight: isHome ? 600 : 400,
+              fontFamily: 'Inter',
+              lineHeight: 'normal',
+              color: isHome ? 'var(--color-white-white, #FFFFFF)' : 'rgba(255,255,255,0.6)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Home
+          </MuiTypography>
+        </MuiBox>
+
+        {/* Meetings Tab */}
+        <MuiBox
+          onClick={() => handleTabPress('Meetings')}
+          sx={{
+            width: '72px',
+            height: '75px',
+            minHeight: '75px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'var(--size-shadow-blur-6, 6px)',
+            padding: '12px 0px',
+            cursor: isDisabled || disabled ? 'not-allowed' : 'pointer',
+            opacity: isDisabled || disabled ? 0.5 : 1,
+            flexShrink: 0,
+          }}
+        >
+          <MuiBox sx={{ width: '21px', height: '21px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <MeetingsIcon active={isMeetings} />
+          </MuiBox>
+          <MuiTypography
+            sx={{
+              fontSize: '12px',
+              fontWeight: isMeetings ? 600 : 400,
+              fontFamily: 'Inter',
+              lineHeight: 'normal',
+              color: isMeetings ? 'var(--color-white-white, #FFFFFF)' : 'rgba(255,255,255,0.6)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Meetings
+          </MuiTypography>
+        </MuiBox>
+
+        {/* Actions Tab */}
+        <MuiBox
+          onClick={() => handleTabPress('Actions')}
+          sx={{
+            width: '72px',
+            height: '75px',
+            minHeight: '75px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'var(--size-shadow-blur-6, 6px)',
+            padding: '12px 0px',
+            cursor: isDisabled || disabled ? 'not-allowed' : 'pointer',
+            opacity: isDisabled || disabled ? 0.5 : 1,
+            flexShrink: 0,
+          }}
+        >
+          <MuiBox sx={{ width: '14px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <ActionsIcon active={isActions} />
+          </MuiBox>
+          <MuiTypography
+            sx={{
+              fontSize: '12px',
+              fontWeight: isActions ? 600 : 400,
+              fontFamily: 'Inter',
+              lineHeight: 'normal',
+              color: isActions ? 'var(--color-white-white, #FFFFFF)' : 'rgba(255,255,255,0.6)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Actions
+          </MuiTypography>
+        </MuiBox>
+
+        {/* Notifications Tab */}
+        <MuiBox
+          onClick={() => handleTabPress('Notifications')}
+          sx={{
+            width: 'fit-content',
+            height: '75px',
+            minHeight: '75px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'var(--size-shadow-blur-6, 6px)',
+            padding: '12px 0px',
+            cursor: isDisabled || disabled ? 'not-allowed' : 'pointer',
+            opacity: isDisabled || disabled ? 0.5 : 1,
+            flexShrink: 0,
+          }}
+        >
+          <MuiBox sx={{ width: '17px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <NotificationsIcon active={isNotifications} />
+          </MuiBox>
+          <MuiTypography
+            sx={{
+              fontSize: '12px',
+              fontWeight: isNotifications ? 600 : 400,
+              fontFamily: 'Inter',
+              lineHeight: 'normal',
+              color: isNotifications ? 'var(--color-white-white, #FFFFFF)' : 'rgba(255,255,255,0.6)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Notifications
+          </MuiTypography>
+        </MuiBox>
+      </MuiBox>
+
+      {children}
+    </MuiBox>
+  );
+});
+
+Tab.displayName = 'Tab';
+
+export { Tab };
