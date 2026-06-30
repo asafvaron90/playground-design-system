@@ -1,20 +1,309 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-18T15:51:48.145Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-06-30T09:04:47.844Z",
+  "components": [
+    {
+      "name": "Tab",
+      "path": "src/components/Tab/Tab.tsx",
+      "description": "Tab component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        },
+        "variant": {
+          "type": "'Home' | 'Meetings' | 'Actions' | 'Notifications'",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    },
+    {
+      "name": "dialog",
+      "path": "src/components/Dialog/Dialog.tsx",
+      "description": "dialog component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": false
+        },
+        "message": {
+          "type": "string",
+          "required": false
+        },
+        "confirmLabel": {
+          "type": "string",
+          "required": false
+        },
+        "cancelLabel": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "open": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "'notice' | 'warning' | 'error' | 'info'",
+          "required": false
+        },
+        "onConfirm": {
+          "type": "() => void",
+          "required": false
+        },
+        "onCancel": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClose": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPrimary": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "ppp",
+      "path": "src/components/Ppp/Ppp.tsx",
+      "description": "ppp component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "iconPosition": {
+          "type": "'left' | 'right'",
+          "required": false
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "state": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "variant": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onRelease": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    },
+    {
+      "name": "menu",
+      "path": "src/components/Menu/Menu.tsx",
+      "description": "menu component",
+      "props": {
+        "anchorEl": {
+          "type": "HTMLElement | null",
+          "required": false,
+          "description": "Anchor element for positioning"
+        },
+        "open": {
+          "type": "boolean",
+          "required": false,
+          "description": "Whether menu is open"
+        },
+        "items": {
+          "type": "MenuItemConfig[]",
+          "required": false,
+          "description": "Array of menu items"
+        },
+        "label": {
+          "type": "string",
+          "required": false,
+          "description": "Menu label"
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Icon for the trigger"
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable all items"
+        },
+        "showDivider": {
+          "type": "boolean",
+          "required": false,
+          "description": "Show divider between groups"
+        },
+        "destructive": {
+          "type": "boolean",
+          "required": false,
+          "description": "Mark as destructive"
+        },
+        "variant": {
+          "type": "'default' | 'destructive' | 'disabled' | 'withIcon' | 'withDivider'",
+          "required": false,
+          "description": "Variant"
+        },
+        "onItemClick": {
+          "type": "(item: MenuItemConfig) => void",
+          "required": false,
+          "description": "Item click handler"
+        },
+        "onClose": {
+          "type": "() => void",
+          "required": false,
+          "description": "Close handler"
+        },
+        "onSelect": {
+          "type": "(item: MenuItemConfig) => void",
+          "required": false,
+          "description": "Select handler"
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 42,
+    "typography": 17,
+    "radius": 14,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 13,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 10,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
