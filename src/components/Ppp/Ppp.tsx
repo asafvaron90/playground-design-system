@@ -1,0 +1,193 @@
+import React from 'react';
+import { MuiBox, MuiTypography } from '../adapters/mui/internal';
+
+export interface PppProps {
+  label?: string;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+  state?: 'default' | 'pressed' | 'disabled';
+  variant?: 'default' | 'pressed' | 'disabled';
+  onClick?: () => void;
+  onPress?: () => void;
+  onRelease?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+const DEFAULT_GRADIENT = 'linear-gradient(97deg, rgba(58,62,123,1) 0%, rgba(97,74,176,1) 56.5%, rgba(155,93,255,1) 100%)';
+const PRESSED_BG = '#0a0a14';
+const DISABLED_BG = '#3a3f52';
+
+const Ppp = React.forwardRef<HTMLDivElement, PppProps>((
+  {
+    label = 'Confirm',
+    icon,
+    iconPosition = 'left',
+    disabled = false,
+    state = 'default',
+    variant = 'default',
+    onClick,
+    onPress,
+    onRelease,
+    onHover,
+    isDisabled = false,
+    isLoading = false,
+    children,
+    sx,
+    className,
+  },
+  ref
+) => {
+  const resolvedVariant: 'default' | 'pressed' | 'disabled' =
+    variant !== 'default' ? variant :
+    state !== 'default' ? (state as 'default' | 'pressed' | 'disabled') :
+    'default';
+
+  const isActuallyDisabled = disabled || isDisabled || resolvedVariant === 'disabled';
+  const isPressed = resolvedVariant === 'pressed';
+
+  const getBackground = () => {
+    if (isActuallyDisabled) return DISABLED_BG;
+    if (isPressed) return PRESSED_BG;
+    return DEFAULT_GRADIENT;
+  };
+
+  const getTextColor = () => {
+    if (isActuallyDisabled) return 'var(--color-grey-secondary-body-text, #90A3B1)';
+    return 'var(--color-white-white, #FFFFFF)';
+  };
+
+  const getIconColor = () => {
+    if (isActuallyDisabled) return 'var(--color-grey-secondary-body-text, #90A3B1)';
+    return 'var(--color-white-white, #FFFFFF)';
+  };
+
+  const handleClick = () => {
+    if (isActuallyDisabled) return;
+    onClick?.();
+  };
+
+  const handleMouseDown = () => {
+    if (isActuallyDisabled) return;
+    onPress?.();
+  };
+
+  const handleMouseUp = () => {
+    if (isActuallyDisabled) return;
+    onRelease?.();
+  };
+
+  const handleMouseEnter = () => {
+    if (isActuallyDisabled) return;
+    onHover?.();
+  };
+
+  const bgValue = getBackground();
+  const isGradient = bgValue.startsWith('linear-gradient');
+
+  const rootSx: Record<string, unknown> = {
+    width: '108px',
+    height: '44px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 'var(--gap-space-xs, 8px)',
+    paddingBottom: 'var(--gap-space-xs, 8px)',
+    paddingLeft: 'var(--gap-space-xl, 24px)',
+    paddingRight: 'var(--gap-space-xl, 24px)',
+    borderRadius: '12px',
+    background: isGradient ? bgValue : undefined,
+    backgroundColor: !isGradient ? bgValue : undefined,
+    boxShadow: isActuallyDisabled ? 'none' : '0px 1.5px 3px 0px rgba(22,5,50,0.2)',
+    cursor: isActuallyDisabled ? 'not-allowed' : 'pointer',
+    pointerEvents: isActuallyDisabled ? 'none' : 'auto',
+    boxSizing: 'border-box',
+    userSelect: 'none',
+    transition: 'background 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease',
+    '&:hover': !isActuallyDisabled && !isPressed ? {
+      opacity: 0.92,
+    } : {},
+    ...sx,
+  };
+
+  const showIcon = !!icon;
+
+  return (
+    <MuiBox
+      ref={ref}
+      data-figma-component="Ppp"
+      className={className}
+      onClick={handleClick}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseEnter={handleMouseEnter}
+      role="button"
+      tabIndex={isActuallyDisabled ? -1 : 0}
+      aria-disabled={isActuallyDisabled}
+      sx={rootSx}
+    >
+      <MuiBox
+        sx={{
+          width: 'fit-content',
+          height: 'fit-content',
+          minHeight: 'fit-content',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 'var(--gap-space-xxs, 4px)',
+        }}
+      >
+        {showIcon && iconPosition === 'left' && (
+          <MuiBox
+            component="span"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: getIconColor(),
+              lineHeight: 0,
+            }}
+          >
+            {icon}
+          </MuiBox>
+        )}
+        <MuiTypography
+          component="span"
+          sx={{
+            fontSize: '14px',
+            fontWeight: 500,
+            fontFamily: 'Inter',
+            lineHeight: 'normal',
+            color: getTextColor(),
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {children ?? label}
+        </MuiTypography>
+        {showIcon && iconPosition === 'right' && (
+          <MuiBox
+            component="span"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: getIconColor(),
+              lineHeight: 0,
+            }}
+          >
+            {icon}
+          </MuiBox>
+        )}
+      </MuiBox>
+    </MuiBox>
+  );
+});
+
+Ppp.displayName = 'Ppp';
+
+export { Ppp };
