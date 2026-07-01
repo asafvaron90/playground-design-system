@@ -7,7 +7,13 @@ import { withFigmaReference } from '../../storybook/withFigmaReference';
 const meta = {
   title: 'Components/Dialog',
   component: Dialog,
-  decorators: [withFigmaReference(referencePng), (Story) => (<div style={{ width: 277, minHeight: 319 }}><Story /></div>)],
+  decorators: [withFigmaReference(referencePng), 
+    (Story) => (
+      <div style={{ width: 277, minHeight: 322 }}>
+        <Story />
+      </div>
+    ),
+  ],
   parameters: { layout: 'fullscreen' },
   args: {
     title: 'Notice',
@@ -29,9 +35,8 @@ export const Warning: Story = {
   args: {
     variant: 'warning',
     title: 'Warning',
-    message: 'This action may result in data loss. Are you sure you want to continue?',
-    primaryLabel: 'Continue',
-    cancelLabel: 'Cancel',
+    message: 'This action may have unintended consequences. Are you sure you want to proceed?',
+    primaryLabel: 'Proceed',
   },
 };
 
@@ -39,9 +44,8 @@ export const Info: Story = {
   args: {
     variant: 'info',
     title: 'Info',
-    message: 'Your session will expire in 5 minutes. Please save your work.',
-    primaryLabel: 'OK',
-    cancelLabel: 'Dismiss',
+    message: 'This operation will update the system configuration. Please review before continuing.',
+    primaryLabel: 'Got it',
   },
 };
 
@@ -49,9 +53,8 @@ export const Error: Story = {
   args: {
     variant: 'error',
     title: 'Error',
-    message: 'An unexpected error occurred. Please try again later.',
+    message: 'An error occurred while processing your request. Please try again.',
     primaryLabel: 'Retry',
-    cancelLabel: 'Cancel',
   },
 };
 
@@ -70,11 +73,5 @@ export const Disabled: Story = {
 export const NoIcon: Story = {
   args: {
     showIcon: false,
-  },
-};
-
-export const Closed: Story = {
-  args: {
-    open: false,
   },
 };

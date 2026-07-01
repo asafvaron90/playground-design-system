@@ -1,5 +1,5 @@
 import React from 'react';
-import { MuiBox, MuiTypography, MuiButton } from '../adapters/mui/internal';
+import { MuiBox, MuiTypography, MuiButton, MuiModal, MuiBackdrop, MuiFade } from '../adapters/mui/internal';
 
 export interface DialogProps {
   title?: string;
@@ -37,16 +37,29 @@ const WarningIcon = () => (
   </svg>
 );
 
-const getVariantIconBackground = (variant: string): string => {
+const getVariantIconColor = (variant: DialogProps['variant']): string => {
   switch (variant) {
     case 'error':
-      return 'linear-gradient(135deg, var(--color-danger-500, #C84747) 0%, var(--color-grey-page, #051321) 100%)';
+      return 'linear-gradient(rgba(200,71,71,1) 0%, rgba(48,51,93,1) 100%)';
     case 'info':
-      return 'linear-gradient(135deg, var(--color-brand-500, #3074F3) 0%, var(--color-grey-page, #051321) 100%)';
+      return 'linear-gradient(rgba(48,116,243,1) 0%, rgba(48,51,93,1) 100%)';
     case 'warning':
     case 'default':
     default:
       return 'linear-gradient(-74deg, rgba(155,93,255,1) 0%, rgba(48,51,93,1) 100%)';
+  }
+};
+
+const getVariantPrimaryGradient = (variant: DialogProps['variant']): string => {
+  switch (variant) {
+    case 'error':
+      return 'linear-gradient(-82deg, rgba(200,71,71,1) 0%, rgba(48,51,93,1) 100%)';
+    case 'info':
+      return 'linear-gradient(-82deg, rgba(48,116,243,1) 0%, rgba(48,51,93,1) 100%)';
+    case 'warning':
+    case 'default':
+    default:
+      return 'linear-gradient(-82deg, rgba(110,62,187,1) 0%, rgba(48,51,93,1) 100%)';
   }
 };
 
@@ -73,9 +86,9 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
   },
   ref
 ) => {
-  if (!open) return null;
+  const primaryGradient = getVariantPrimaryGradient(variant);
 
-  return (
+  const cardContent = (
     <MuiBox
       ref={ref}
       data-figma-component="Dialog"
@@ -83,12 +96,12 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
       onClick={onClick}
       sx={{
         width: '277px',
-        height: '319px',
+        height: '322px',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'relative',
+        color: 'var(--color-grey-text-icons, #D7E3EC)',
         ...sx,
       }}
     >
@@ -96,25 +109,24 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
       <MuiBox
         sx={{
           width: '277px',
-          minHeight: '319px',
+          height: '322px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           gap: 'var(--gap-space-xl, 24px)',
-          padding: '24px 24px 24px 24px',
+          padding: '24px',
           borderRadius: '24px',
           backgroundColor: 'var(--color-grey-page-light, #091C2A)',
           border: '1px solid var(--color-grey-stroke, #2A4051)',
           boxSizing: 'border-box',
-          position: 'relative',
         }}
       >
         {/* Frame 1973342171 — icon + text group */}
         <MuiBox
           sx={{
             width: '229px',
-            minHeight: '148px',
+            minHeight: '151px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -129,12 +141,11 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
                 width: '40px',
                 height: '40px',
                 minHeight: '40px',
+                flexShrink: 0,
                 borderRadius: '38px',
-                background: getVariantIconBackground(variant),
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                flexShrink: 0,
                 overflow: 'hidden',
               }}
             >
@@ -142,11 +153,11 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
             </MuiBox>
           )}
 
-          {/* Frame 1973342172 — title + message */}
+          {/* Frame 1973342172 — title + body */}
           <MuiBox
             sx={{
               width: '229px',
-              minHeight: '92px',
+              minHeight: '95px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -156,26 +167,30 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
           >
             <MuiTypography
               sx={{
-                fontSize: '16px',
-                fontWeight: 400,
+                width: '57px',
+                minHeight: '22px',
+                fontSize: '18px',
+                fontWeight: 600,
                 fontFamily: 'Inter',
                 lineHeight: 'normal',
                 color: 'rgba(215, 227, 236, 1)',
                 textAlign: 'center',
-                width: '57px',
+                whiteSpace: 'nowrap',
               }}
             >
               {title}
             </MuiTypography>
+
             <MuiTypography
               sx={{
+                width: '229px',
+                minHeight: '57px',
                 fontSize: '16px',
                 fontWeight: 400,
                 fontFamily: 'Inter',
                 lineHeight: 'normal',
                 color: 'rgba(215, 227, 236, 1)',
                 textAlign: 'center',
-                width: '229px',
               }}
             >
               {message}
@@ -210,22 +225,27 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
               alignItems: 'center',
               justifyContent: 'center',
               gap: 'var(--gap-space-10, 10px)',
-              padding: '14px 10px 14px 10px',
+              padding: '14px 10px',
               borderRadius: '12px',
-              background: 'linear-gradient(-82deg, rgba(110,62,187,1) 0%, rgba(48,51,93,1) 100%)',
+              background: primaryGradient,
               color: 'var(--color-white, #FFFFFF)',
               fontSize: '16px',
-              fontWeight: 600,
+              fontWeight: 500,
               fontFamily: 'Inter',
               lineHeight: 'normal',
               textTransform: 'none',
               border: 'none',
               '&:hover': {
-                background: 'linear-gradient(-82deg, rgba(130,82,207,1) 0%, rgba(68,71,113,1) 100%)',
+                background: primaryGradient,
+                opacity: 0.9,
               },
               '&:disabled': {
-                background: 'linear-gradient(-82deg, rgba(110,62,187,0.5) 0%, rgba(48,51,93,0.5) 100%)',
-                color: 'rgba(215, 227, 236, 0.5)',
+                background: primaryGradient,
+                opacity: 0.5,
+                color: 'var(--color-white, #FFFFFF)',
+              },
+              '&.MuiButton-root': {
+                minWidth: 'unset',
               },
             }}
           >
@@ -247,12 +267,12 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
               alignItems: 'center',
               justifyContent: 'center',
               gap: 'var(--gap-space-10, 10px)',
-              padding: '12px 12px 12px 12px',
+              padding: '12px',
               borderRadius: '58px',
               background: 'transparent',
               color: 'var(--color-purple-purple, #9B5DFF)',
               fontSize: '16px',
-              fontWeight: 400,
+              fontWeight: 500,
               fontFamily: 'Inter',
               lineHeight: 'normal',
               textTransform: 'none',
@@ -261,7 +281,11 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
                 background: 'rgba(155, 93, 255, 0.08)',
               },
               '&:disabled': {
-                color: 'rgba(155, 93, 255, 0.5)',
+                color: 'var(--color-purple-purple, #9B5DFF)',
+                opacity: 0.5,
+              },
+              '&.MuiButton-root': {
+                minWidth: 'unset',
               },
             }}
           >
@@ -273,6 +297,8 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>((
       </MuiBox>
     </MuiBox>
   );
+
+  return cardContent;
 });
 
 Dialog.displayName = 'Dialog';
