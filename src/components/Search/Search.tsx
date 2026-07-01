@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { MuiBox, MuiInputBase } from '../adapters/mui/internal';
 
 export interface SearchProps {
@@ -20,6 +20,7 @@ export interface SearchProps {
   arrowBackIcon5790?: boolean;
   property1?: 'Search Bar - Back' | 'Search AI';
   onCancel?: () => void;
+  'search...Icon'?: React.ReactNode;
   onClick?: () => void;
   onHover?: () => void;
   isDisabled?: boolean;
@@ -29,27 +30,58 @@ export interface SearchProps {
   className?: string;
 }
 
-const SearchBarIconSVG = () => (
-  <svg width="64" height="20" viewBox="0 0 64 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.5 17.5L13.8834 13.8834" stroke="#D7E3EC" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#D7E3EC" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
-    <line x1="32.5" y1="3" x2="32.5" y2="17" stroke="#90A3B1"/>
-    <path d="M49 7.5L54 12.5L59 7.5" stroke="#D7E3EC" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+const SearchMagnifierIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M17.5 17.5L13.8833 13.8834"
+      stroke="var(--color-grey-text-icons, #D7E3EC)"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+      stroke="var(--color-grey-text-icons, #D7E3EC)"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-const AISearchIconSVG = () => (
-  <svg width="64" height="20" viewBox="0 0 64 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9.16667 5C7.51184 5 5.92591 5.65848 4.75068 6.83371C3.57545 8.00895 2.91667 9.59489 2.91667 11.25C2.91667 12.9051 3.57545 14.4911 4.75068 15.6663C5.92591 16.8415 7.51184 17.5 9.16667 17.5C10.8215 17.5 12.4074 16.8415 13.5827 15.6663C14.7579 14.4911 15.4167 12.9051 15.4167 11.25" stroke="#D7E3EC" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M9.16667 2.5V5" stroke="#D7E3EC" strokeWidth="1.25" strokeLinecap="round"/>
-    <path d="M13.8834 3.88672L12.2167 5.55339" stroke="#9B5DFF" strokeWidth="1.25" strokeLinecap="round"/>
-    <path d="M15.8333 8.33398H13.5" stroke="#9B5DFF" strokeWidth="1.25" strokeLinecap="round"/>
-    <line x1="32.5" y1="3" x2="32.5" y2="17" stroke="#90A3B1"/>
-    <path d="M49 7.5L54 12.5L59 7.5" stroke="#D7E3EC" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+const ChevronDownIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M2 4L6 8L10 4"
+      stroke="var(--color-grey-text-icons, #D7E3EC)"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
-const Search = forwardRef<HTMLDivElement, SearchProps>((
+const AISpinnerIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle
+      cx="10"
+      cy="10"
+      r="7.5"
+      stroke="var(--color-grey-secondary-body-text, #90A3B1)"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeDasharray="3 3"
+    />
+    <path
+      d="M10 2.5C10 2.5 14.5 4 15.5 8"
+      stroke="var(--color-grey-secondary-body-text, #90A3B1)"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const Search = React.forwardRef<HTMLDivElement, SearchProps>((
   {
     variant = 'searchBar',
     placeholder,
@@ -69,28 +101,24 @@ const Search = forwardRef<HTMLDivElement, SearchProps>((
     arrowBackIcon5790 = false,
     property1 = 'Search Bar - Back',
     onCancel,
+    'search...Icon': searchIcon,
     onClick,
     onHover,
     isDisabled = false,
     isLoading = false,
     children,
-    sx,
+    sx = {},
     className,
   },
   ref
 ) => {
-  const isAI = variant === 'searchAI' || property1 === 'Search AI';
-  const isComponentDisabled = disabled || isDisabled;
+  const isSearchAI = variant === 'searchAI' || property1 === 'Search AI';
+  const effectiveDisabled = disabled || isDisabled;
+  const resolvedPlaceholder = placeholder ?? (isSearchAI ? 'Search Meetings...' : 'Search...');
 
-  const derivedPlaceholder = placeholder ?? (isAI ? 'Search Meetings...' : 'Search...');
-
-  const borderStyle = isAI
-    ? '1px solid var(--color-purple-purple, #9B5DFF)'
-    : '1px solid var(--color-grey-stroke, #2A4051)';
-
-  const boxShadow = isAI
-    ? '0 0 0 2px rgba(155, 93, 255, 0.25)'
-    : 'none';
+  const placeholderColor = isSearchAI
+    ? 'var(--color-grey-secondary-body-text, #90A3B1)'
+    : 'var(--color-green-green, #25A96B)';
 
   return (
     <MuiBox
@@ -107,68 +135,75 @@ const Search = forwardRef<HTMLDivElement, SearchProps>((
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        color: 'var(--color-grey-secondary-body-text, #90A3B1)',
-        opacity: isComponentDisabled ? 0.5 : 1,
-        pointerEvents: isComponentDisabled ? 'none' : 'auto',
+        color: 'var(--color-grey-text-icons, #D7E3EC)',
+        opacity: effectiveDisabled ? 0.5 : 1,
+        pointerEvents: effectiveDisabled ? 'none' : 'auto',
+        boxSizing: 'border-box',
         ...sx,
       }}
     >
-      {/* Frame 1410103816 */}
+      {/* Frame 1410103816 — full-width pill container */}
       <MuiBox
         sx={{
           width: '343px',
-          height: '44px',
           minHeight: '44px',
+          height: '44px',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          paddingLeft: '16px',
-          paddingRight: '16px',
+          justifyContent: 'flex-start',
+          paddingLeft: 'var(--gap-space-m, 16px)',
+          paddingRight: 'var(--gap-space-m, 16px)',
           borderRadius: 'var(--radius-radius-full, 99px)',
-          backgroundColor: 'var(--color-grey-text-field, #2F3649)',
-          border: borderStyle,
-          boxShadow: boxShadow,
+          backgroundColor: isSearchAI
+            ? 'var(--color-grey-page-light, #091C2A)'
+            : 'var(--color-grey-buttons-bg, #1B293A)',
+          border: isSearchAI
+            ? '1px solid var(--color-action-secondary, #9B5DFF)'
+            : 'none',
           boxSizing: 'border-box',
+          overflow: 'hidden',
+          gap: 0,
         }}
       >
-        {/* Frame 2147225554 — left: placeholder/input text, 59×17px */}
+        {/* Frame 2147225554 — "Search..." text area: 59×17px */}
         <MuiBox
           sx={{
             width: '59px',
             minHeight: '17px',
+            height: '17px',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'flex-start',
-            flex: 1,
-            overflow: 'hidden',
+            flexShrink: 0,
           }}
         >
           <MuiInputBase
             value={value}
+            placeholder={resolvedPlaceholder}
+            disabled={effectiveDisabled}
             onChange={(e) => onChange?.(e.target.value)}
             onFocus={onFocus}
             onBlur={onBlur}
-            disabled={isComponentDisabled}
             onKeyDown={(e) => { if (e.key === 'Enter') onSearch?.(); }}
-            placeholder={derivedPlaceholder}
             sx={{
-              fontSize: 'var(--font-label-reg-14-reg-size, 14px)',
-              fontWeight: 'var(--font-label-reg-14-reg-weight, 400)',
-              fontFamily: 'var(--font-label-reg-14-reg-family, Inter)',
+              width: '59px',
+              color: placeholderColor,
+              fontSize: 'var(--font-headline-med-headline-reg-label-large-14-med-size, 14px)',
+              fontFamily: 'var(--font-headline-med-headline-reg-label-large-14-med-family, Inter)',
+              fontWeight: 'var(--font-headline-med-headline-reg-label-large-14-med-weight, 500)',
               lineHeight: 'normal',
-              color: 'var(--color-grey-secondary-body-text, #90A3B1)',
-              width: '100%',
               '& input': {
-                fontSize: 'var(--font-label-reg-14-reg-size, 14px)',
-                fontWeight: 'var(--font-label-reg-14-reg-weight, 400)',
-                fontFamily: 'var(--font-label-reg-14-reg-family, Inter)',
-                lineHeight: 'normal',
-                color: 'var(--color-grey-secondary-body-text, #90A3B1)',
                 padding: 0,
+                color: placeholderColor,
+                fontSize: 'var(--font-headline-med-headline-reg-label-large-14-med-size, 14px)',
+                fontFamily: 'var(--font-headline-med-headline-reg-label-large-14-med-family, Inter)',
+                fontWeight: 'var(--font-headline-med-headline-reg-label-large-14-med-weight, 500)',
+                lineHeight: 'normal',
+                width: '59px',
                 '&::placeholder': {
-                  color: 'var(--color-grey-secondary-body-text, #90A3B1)',
+                  color: placeholderColor,
                   opacity: 1,
                 },
               },
@@ -176,27 +211,65 @@ const Search = forwardRef<HTMLDivElement, SearchProps>((
           />
         </MuiBox>
 
-        {/* Frame 2147225553 — right: search icon + divider + chevron, 64×20px */}
+        {/* Spacer between text and icons */}
+        <MuiBox sx={{ flex: 1 }} />
+
+        {/* Frame 2147225553 — icons area: 64×20px */}
         <MuiBox
           sx={{
             width: '64px',
-            height: '20px',
             minHeight: '20px',
+            height: '20px',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'flex-start',
+            gap: 'var(--gap-space-s, 12px)',
             flexShrink: 0,
-            cursor: 'pointer',
           }}
-          onClick={(e) => {
-            e.stopPropagation();
-            onDropdownToggle?.();
-          }}
+          onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
-          {icon ? icon : (isAI ? <AISearchIconSVG /> : <SearchBarIconSVG />)}
+          {/* Search / AI icon */}
+          {isSearchAI ? (
+            <AISpinnerIcon />
+          ) : (
+            icon ?? <SearchMagnifierIcon />
+          )}
+
+          {/* Vertical divider */}
+          {showDivider && !isSearchAI && (
+            <MuiBox
+              sx={{
+                width: '1px',
+                height: '16px',
+                backgroundColor: 'var(--color-grey-secondary-body-text, #90A3B1)',
+                flexShrink: 0,
+              }}
+            />
+          )}
+
+          {/* Chevron / dropdown toggle */}
+          {showArrowIcon5426 && !isSearchAI && (
+            <MuiBox
+              component="button"
+              onClick={(e: React.MouseEvent) => { e.stopPropagation(); onDropdownToggle?.(); }}
+              sx={{
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--color-grey-text-icons, #D7E3EC)',
+              }}
+            >
+              <ChevronDownIcon />
+            </MuiBox>
+          )}
         </MuiBox>
       </MuiBox>
+
       {children}
     </MuiBox>
   );

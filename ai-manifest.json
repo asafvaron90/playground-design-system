@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "generatedAt": "2026-07-01T13:52:13.114Z",
+  "generatedAt": "2026-07-01T18:33:33.994Z",
   "components": [
     {
       "name": "search",
@@ -76,6 +76,89 @@
           "required": false
         },
         "onCancel": {
+          "type": "() => void",
+          "required": false
+        },
+        "'search...Icon'": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "dailog",
+      "path": "src/components/Dailog/Dailog.tsx",
+      "description": "dailog component",
+      "props": {
+        "title": {
+          "type": "string",
+          "required": false
+        },
+        "message": {
+          "type": "string",
+          "required": false
+        },
+        "confirmLabel": {
+          "type": "string",
+          "required": false
+        },
+        "cancelLabel": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "open": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "DailogVariant",
+          "required": false
+        },
+        "onConfirm": {
+          "type": "() => void",
+          "required": false
+        },
+        "onCancel": {
+          "type": "() => void",
+          "required": false
+        },
+        "onClose": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPrimary": {
           "type": "() => void",
           "required": false
         },

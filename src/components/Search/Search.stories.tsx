@@ -10,7 +10,9 @@ const meta = {
   args: {
     placeholder: 'Search...',
     variant: 'searchBar',
-    property1: 'Search Bar - Back',
+    showDropdown: true,
+    showDivider: true,
+    showArrowIcon5426: true,
   },
 } satisfies Meta<typeof Search>;
 
@@ -19,10 +21,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const AISearch: Story = {
+export const SearchAI: Story = {
   args: {
     variant: 'searchAI',
-    property1: 'Search AI',
     placeholder: 'Search Meetings...',
   },
 };
@@ -41,6 +42,13 @@ export const Disabled: Story = {
 
 export const WithValue: Story = {
   args: {
-    value: 'Hello world',
+    value: 'hello world',
+  },
+};
+
+export const NoDropdown: Story = {
+  args: {
+    showArrowIcon5426: false,
+    showDivider: false,
   },
 };

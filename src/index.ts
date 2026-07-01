@@ -13,3 +13,4 @@ export { Typography } from './components/Text/Text';
 
 // Figma-mapped components (override library defaults for same-named exports)
 export { Search } from './components/Search';
+export { Dailog } from './components/Dailog';
