@@ -1,0 +1,184 @@
+import React from 'react';
+import { MuiButton, MuiBox, MuiTypography } from '../adapters/mui/internal';
+
+export interface PrimaryButtonProps {
+  label?: string;
+  icon?: React.ReactNode;
+  showIcon?: boolean;
+  state?: 'default' | 'pressed' | 'disabled';
+  disabled?: boolean;
+  variant?: 'default' | 'pressed' | 'disabled';
+  onClick?: () => void;
+  onPress?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
+  onHover?: () => void;
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  children?: React.ReactNode;
+  sx?: Record<string, unknown>;
+  className?: string;
+}
+
+const GRADIENT_DEFAULT = 'linear-gradient(97deg, rgba(58,62,123,1) 0%, rgba(97,74,176,1) 56.5%, rgba(155,93,255,1) 100%)';
+const GRADIENT_PRESSED = '#0a0a14';
+const BG_DISABLED = 'var(--color-grey-light-grey, #C9CFDC)';
+const TEXT_DISABLED = 'var(--color-grey-secondary-body-text, #90A3B1)';
+const TEXT_DEFAULT = 'var(--color-white-white, #FFFFFF)';
+
+const PrimaryButton = React.forwardRef<HTMLButtonElement, PrimaryButtonProps>(
+  (
+    {
+      label = 'Confirm',
+      icon,
+      showIcon = false,
+      state,
+      disabled,
+      variant = 'default',
+      onClick,
+      onPress,
+      onFocus,
+      onBlur,
+      onHover,
+      isDisabled = false,
+      isLoading = false,
+      children,
+      sx = {},
+      className,
+    },
+    ref
+  ) => {
+    // Resolve effective variant from multiple sources
+    const effectiveVariant: 'default' | 'pressed' | 'disabled' =
+      state === 'disabled' || disabled || isDisabled
+        ? 'disabled'
+        : state === 'pressed'
+        ? 'pressed'
+        : variant === 'pressed'
+        ? 'pressed'
+        : variant === 'disabled'
+        ? 'disabled'
+        : 'default';
+
+    const isDisabledState = effectiveVariant === 'disabled';
+    const isPressedState = effectiveVariant === 'pressed';
+
+    const background = isDisabledState
+      ? BG_DISABLED
+      : isPressedState
+      ? GRADIENT_PRESSED
+      : GRADIENT_DEFAULT;
+
+    const textColor = isDisabledState ? TEXT_DISABLED : TEXT_DEFAULT;
+
+    const iconColor = isDisabledState ? TEXT_DISABLED : TEXT_DEFAULT;
+
+    return (
+      <MuiButton
+        ref={ref}
+        data-figma-component="PrimaryButton"
+        className={className}
+        disabled={isDisabledState}
+        onClick={() => {
+          onClick?.();
+          onPress?.();
+        }}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        onMouseEnter={onHover}
+        disableRipple={false}
+        disableElevation
+        variant="contained"
+        sx={{
+          width: '108px',
+          height: '44px',
+          minHeight: '44px',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingTop: 'var(--gap-space-xs, 8px)',
+          paddingBottom: 'var(--gap-space-xs, 8px)',
+          paddingLeft: 'var(--gap-space-xl, 24px)',
+          paddingRight: 'var(--gap-space-xl, 24px)',
+          borderRadius: '12px',
+          background,
+          backgroundColor: 'transparent',
+          boxShadow: isDisabledState
+            ? 'none'
+            : '0px 1.5px 3px 0px rgba(22,5,50,0.2)',
+          border: 'none',
+          cursor: isDisabledState ? 'not-allowed' : 'pointer',
+          textTransform: 'none',
+          '&:hover': {
+            background: isDisabledState
+              ? BG_DISABLED
+              : GRADIENT_DEFAULT,
+            backgroundColor: 'transparent',
+            boxShadow: isDisabledState
+              ? 'none'
+              : '0px 1.5px 3px 0px rgba(22,5,50,0.2)',
+            opacity: isDisabledState ? 1 : 0.92,
+          },
+          '&:active': {
+            background: GRADIENT_PRESSED,
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+          },
+          '&.Mui-disabled': {
+            background: BG_DISABLED,
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+            color: TEXT_DISABLED,
+            pointerEvents: 'none',
+          },
+          ...sx,
+        }}
+      >
+        <MuiBox
+          sx={{
+            width: 'fit-content',
+            height: 'fit-content',
+            minHeight: 'fit-content',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'var(--gap-space-xxs, 4px)',
+          }}
+        >
+          {showIcon && icon && (
+            <MuiBox
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: iconColor,
+                fontSize: '14px',
+              }}
+            >
+              {icon}
+            </MuiBox>
+          )}
+          <MuiTypography
+            component="span"
+            sx={{
+              fontSize: 'var(--font-headline-med-headline-reg-label-large-14-med-size, 14px)',
+              fontWeight: 'var(--font-headline-med-headline-reg-label-large-14-med-weight, 500)',
+              fontFamily: 'var(--font-headline-med-headline-reg-label-large-14-med-family, Inter)',
+              lineHeight: 'normal',
+              color: textColor,
+              userSelect: 'none',
+            }}
+          >
+            {children ?? label}
+          </MuiTypography>
+        </MuiBox>
+      </MuiButton>
+    );
+  }
+);
+
+PrimaryButton.displayName = 'PrimaryButton';
+
+export { PrimaryButton };

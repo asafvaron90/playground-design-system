@@ -1,20 +1,98 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-18T15:51:48.145Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-07-01T18:54:35.432Z",
+  "components": [
+    {
+      "name": "PrimaryButton",
+      "path": "src/components/PrimaryButton/PrimaryButton.tsx",
+      "description": "PrimaryButton component",
+      "props": {
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "showIcon": {
+          "type": "boolean",
+          "required": false
+        },
+        "state": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "disabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "variant": {
+          "type": "'default' | 'pressed' | 'disabled'",
+          "required": false
+        },
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onFocus": {
+          "type": "() => void",
+          "required": false
+        },
+        "onBlur": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 42,
+    "typography": 17,
+    "radius": 14,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 13,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 10,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
