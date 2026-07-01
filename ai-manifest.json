@@ -1,82 +1,26 @@
 {
   "version": "0.0.1",
-  "generatedAt": "2026-07-01T13:52:13.114Z",
+  "generatedAt": "2026-07-01T15:16:54.580Z",
   "components": [
     {
       "name": "search",
       "path": "src/components/Search/Search.tsx",
       "description": "search component",
       "props": {
-        "variant": {
-          "type": "'searchBar' | 'searchAI'",
-          "required": false
-        },
-        "placeholder": {
-          "type": "string",
-          "required": false
-        },
-        "value": {
-          "type": "string",
-          "required": false
-        },
-        "showDropdown": {
+        "showAiSearch": {
           "type": "boolean",
           "required": false
         },
-        "showDivider": {
+        "showSearchIcon": {
           "type": "boolean",
           "required": false
         },
-        "icon": {
-          "type": "React.ReactNode",
-          "required": false
-        },
-        "disabled": {
+        "showArrowIcon": {
           "type": "boolean",
           "required": false
         },
-        "onChange": {
-          "type": "(value: string) => void",
-          "required": false
-        },
-        "onSearch": {
-          "type": "() => void",
-          "required": false
-        },
-        "onDropdownToggle": {
-          "type": "() => void",
-          "required": false
-        },
-        "onFocus": {
-          "type": "() => void",
-          "required": false
-        },
-        "onBlur": {
-          "type": "() => void",
-          "required": false
-        },
-        "showAisearch5420": {
+        "arrowBackIcon": {
           "type": "boolean",
-          "required": false
-        },
-        "showSearchIcon5423": {
-          "type": "boolean",
-          "required": false
-        },
-        "showArrowIcon5426": {
-          "type": "boolean",
-          "required": false
-        },
-        "arrowBackIcon5790": {
-          "type": "boolean",
-          "required": false
-        },
-        "property1": {
-          "type": "'Search Bar - Back' | 'Search AI'",
-          "required": false
-        },
-        "onCancel": {
-          "type": "() => void",
           "required": false
         },
         "onClick": {
@@ -107,7 +51,8 @@
           "type": "string",
           "required": false
         }
-      }
+      },
+      "pixelReview": true
     }
   ],
   "tokens": {
