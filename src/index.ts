@@ -12,4 +12,4 @@ export * from './design-tokens/vars';
 export { Typography } from './components/Text/Text';
 
 // Figma-mapped components (override library defaults for same-named exports)
-export { Dialog } from './components/Dialog';
+export { Search } from './components/Search';

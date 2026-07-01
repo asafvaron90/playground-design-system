@@ -1,53 +1,81 @@
 {
   "version": "0.0.1",
-  "generatedAt": "2026-07-01T00:28:31.728Z",
+  "generatedAt": "2026-07-01T13:52:13.114Z",
   "components": [
     {
-      "name": "dialog",
-      "path": "src/components/Dialog/Dialog.tsx",
-      "description": "dialog component",
+      "name": "search",
+      "path": "src/components/Search/Search.tsx",
+      "description": "search component",
       "props": {
-        "title": {
+        "variant": {
+          "type": "'searchBar' | 'searchAI'",
+          "required": false
+        },
+        "placeholder": {
           "type": "string",
           "required": false
         },
-        "message": {
+        "value": {
           "type": "string",
+          "required": false
+        },
+        "showDropdown": {
+          "type": "boolean",
+          "required": false
+        },
+        "showDivider": {
+          "type": "boolean",
           "required": false
         },
         "icon": {
           "type": "React.ReactNode",
           "required": false
         },
-        "primaryLabel": {
-          "type": "string",
-          "required": false
-        },
-        "cancelLabel": {
-          "type": "string",
-          "required": false
-        },
-        "open": {
+        "disabled": {
           "type": "boolean",
           "required": false
         },
-        "showIcon": {
-          "type": "boolean",
+        "onChange": {
+          "type": "(value: string) => void",
           "required": false
         },
-        "variant": {
-          "type": "'warning' | 'info' | 'error' | 'default'",
-          "required": false
-        },
-        "onConfirm": {
+        "onSearch": {
           "type": "() => void",
+          "required": false
+        },
+        "onDropdownToggle": {
+          "type": "() => void",
+          "required": false
+        },
+        "onFocus": {
+          "type": "() => void",
+          "required": false
+        },
+        "onBlur": {
+          "type": "() => void",
+          "required": false
+        },
+        "showAisearch5420": {
+          "type": "boolean",
+          "required": false
+        },
+        "showSearchIcon5423": {
+          "type": "boolean",
+          "required": false
+        },
+        "showArrowIcon5426": {
+          "type": "boolean",
+          "required": false
+        },
+        "arrowBackIcon5790": {
+          "type": "boolean",
+          "required": false
+        },
+        "property1": {
+          "type": "'Search Bar - Back' | 'Search AI'",
           "required": false
         },
         "onCancel": {
-          "type": "() => void",
-          "required": false
-        },
-        "onClose": {
           "type": "() => void",
           "required": false
         },
@@ -89,7 +117,7 @@
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 12,
+    "gaps": 13,
     "sizes": 25,
     "opacity": 0,
     "gradients": 10,

@@ -27,7 +27,7 @@ export const tokens = {
       "value": "#1B293A",
       "category": "Variables",
       "modes": {
-        "Dark": "#409057",
+        "Dark": "#429470",
         "Light": "#1B293A"
       }
     },
@@ -68,21 +68,21 @@ export const tokens = {
       }
     },
     {
-      "name": "grey/light-grey",
-      "value": "#C9CFDC",
-      "category": "Variables",
-      "modes": {
-        "Dark": "#C9CFDC",
-        "Light": "#C9CFDC"
-      }
-    },
-    {
       "name": "orange/orange-warning",
       "value": "#FFA000",
       "category": "Variables",
       "modes": {
         "Dark": "#F54712",
         "Light": "#FFA000"
+      }
+    },
+    {
+      "name": "grey/light-grey",
+      "value": "#C9CFDC",
+      "category": "Variables",
+      "modes": {
+        "Dark": "#C9CFDC",
+        "Light": "#C9CFDC"
       }
     },
     {
@@ -664,6 +664,11 @@ export const tokens = {
       "name": "Space/156",
       "value": 155,
       "category": "Spacing"
+    },
+    {
+      "name": "Space/5",
+      "value": 5,
+      "category": "Spacing"
     }
   ],
   "sizes": [
@@ -1056,10 +1061,10 @@ export const designTokens = {
     greyDrawerHandle: "#ADB4CA",
     /** #D7E3EC */
     greyTextIcons: "#D7E3EC",
-    /** #C9CFDC */
-    greyLightGrey: "#C9CFDC",
     /** #FFA000 */
     orangeOrangeWarning: "#FFA000",
+    /** #C9CFDC */
+    greyLightGrey: "#C9CFDC",
     /** #00FFFF */
     turquoiseTurquoise: "#00FFFF",
     /** #90A3B1 */
@@ -1272,6 +1277,7 @@ export const designTokens = {
     space48: 48,
     space166: 166,
     space156: 155,
+    space5: 5,
   },
   sizes: {
     borderWidthXXS: 1,
