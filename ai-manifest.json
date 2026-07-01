@@ -1,87 +1,7 @@
 {
   "version": "0.0.1",
-  "generatedAt": "2026-07-01T00:28:31.728Z",
-  "components": [
-    {
-      "name": "dialog",
-      "path": "src/components/Dialog/Dialog.tsx",
-      "description": "dialog component",
-      "props": {
-        "title": {
-          "type": "string",
-          "required": false
-        },
-        "message": {
-          "type": "string",
-          "required": false
-        },
-        "icon": {
-          "type": "React.ReactNode",
-          "required": false
-        },
-        "primaryLabel": {
-          "type": "string",
-          "required": false
-        },
-        "cancelLabel": {
-          "type": "string",
-          "required": false
-        },
-        "open": {
-          "type": "boolean",
-          "required": false
-        },
-        "showIcon": {
-          "type": "boolean",
-          "required": false
-        },
-        "variant": {
-          "type": "'warning' | 'info' | 'error' | 'default'",
-          "required": false
-        },
-        "onConfirm": {
-          "type": "() => void",
-          "required": false
-        },
-        "onCancel": {
-          "type": "() => void",
-          "required": false
-        },
-        "onClose": {
-          "type": "() => void",
-          "required": false
-        },
-        "onClick": {
-          "type": "() => void",
-          "required": false
-        },
-        "onHover": {
-          "type": "() => void",
-          "required": false
-        },
-        "isDisabled": {
-          "type": "boolean",
-          "required": false
-        },
-        "isLoading": {
-          "type": "boolean",
-          "required": false
-        },
-        "children": {
-          "type": "React.ReactNode",
-          "required": false
-        },
-        "sx": {
-          "type": "Record<string, unknown>",
-          "required": false
-        },
-        "className": {
-          "type": "string",
-          "required": false
-        }
-      }
-    }
-  ],
+  "generatedAt": "2026-07-01T13:45:41.319Z",
+  "components": [],
   "tokens": {
     "colors": 42,
     "typography": 17,
@@ -89,7 +9,7 @@
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 12,
+    "gaps": 13,
     "sizes": 25,
     "opacity": 0,
     "gradients": 10,
