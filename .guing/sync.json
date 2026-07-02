@@ -766,5 +766,23 @@
       }
     ]
   },
-  "components": []
+  "components": [
+    {
+      "key": "bar",
+      "name": "bar",
+      "type": "bar",
+      "label": "bar",
+      "layerId": "542:7585",
+      "variants": 4,
+      "path": "src/components/Bar/Bar.tsx",
+      "hash": "9b12a6feb77c",
+      "facets": {
+        "structure": "142f90846775",
+        "tokens": "f51fd297d923",
+        "variants": "6bb2bb67a3a4",
+        "props": "41ab61ad2e1e"
+      },
+      "renderRef": "bar__9b12a6feb77c"
+    }
+  ]
 }
