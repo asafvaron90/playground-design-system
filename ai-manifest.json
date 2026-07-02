@@ -1,181 +1,98 @@
 {
   "version": "0.0.1",
-  "generatedAt": "2026-04-18T16:06:33.521Z",
+  "generatedAt": "2026-07-02T20:35:07.252Z",
   "components": [
     {
-      "name": "Blurs",
-      "path": "src/components/Blurs/Blurs.tsx",
-      "description": "Blurs component",
-      "props": {}
-    },
-    {
-      "name": "Borders",
-      "path": "src/components/Borders/Borders.tsx",
-      "description": "Borders component",
-      "props": {}
-    },
-    {
-      "name": "Colors",
-      "path": "src/components/Colors/Colors.tsx",
-      "description": "Colors component",
-      "props": {}
-    },
-    {
-      "name": "Elevations",
-      "path": "src/components/Elevations/Elevations.tsx",
-      "description": "Elevations component",
-      "props": {}
-    },
-    {
-      "name": "Gaps",
-      "path": "src/components/Gaps/Gaps.tsx",
-      "description": "Gaps component",
-      "props": {}
-    },
-    {
-      "name": "Grids",
-      "path": "src/components/Grids/Grids.tsx",
-      "description": "Grids component",
-      "props": {}
-    },
-    {
-      "name": "Icons",
-      "path": "src/components/Icons/Icons.tsx",
-      "description": "Icons component",
-      "props": {}
-    },
-    {
-      "name": "InjectionView",
-      "path": "src/components/InjectionView.tsx",
-      "description": "InjectionView component",
+      "name": "bar",
+      "path": "src/components/Bar/Bar.tsx",
+      "description": "bar component",
       "props": {
-        "libraryName": {
-          "type": "string",
-          "required": true
+        "activeTab": {
+          "type": "TabKey",
+          "required": false
         },
-        "approach": {
-          "type": "string",
-          "required": true
+        "tabs": {
+          "type": "TabKey[]",
+          "required": false
         },
-        "bindings": {
-          "type": "TokenBinding[]",
-          "required": true
-        }
-      }
-    },
-    {
-      "name": "ModelMap",
-      "path": "src/components/ModelMap/ModelMap.tsx",
-      "description": "ModelMap component",
-      "props": {}
-    },
-    {
-      "name": "Opacity",
-      "path": "src/components/Opacity/Opacity.tsx",
-      "description": "Opacity component",
-      "props": {}
-    },
-    {
-      "name": "Radius",
-      "path": "src/components/Radius/Radius.tsx",
-      "description": "Radius component",
-      "props": {}
-    },
-    {
-      "name": "Shadows",
-      "path": "src/components/Shadows/Shadows.tsx",
-      "description": "Shadows component",
-      "props": {}
-    },
-    {
-      "name": "Sizes",
-      "path": "src/components/Sizes/Sizes.tsx",
-      "description": "Sizes component",
-      "props": {}
-    },
-    {
-      "name": "Text",
-      "path": "src/components/Text/Text.tsx",
-      "description": "Text component",
-      "props": {}
-    },
-    {
-      "name": "TokenMapView",
-      "path": "src/components/TokenMapView.tsx",
-      "description": "TokenMapView component",
-      "props": {}
-    },
-    {
-      "name": "Typography",
-      "path": "src/components/Typography/Typography.tsx",
-      "description": "Typography component",
-      "props": {}
-    },
-    {
-      "name": "Welcome",
-      "path": "src/components/Welcome/Welcome.tsx",
-      "description": "Welcome component",
-      "props": {}
-    },
-    {
-      "name": "Button (Primary)",
-      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
-      "description": "Button (Primary) component",
-      "props": {
+        "showLabels": {
+          "type": "boolean",
+          "required": false
+        },
+        "tabIcon": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "tabLabel": {
+          "type": "string",
+          "required": false
+        },
+        "variant": {
+          "type": "TabKey",
+          "required": false
+        },
+        "onTabChange": {
+          "type": "(tab: TabKey) => void",
+          "required": false
+        },
+        "onHomePress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onMeetingsPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onActionsPress": {
+          "type": "() => void",
+          "required": false
+        },
+        "onNotificationsPress": {
+          "type": "() => void",
+          "required": false
+        },
         "onClick": {
           "type": "() => void",
-          "required": false,
-          "description": "Click event handler."
+          "required": false
         },
         "onHover": {
           "type": "() => void",
-          "required": false,
-          "description": "Hover event handler."
+          "required": false
         },
         "isDisabled": {
           "type": "boolean",
-          "required": false,
-          "description": "Disabled state of the button."
+          "required": false
         },
         "isLoading": {
           "type": "boolean",
-          "required": false,
-          "description": "Loading state of the button."
+          "required": false
         },
         "children": {
           "type": "React.ReactNode",
-          "required": false,
-          "description": "Content of the button."
+          "required": false
         },
         "sx": {
-          "type": "SxProps",
-          "required": false,
-          "description": "Style overrides."
+          "type": "Record<string, unknown>",
+          "required": false
         },
         "className": {
           "type": "string",
-          "required": false,
-          "description": "Class name for styling overrides."
-        },
-        "icon": {
-          "type": "React.ReactNode",
-          "required": false,
-          "description": "Icon to be displayed in the button."
+          "required": false
         }
       }
     }
   ],
   "tokens": {
-    "colors": 277,
-    "typography": 52,
-    "radius": 13,
+    "colors": 42,
+    "typography": 17,
+    "radius": 14,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 20,
-    "sizes": 57,
+    "gaps": 13,
+    "sizes": 25,
     "opacity": 0,
-    "gradients": 1,
+    "gradients": 10,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0

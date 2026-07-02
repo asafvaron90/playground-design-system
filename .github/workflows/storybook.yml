@@ -4,13 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-  pull-requests: write
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
@@ -23,19 +17,24 @@ jobs:
       - run: npm install
       - run: npm run build-storybook
 
-      # PR Preview Deployment
-      - name: Deploy PR Preview
-        uses: rossjrw/pr-preview-action@v1
-        if: github.event_name == 'pull_request'
-        with:
-          source-dir: ./storybook-static/
-          token: ${{ secrets.GITHUB_TOKEN }}
-          action: ${{ github.event.action == 'closed' && 'remove' || 'deploy' }}
-
-      # Main Branch Deployment
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+      # Upload the built storybook to Guing, which deploys it to a public
+      # bucket path (live instantly — no GitHub Pages queue). Guing resolves the
+      # tenant from the repo and writes the preview URL back onto the dashboard.
+      - name: Upload preview to Guing
+        env:
+          GUING_URL: ${{ secrets.GUING_WEBHOOK_URL }}
+          GUING_SECRET: ${{ secrets.GUING_WEBHOOK_SECRET }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -z "$GUING_URL" ]; then
+            echo "GUING_WEBHOOK_URL not set; skipping preview upload."
+            exit 0
+          fi
+          tar -czf storybook.tgz -C storybook-static .
+          SIG="sha256=$(openssl dgst -sha256 -hmac "$GUING_SECRET" < storybook.tgz | awk '{print $2}')"
+          curl -fsS -X POST "$GUING_URL/api/v1/storybook" \
+            -H "content-type: application/gzip" \
+            -H "x-guing-repo: ${{ github.repository }}" \
+            -H "x-guing-pr: $PR_NUMBER" \
+            -H "x-guing-signature: $SIG" \
+            --data-binary @storybook.tgz
