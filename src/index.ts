@@ -18,3 +18,6 @@ export * from './components/Opacity/Opacity';
 export * from './components/Blurs/Blurs';
 export * from './components/Grids/Grids';
 export * from './components/Icons/Icons';
+
+export * from './components/Gradients/Gradients';
+export * from './components/Spacing/Spacing';
