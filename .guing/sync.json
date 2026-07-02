@@ -766,5 +766,23 @@
       }
     ]
   },
-  "components": []
+  "components": [
+    {
+      "key": "primaybutton",
+      "name": "PrimayButton",
+      "type": "PrimayButton",
+      "label": "PrimayButton",
+      "layerId": "55795:12410",
+      "variants": 5,
+      "path": "src/components/PrimayButton/PrimayButton.tsx",
+      "hash": "b7bf9c09f6b2",
+      "facets": {
+        "structure": "79bfd00ffcc4",
+        "tokens": "ed413eb5f594",
+        "variants": "6387152ca5a2",
+        "props": "7ceec55c3279"
+      },
+      "renderRef": "primaybutton__b7bf9c09f6b2"
+    }
+  ]
 }
