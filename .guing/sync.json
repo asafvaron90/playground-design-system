@@ -766,5 +766,23 @@
       }
     ]
   },
-  "components": []
+  "components": [
+    {
+      "key": "popup",
+      "name": "Popup",
+      "type": "Popup",
+      "label": "Popup",
+      "layerId": "551:6557",
+      "variants": 0,
+      "path": "src/components/Popup/Popup.tsx",
+      "hash": "f186e80b255a",
+      "facets": {
+        "structure": "0ef9500a1184",
+        "tokens": "d6b6aee9cf00",
+        "variants": "",
+        "props": "44136fa355b3"
+      },
+      "renderRef": "popup__f186e80b255a"
+    }
+  ]
 }
