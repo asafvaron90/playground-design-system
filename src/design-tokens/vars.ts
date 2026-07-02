@@ -26,6 +26,12 @@ export const colorVars = Object.fromEntries(
 
 /** Semantic colour CSS-variable strings (Universal Semantic Model). */
 export const semanticColorVars = {
+  brand500: 'var(--color-brand-500)',
+  actionPrimary: 'var(--color-action-primary)',
+  actionSecondary: 'var(--color-action-secondary)',
+  success500: 'var(--color-success-500)',
+  warning500: 'var(--color-warning-500)',
+  danger500: 'var(--color-danger-500)',
   background: 'var(--color-background)',
   surface: 'var(--color-surface)',
   textMain: 'var(--color-text-main)',

@@ -766,5 +766,40 @@
       }
     ]
   },
-  "components": []
+  "components": [
+    {
+      "key": "dialog",
+      "name": "dialog",
+      "type": "dialog",
+      "label": "dialog",
+      "layerId": "551:6557",
+      "variants": 0,
+      "path": "src/components/Dialog/Dialog.tsx",
+      "hash": "658aa0a586a3",
+      "facets": {
+        "structure": "da28f889cdbc",
+        "tokens": "d6b6aee9cf00",
+        "variants": "",
+        "props": "44136fa355b3"
+      },
+      "renderRef": "dialog__658aa0a586a3"
+    },
+    {
+      "key": "tabs",
+      "name": "tabs",
+      "type": "tabs",
+      "label": "tabs",
+      "layerId": "542:7585",
+      "variants": 4,
+      "path": "src/components/Tabs/Tabs.tsx",
+      "hash": "c1a64e04d1d0",
+      "facets": {
+        "structure": "160fdc39704c",
+        "tokens": "f51fd297d923",
+        "variants": "6bb2bb67a3a4",
+        "props": "41ab61ad2e1e"
+      },
+      "renderRef": "tabs__c1a64e04d1d0"
+    }
+  ]
 }
