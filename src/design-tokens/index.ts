@@ -72,7 +72,7 @@ export const tokens = {
       "value": "#FFA000",
       "category": "Variables",
       "modes": {
-        "Dark": "#F54712",
+        "Dark": "#E45023",
         "Light": "#FFA000"
       }
     },
@@ -266,7 +266,7 @@ export const tokens = {
       "value": "#FFA000",
       "category": "Variables",
       "modes": {
-        "Dark": "#F54712",
+        "Dark": "#E45023",
         "Light": "#FFA000"
       }
     },
