@@ -766,5 +766,23 @@
       }
     ]
   },
-  "components": []
+  "components": [
+    {
+      "key": "taskscontentpage",
+      "name": "TasksContentPage",
+      "type": "TasksContentPage",
+      "label": "TasksContentPage",
+      "layerId": "55042:7989",
+      "variants": 0,
+      "path": "src/components/TasksContentPage/TasksContentPage.tsx",
+      "hash": "d9ee8a996ad6",
+      "facets": {
+        "structure": "23b7c7cb30fe",
+        "tokens": "34c4afc87bde",
+        "variants": "",
+        "props": ""
+      },
+      "renderRef": "taskscontentpage__d9ee8a996ad6"
+    }
+  ]
 }

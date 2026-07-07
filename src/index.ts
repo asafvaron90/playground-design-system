@@ -4,17 +4,8 @@
 export * from './design-tokens';
 export * from './design-tokens/vars';
 
-// Components
-export * from './components/Welcome/Welcome';
-export * from './components/Colors/Colors';
-export * from './components/Typography/Typography';
-export * from './components/Radius/Radius';
-export * from './components/Shadows/Shadows';
-export * from './components/Elevations/Elevations';
-export * from './components/Borders/Borders';
-export * from './components/Gaps/Gaps';
-export * from './components/Sizes/Sizes';
-export * from './components/Opacity/Opacity';
-export * from './components/Blurs/Blurs';
-export * from './components/Grids/Grids';
-export * from './components/Icons/Icons';
+// Token-driven typography bridge — every Figma typography token becomes <Typography.XxxYyy>
+export { Typography } from './components/Text/Text';
+
+// Figma-mapped components (override library defaults for same-named exports)
+export { TasksContentPage } from './components/TasksContentPage';
