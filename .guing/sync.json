@@ -1,11 +1,11 @@
 {
   "version": "0.0.1",
-  "tokensHash": "1023c8b90aa4",
+  "tokensHash": "1d881ca98768",
   "tokens": {
     "colors": [
       {
         "name": "grey/page",
-        "value": "#051321",
+        "value": "#091C2A",
         "category": "Variables",
         "modes": {
           "Dark": "#091C2A",
@@ -23,7 +23,7 @@
       },
       {
         "name": "grey/buttons-bg",
-        "value": "#1B293A",
+        "value": "#429470",
         "category": "Variables",
         "modes": {
           "Dark": "#429470",
@@ -50,7 +50,7 @@
       },
       {
         "name": "grey/drawer-handle",
-        "value": "#ADB4CA",
+        "value": "#B1B8D0",
         "category": "Variables",
         "modes": {
           "Dark": "#B1B8D0",
@@ -67,15 +67,6 @@
         }
       },
       {
-        "name": "orange/orange-warning",
-        "value": "#FFA000",
-        "category": "Variables",
-        "modes": {
-          "Dark": "#E45023",
-          "Light": "#FFA000"
-        }
-      },
-      {
         "name": "grey/light-grey",
         "value": "#C9CFDC",
         "category": "Variables",
@@ -85,8 +76,17 @@
         }
       },
       {
+        "name": "orange/orange-warning",
+        "value": "#E45023",
+        "category": "Variables",
+        "modes": {
+          "Dark": "#E45023",
+          "Light": "#FFA000"
+        }
+      },
+      {
         "name": "turquoise/turquoise",
-        "value": "#00FFFF",
+        "value": "#CCFF00",
         "category": "Variables",
         "modes": {
           "Dark": "#CCFF00",
@@ -113,7 +113,7 @@
       },
       {
         "name": "blue/blue",
-        "value": "#3074F3",
+        "value": "#AC37BC",
         "category": "Variables",
         "modes": {
           "Dark": "#AC37BC",
@@ -122,7 +122,7 @@
       },
       {
         "name": "red/red-warning",
-        "value": "#FF4B4B",
+        "value": "#FF4B4A",
         "category": "Variables",
         "modes": {
           "Dark": "#FF4B4A",
@@ -158,7 +158,7 @@
       },
       {
         "name": "black/black",
-        "value": "#FFFFFF",
+        "value": "#000000",
         "category": "Variables",
         "modes": {
           "Dark": "#000000",
@@ -167,7 +167,7 @@
       },
       {
         "name": "color/button-effect",
-        "value": "#FFFFFF",
+        "value": "#8A5ADB",
         "category": "Variables",
         "modes": {
           "Dark": "#8A5ADB",
@@ -176,7 +176,7 @@
       },
       {
         "name": "color/button-seconday-bg",
-        "value": "#FFFFFF",
+        "value": "#F4F4F4",
         "category": "Variables",
         "modes": {
           "Dark": "#F4F4F4",
@@ -203,7 +203,7 @@
       },
       {
         "name": "Color/D9D9D9",
-        "value": "#FFFFFF",
+        "value": "#D9D9D9",
         "category": "Variables",
         "modes": {
           "Dark": "#D9D9D9",
@@ -212,10 +212,46 @@
       },
       {
         "name": "Color/00A7A7",
-        "value": "#FFFFFF",
+        "value": "#00A7A7",
         "category": "Variables",
         "modes": {
           "Dark": "#00A7A7",
+          "Light": "#FFFFFF"
+        }
+      },
+      {
+        "name": "Color/D038D8",
+        "value": "#D038D8",
+        "category": "Variables",
+        "modes": {
+          "Dark": "#D038D8",
+          "Light": "#FFFFFF"
+        }
+      },
+      {
+        "name": "Color/005ECA",
+        "value": "#005ECA",
+        "category": "Variables",
+        "modes": {
+          "Dark": "#005ECA",
+          "Light": "#FFFFFF"
+        }
+      },
+      {
+        "name": "Color/BA7714",
+        "value": "#BA7714",
+        "category": "Variables",
+        "modes": {
+          "Dark": "#BA7714",
+          "Light": "#FFFFFF"
+        }
+      },
+      {
+        "name": "Color/697592",
+        "value": "#697592",
+        "category": "Variables",
+        "modes": {
+          "Dark": "#697592",
           "Light": "#FFFFFF"
         }
       },
@@ -295,6 +331,48 @@
         "fontSize": 14,
         "fontWeight": 400,
         "lineHeight": 1.25
+      },
+      {
+        "name": "Typography/Open-Sans-17",
+        "fontFamily": "Open Sans",
+        "fontSize": 17,
+        "fontWeight": 700,
+        "lineHeight": 1.5
+      },
+      {
+        "name": "Typography/Inter-12",
+        "fontFamily": "Inter",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "lineHeight": 1.25
+      },
+      {
+        "name": "Typography/Open-Sans-Hebrew-12",
+        "fontFamily": "Open Sans Hebrew",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "lineHeight": 1.5
+      },
+      {
+        "name": "Typography/Roboto-16",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 1.5
+      },
+      {
+        "name": "Typography/Open-Sans-14",
+        "fontFamily": "Open Sans",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "lineHeight": 0.9
+      },
+      {
+        "name": "Typography/Open-Sans-Hebrew-14",
+        "fontFamily": "Open Sans Hebrew",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.5
       }
     ],
     "radius": [
@@ -453,6 +531,66 @@
       {
         "name": "Space/5",
         "value": 5,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/45",
+        "value": 45,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/30",
+        "value": 30,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/665",
+        "value": 665,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/25",
+        "value": 25,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/29",
+        "value": 29,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/1088",
+        "value": 1088,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/1249",
+        "value": 1249,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/27",
+        "value": 27,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/15",
+        "value": 15,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/9",
+        "value": 9,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/26",
+        "value": 26,
+        "category": "Spacing"
+      },
+      {
+        "name": "Space/13",
+        "value": 13,
         "category": "Spacing"
       }
     ],
@@ -763,8 +901,554 @@
             "opacity": 1
           }
         ]
+      },
+      {
+        "name": "Gradients/Custom",
+        "gradientType": "linear",
+        "stops": [
+          {
+            "position": 0,
+            "color": "#A268FF",
+            "opacity": 0.8
+          },
+          {
+            "position": 1,
+            "color": "#3E95D6",
+            "opacity": 1
+          }
+        ]
+      },
+      {
+        "name": "Gradients/Custom",
+        "gradientType": "linear",
+        "stops": [
+          {
+            "position": 0,
+            "color": "#A268FF",
+            "opacity": 0.8
+          },
+          {
+            "position": 1,
+            "color": "#3E95D6",
+            "opacity": 1
+          }
+        ]
       }
-    ]
+    ],
+    "themes": {
+      "Dark": {
+        "colors": [
+          {
+            "name": "grey/page",
+            "value": "#091C2A",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#091C2A",
+              "Light": "#051321"
+            }
+          },
+          {
+            "name": "grey/page-light",
+            "value": "#091C2A",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#091C2A",
+              "Light": "#091C2A"
+            }
+          },
+          {
+            "name": "grey/buttons-bg",
+            "value": "#429470",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#429470",
+              "Light": "#1B293A"
+            }
+          },
+          {
+            "name": "grey/text-field",
+            "value": "#2F3649",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#2F3649",
+              "Light": "#2F3649"
+            }
+          },
+          {
+            "name": "grey/stroke",
+            "value": "#2A4051",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#2A4051",
+              "Light": "#2A4051"
+            }
+          },
+          {
+            "name": "grey/drawer-handle",
+            "value": "#B1B8D0",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#B1B8D0",
+              "Light": "#ADB4CA"
+            }
+          },
+          {
+            "name": "grey/text-icons",
+            "value": "#D7E3EC",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D7E3EC",
+              "Light": "#D7E3EC"
+            }
+          },
+          {
+            "name": "grey/light-grey",
+            "value": "#C9CFDC",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#C9CFDC",
+              "Light": "#C9CFDC"
+            }
+          },
+          {
+            "name": "orange/orange-warning",
+            "value": "#E45023",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#E45023",
+              "Light": "#FFA000"
+            }
+          },
+          {
+            "name": "turquoise/turquoise",
+            "value": "#CCFF00",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#CCFF00",
+              "Light": "#00FFFF"
+            }
+          },
+          {
+            "name": "grey/secondary-body-text",
+            "value": "#90A3B1",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#90A3B1",
+              "Light": "#90A3B1"
+            }
+          },
+          {
+            "name": "white/white",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "blue/blue",
+            "value": "#AC37BC",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#AC37BC",
+              "Light": "#3074F3"
+            }
+          },
+          {
+            "name": "red/red-warning",
+            "value": "#FF4B4A",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FF4B4A",
+              "Light": "#FF4B4B"
+            }
+          },
+          {
+            "name": "red/red-error",
+            "value": "#C84747",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#C84747",
+              "Light": "#C84747"
+            }
+          },
+          {
+            "name": "purple/purple",
+            "value": "#9B5DFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#9B5DFF",
+              "Light": "#9B5DFF"
+            }
+          },
+          {
+            "name": "green/green",
+            "value": "#25A96B",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#25A96B",
+              "Light": "#25A96B"
+            }
+          },
+          {
+            "name": "black/black",
+            "value": "#000000",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#000000",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/button-effect",
+            "value": "#8A5ADB",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#8A5ADB",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/button-seconday-bg",
+            "value": "#F4F4F4",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#F4F4F4",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/10px",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/inter 14px",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/D9D9D9",
+            "value": "#D9D9D9",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D9D9D9",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/00A7A7",
+            "value": "#00A7A7",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#00A7A7",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/D038D8",
+            "value": "#D038D8",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D038D8",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/005ECA",
+            "value": "#005ECA",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#005ECA",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/BA7714",
+            "value": "#BA7714",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#BA7714",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/697592",
+            "value": "#697592",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#697592",
+              "Light": "#FFFFFF"
+            }
+          }
+        ]
+      },
+      "Light": {
+        "colors": [
+          {
+            "name": "grey/page",
+            "value": "#051321",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#091C2A",
+              "Light": "#051321"
+            }
+          },
+          {
+            "name": "grey/page-light",
+            "value": "#091C2A",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#091C2A",
+              "Light": "#091C2A"
+            }
+          },
+          {
+            "name": "grey/buttons-bg",
+            "value": "#1B293A",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#429470",
+              "Light": "#1B293A"
+            }
+          },
+          {
+            "name": "grey/text-field",
+            "value": "#2F3649",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#2F3649",
+              "Light": "#2F3649"
+            }
+          },
+          {
+            "name": "grey/stroke",
+            "value": "#2A4051",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#2A4051",
+              "Light": "#2A4051"
+            }
+          },
+          {
+            "name": "grey/drawer-handle",
+            "value": "#ADB4CA",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#B1B8D0",
+              "Light": "#ADB4CA"
+            }
+          },
+          {
+            "name": "grey/text-icons",
+            "value": "#D7E3EC",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D7E3EC",
+              "Light": "#D7E3EC"
+            }
+          },
+          {
+            "name": "grey/light-grey",
+            "value": "#C9CFDC",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#C9CFDC",
+              "Light": "#C9CFDC"
+            }
+          },
+          {
+            "name": "orange/orange-warning",
+            "value": "#FFA000",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#E45023",
+              "Light": "#FFA000"
+            }
+          },
+          {
+            "name": "turquoise/turquoise",
+            "value": "#00FFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#CCFF00",
+              "Light": "#00FFFF"
+            }
+          },
+          {
+            "name": "grey/secondary-body-text",
+            "value": "#90A3B1",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#90A3B1",
+              "Light": "#90A3B1"
+            }
+          },
+          {
+            "name": "white/white",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "blue/blue",
+            "value": "#3074F3",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#AC37BC",
+              "Light": "#3074F3"
+            }
+          },
+          {
+            "name": "red/red-warning",
+            "value": "#FF4B4B",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FF4B4A",
+              "Light": "#FF4B4B"
+            }
+          },
+          {
+            "name": "red/red-error",
+            "value": "#C84747",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#C84747",
+              "Light": "#C84747"
+            }
+          },
+          {
+            "name": "purple/purple",
+            "value": "#9B5DFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#9B5DFF",
+              "Light": "#9B5DFF"
+            }
+          },
+          {
+            "name": "green/green",
+            "value": "#25A96B",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#25A96B",
+              "Light": "#25A96B"
+            }
+          },
+          {
+            "name": "black/black",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#000000",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/button-effect",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#8A5ADB",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/button-seconday-bg",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#F4F4F4",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/10px",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "color/inter 14px",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#FFFFFF",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/D9D9D9",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D9D9D9",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/00A7A7",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#00A7A7",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/D038D8",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#D038D8",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/005ECA",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#005ECA",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/BA7714",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#BA7714",
+              "Light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Color/697592",
+            "value": "#FFFFFF",
+            "category": "Variables",
+            "modes": {
+              "Dark": "#697592",
+              "Light": "#FFFFFF"
+            }
+          }
+        ]
+      }
+    }
   },
   "components": []
 }
