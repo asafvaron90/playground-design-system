@@ -1,20 +1,115 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-18T15:51:48.145Z",
-  "components": [],
+  "version": "0.1.0",
+  "generatedAt": "2026-07-07T13:59:30.988Z",
+  "components": [
+    {
+      "name": "TasksPage",
+      "path": "src/components/TasksPage/TasksPage.tsx",
+      "description": "TasksPage component",
+      "props": {
+        "theme": {
+          "type": "string",
+          "required": false,
+          "description": "Theme mode ('dark' | 'light'); switches the DS tokens via [data-theme]."
+        },
+        "variant": {
+          "type": "string",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "tasks": {
+          "type": "Task[]",
+          "required": false
+        },
+        "columns": {
+          "type": "Column[]",
+          "required": false
+        },
+        "selectedRows": {
+          "type": "string[]",
+          "required": false
+        },
+        "currentPage": {
+          "type": "number",
+          "required": false
+        },
+        "totalPages": {
+          "type": "number",
+          "required": false
+        },
+        "rowsPerPage": {
+          "type": "number",
+          "required": false
+        },
+        "viewMode": {
+          "type": "\"list\" | \"grid\"",
+          "required": false
+        },
+        "searchQuery": {
+          "type": "string",
+          "required": false
+        },
+        "onAddTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onEditTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onDeleteTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onRowSelect": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSelectAll": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSearch": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSort": {
+          "type": "() => void",
+          "required": false
+        },
+        "onFilter": {
+          "type": "() => void",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 52,
+    "typography": 16,
+    "radius": 10,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 25,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 12,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }

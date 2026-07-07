@@ -1450,5 +1450,23 @@
       }
     }
   },
-  "components": []
+  "components": [
+    {
+      "key": "taskspage",
+      "name": "TasksPage",
+      "type": "TasksPage",
+      "label": "TasksPage",
+      "layerId": "55042:7989",
+      "variants": 0,
+      "path": "src/components/TasksPage/TasksPage.tsx",
+      "hash": "ac2e3376cb1c",
+      "facets": {
+        "structure": "5c460612193f",
+        "tokens": "34c4afc87bde",
+        "variants": "",
+        "props": ""
+      },
+      "renderRef": "taskspage__ac2e3376cb1c"
+    }
+  ]
 }
