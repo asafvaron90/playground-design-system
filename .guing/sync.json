@@ -1450,5 +1450,23 @@
       }
     }
   },
-  "components": []
+  "components": [
+    {
+      "key": "tasksdashboardcontent",
+      "name": "TasksDashboardContent",
+      "type": "TasksDashboardContent",
+      "label": "TasksDashboardContent",
+      "layerId": "55042:7989",
+      "variants": 0,
+      "path": "src/components/TasksDashboardContent/TasksDashboardContent.tsx",
+      "hash": "075bcc2da470",
+      "facets": {
+        "structure": "dd3d961516e0",
+        "tokens": "34c4afc87bde",
+        "variants": "",
+        "props": ""
+      },
+      "renderRef": "tasksdashboardcontent__075bcc2da470"
+    }
+  ]
 }

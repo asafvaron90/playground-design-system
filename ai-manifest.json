@@ -1,20 +1,167 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-18T15:51:48.145Z",
-  "components": [],
+  "version": "0.1.0",
+  "generatedAt": "2026-07-08T19:25:53.734Z",
+  "components": [
+    {
+      "name": "TasksDashboardContent",
+      "path": "src/components/TasksDashboardContent/TasksDashboardContent.tsx",
+      "description": "TasksDashboardContent component",
+      "props": {
+        "theme": {
+          "type": "string",
+          "required": false,
+          "description": "Theme mode ('dark' | 'light'); switches the DS tokens via [data-theme]."
+        },
+        "variant": {
+          "type": "string",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "tasks": {
+          "type": "Array<any>",
+          "required": true
+        },
+        "columns": {
+          "type": "Array<any>",
+          "required": true
+        },
+        "selectedRowIds": {
+          "type": "Array<string>",
+          "required": true
+        },
+        "sortOrder": {
+          "type": "string",
+          "required": true
+        },
+        "activeView": {
+          "type": "'table' | 'grid'",
+          "required": true
+        },
+        "searchQuery": {
+          "type": "string",
+          "required": true
+        },
+        "isFilterOpen": {
+          "type": "boolean",
+          "required": true
+        },
+        "currentPage": {
+          "type": "number",
+          "required": true
+        },
+        "onAddTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onEditTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onDeleteTask": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSearchChange": {
+          "type": "() => void",
+          "required": false
+        },
+        "onSortChange": {
+          "type": "() => void",
+          "required": false
+        },
+        "onFilterToggle": {
+          "type": "() => void",
+          "required": false
+        },
+        "onViewChange": {
+          "type": "(view: 'table' | 'grid') => void",
+          "required": false
+        },
+        "onRowSelect": {
+          "type": "() => void",
+          "required": false
+        },
+        "title": {
+          "type": "string",
+          "required": false
+        },
+        "subtitle": {
+          "type": "string",
+          "required": false
+        },
+        "addTaskLabel": {
+          "type": "string",
+          "required": false
+        },
+        "editLabel": {
+          "type": "string",
+          "required": false
+        },
+        "deleteLabel": {
+          "type": "string",
+          "required": false
+        },
+        "searchPlaceholder": {
+          "type": "string",
+          "required": false
+        },
+        "filterLabel": {
+          "type": "string",
+          "required": false
+        },
+        "sortDescLabel": {
+          "type": "string",
+          "required": false
+        },
+        "sortAscLabel": {
+          "type": "string",
+          "required": false
+        },
+        "sortRecentLabel": {
+          "type": "string",
+          "required": false
+        },
+        "paginationSummaryLabel": {
+          "type": "string",
+          "required": false
+        },
+        "rowsPerPageLabel": {
+          "type": "string",
+          "required": false
+        },
+        "selectedCountLabel": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "pixelReview": true
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 52,
+    "typography": 16,
+    "radius": 10,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 25,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 12,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
