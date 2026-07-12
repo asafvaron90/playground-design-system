@@ -1450,5 +1450,23 @@
       }
     }
   },
-  "components": []
+  "components": [
+    {
+      "key": "tasks",
+      "name": "Tasks",
+      "type": "Tasks",
+      "label": "Tasks",
+      "layerId": "55042:7989",
+      "variants": 0,
+      "path": "src/components/Tasks/Tasks.tsx",
+      "hash": "5676f4f1776f",
+      "facets": {
+        "structure": "938d9356e8eb",
+        "tokens": "34c4afc87bde",
+        "variants": "",
+        "props": ""
+      },
+      "renderRef": "tasks__5676f4f1776f"
+    }
+  ]
 }
